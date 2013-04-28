@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<title>COSCUP Website Deployment System</title>
+
+	<style>
+
+		body{
+			text-align: center;
+			width: 500px;
+			margin: 100px auto;
+			background: #ccc;
+			color: #666;
+			font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans;
+			font-weight: 300;
+		}
+
+		a{
+			text-decoration: none;
+			color: #333;
+		}
+
+		a:hover{
+			text-decoration: underline;
+		}
+
+		#shiny_red_button {
+			width: 300px;
+			height: 300px;
+			border-radius: 150px;
+			-moz-border-radius: 150px;
+			-webkit-border-radius: 150px;
+			-o-border-radius: 150px;
+			background: #c9171e;
+			border: 3px solid rgba(255,255,255,0.2);
+			color: #fff;
+			font-size: 64px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+			-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+			-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+			-o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+		}
+
+		#options {
+			list-style-type: none;
+			padding: 0;
+			margin: 20px 0;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" accept-charset="utf-8" action="update-gdoc.php">
+		<input id="shiny_red_button" type="submit" value="Update" />
+
+		<ul id="options">
+			<li>
+				<input id="fullupdate_false" type="radio" name="fullupdate" value="0" checked="checked" />
+				<label for="fullupdate_false">Just pull from Google Docs</label>
+			</li>
+
+			<li>
+				<input id="fullupdate_true" type="radio" name="fullupdate" value="1" />
+				<label for="fullupdate_true">Full update <span class="note">including <a href="https://github.com/medicalwei/marksite">Marksite compiler</a>, <a href="https://github.com/COSCUP/coscup2011-sponsorship">sponsorship module for Drupal</a>, <a href="https://github.com/COSCUP/coscup2011-src">content source</a>, <a href="https://github.com/COSCUP/coscup2011-theme">theme</a>, and Google Docs.</span></label>
+			</li>
+		</ul>
+	</form>
+</body>
+</html>
