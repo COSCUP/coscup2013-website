@@ -24,7 +24,8 @@ jQuery(function ($) {
 
   // FIXME: CSS dependent test
   function isMobileLayout() {
-    return !$('#title:visible').length;
+    return false;
+    //return !$('#title:visible').length;
   }
 
   // init: the PageHandler that trigger
@@ -518,7 +519,6 @@ jQuery(function ($) {
   function socialBuzz() {
     // if (!$('#socialbuzz').length)
     //   return;
-    console.log('hey');
 
     $('#socialbuzz').delegate(
       'a',
@@ -594,13 +594,14 @@ jQuery(function ($) {
       $('#socialbuzz').empty().append($u);
     }
 
-    // $.getJSON(
-    //   window.location.href.match(/^http:\/\/[ipv6\.]*coscup.org\/[^\/]+\//)[0] + 'api/plurk/',
-    //   function (data) {
-    //     plurks = data;
-    //     showSocialBuzz(plurks, twits);
-    //   }
-    // );
+    $.getJSON(
+      //window.location.href.match(/^http:\/\/[ipv6\.]*coscup.org\/[^\/]+\//)[0] + 'api/plurk/',
+      'http://coscup.org/2012/api/plurk/',
+      function (data) {
+        plurks = data;
+        showSocialBuzz(plurks, twits);
+      }
+    );
     $.getJSON(
       'https://search.twitter.com/search.json?q=coscup+OR+from%3Acoscup&callback=?',
       function (data) {
@@ -609,8 +610,7 @@ jQuery(function ($) {
       }
     );
   }
-  //$(window).bind('fullpageload', socialBuzz);
-  socialBuzz();
+  $(window).bind('fullpageload', socialBuzz);
 
   // fullpageload: ipv6 block on homepage #sidebar2
   function ipv6block() {
