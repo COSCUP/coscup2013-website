@@ -116,6 +116,9 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 			#mid .socialbuzz h1{ width:330px; height:37px; text-indent:15px; margin:0; line-height:35px; background:#42cfda; color:#fff;}
 				#mid .socialbuzz h1 em{ font-size:12px;}
 			#mid .socialbuzz .text{ width:330px; height:370px; background:#c9f2f5; }
+			  #mid .socialbuzz .text > ul { font-size: 14px; line-height: 18px; margin: 0; padding: 0 0 0 1em; text-align: left; }
+			    #mid .socialbuzz .text > ul li {list-style: square outside none; padding-bottom: 6px;}
+			    #mid .socialbuzz .text > ul .meta {display: block; text-align: right; }
 			#mid .socialbuzz .more{ width:322px; height:25px; text-align:right; padding:5px 8px 0 0; background:#afeff5; float:left;}
 				#mid .socialbuzz .more a{ color:#000; font-size:11px;}
 				#mid .socialbuzz .more a:hover{ color:#666;}
