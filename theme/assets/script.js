@@ -458,7 +458,7 @@ jQuery(function ($) {
       'center -' + (75*Math.floor(Math.random()*6)).toString(10) + 'px'
     );
   }
-  $(window).bind('pageload', moveBackground);
+  //$(window).bind('pageload', moveBackground);
 
   // pageload: checkAppCache
   // if the browser tab has been opened for kAppCacheCheckingInterval
