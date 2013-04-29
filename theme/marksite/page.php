@@ -141,12 +141,12 @@ switch($this->current[0])
 <!--social Mobile-->
 <ul class="sharing">
   <li class="title">Follow Us!!<hr></li>
-  <li><a href="https://www.facebook.com/coscup"><img src="images/icon_fb.png" align="absmiddle" /><span>facebook</span></li>
-  <li><a href="http://www.plurk.com/coscup"><img src="images/icon_plurk.png" align="absmiddle" /><span>Plurk</span></a></li>
-  <li><a href="https://twitter.com/coscup"><img src="images/icon_twitter.png" align="absmiddle" /><span>twitter</span></a></li>
-  <li><a href="http://blog.coscup.org"><img src="images/icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
-  <li><a href="http://www.flickr.com/people/coscup/"><img src="images/icon_flickr.png"  align="absmiddle" /><span>flickr</span></a></li>
-  <li><a href="http://www.youtube.com/user/thecoscup?feature=watch"><img src="images/icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li>
+  <li><a href="https://www.facebook.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_fb.png" align="absmiddle" /><span>facebook</span></li>
+  <li><a href="http://www.plurk.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" align="absmiddle" /><span>Plurk</span></a></li>
+  <li><a href="https://twitter.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" align="absmiddle" /><span>twitter</span></a></li>
+  <li><a href="http://blog.coscup.org"><img src="<?php echo $theme_assets_uri;?>icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
+  <li><a href="http://www.flickr.com/people/coscup/"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  align="absmiddle" /><span>flickr</span></a></li>
+  <li><a href="http://www.youtube.com/user/thecoscup?feature=watch"><img src="<?php echo $theme_assets_uri;?>icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li>
 </ul><!--social Mobile end-->
 <!--底-->
 <div id="footer">
