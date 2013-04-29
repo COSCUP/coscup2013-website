@@ -1,6 +1,6 @@
 <?php
 include_once "i18n.php";
-$theme_assets_uri = "/coscup2013-theme/assets/";
+$theme_assets_uri = "/2013-theme/assets/";
 $lc = new i18n;
 switch($this->current[0])
 {
@@ -17,7 +17,7 @@ switch($this->current[0])
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" manifest="<?php echo $home_path ?>site.appcache" lang="<?php echo $lc->lang ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lc->lang ?>">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $title; ?> | 2013 COSCUP-Open x [Web | Mobile | Data]</title>

@@ -17,15 +17,15 @@
 //define('PROGRAM_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_PROGRAM_LIST');
 
 define('MARKSITE_PATH', 'marksite/');
-define('THEME_PATH', '/coscup2013-theme/');
+define('THEME_PATH', '../theme/');
 define('SRC_PATH', '../src/');
 define('TMP_PATH', 'tmp/');
-define('WEBSITE_PATH', '../2013-beta/');
+define('WEBSITE_PATH', '../../2013-beta/');
 //define('CMS_MODULE_PATH', '../2011-sponsor/site/all/modules/coscup_sponsorship/');
 //define('CMS_THEME_PATH', '../2011-sponsor/sites/all/themes/coscup2011/');
 //define('SPONSORSHIP_FORM_PATH', 'coscup_sponsorship/');
 
-define('RUNNING_USER', 'www-daemon');
+define('RUNNING_USER', 'www-data');
 
 $sponsors_output = array(
 	"sidebar" => array(
