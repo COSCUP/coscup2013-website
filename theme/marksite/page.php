@@ -107,7 +107,7 @@ if (isset($styles)) {
 	    </ul>
       <nav id="nav-wrap">
         <ul id="mainNav">
-          <?php echo $this->menu(1,2); ?>
+          <?php echo $this->menu(1); ?>
           <li class="open"><a href="<?php echo $home_path.$this->current[0]."/openwall/";?>" title="OPEN">We (heart) Open.</a></li>
         </ul>
       </nav> 
