@@ -33,6 +33,23 @@ switch($this->current[0])
 <meta property="og:url" content="" />
 <meta property="og:site_name" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
 <meta property="og:image" content="" />
+<!--RWD Revise-->
+<!--[if lt IE 7]>
+<style type="text/css">
+  body { overflow: hidden; }
+  #wrapper { height: 100%; overflow: auto; }
+  #fixed { position: absolute; right: 17px; }
+</style>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<style type="text/css">
+  body { overflow: hidden; }
+  #wrapper { height: 100%; overflow: auto; }
+  #fixed { position: absolute; right: 17px; }
+</style>
+<![endif]-->
+
 
 <!--phone-->
 <meta name="viewport" content="width=320" />
@@ -52,7 +69,6 @@ if (isset($styles)) {
   }
 }
 ?>
-
 <!--favicon-->
 <link type="image/x-icon" href="<?php echo $theme_assets_uri;?>favicon.ico" rel="shortcut icon">
 
@@ -82,18 +98,19 @@ if (isset($styles)) {
 	        <li><a href="#">日文</a></li>
 	    </ul>
 	    <ul id="social">
-	    	<li><a href="#" title="facebook"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>                                                
-	        <li><a href="#" title="plurk"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" /></a></li>
-	        <li><a href="#" title="twitter"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" /></a></li>
-	        <li><a href="#" title="blog"><img src="<?php echo $theme_assets_uri;?>icon_blog.png" /></a></li>
-	        <li><a href="#" title="flickr"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  /></a></li>
-	        <li><a href="#" title="youtube"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
+        <li><a href="https://www.facebook.com/coscup" title="facebook"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
+        <li><a href="http://www.plurk.com/coscup" title="plurk"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" /></a></li>
+        <li><a href="https://twitter.com/coscup" title="twitter"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" /></a></li>
+        <li><a href="http://blog.coscup.org" title="blog"><img src="<?php echo $theme_assets_uri;?>icon_blog.png" /></a></li>
+        <li><a href="http://www.flickr.com/people/coscup/" title="flickr"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  /></a></li>
+        <li><a href="#" title="youtube"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
 	    </ul>
+      <nav id="nav-wrap">
         <ul id="mainNav">
           <?php echo $this->menu(1,2); ?>
           <li class="open"><a href="<?php echo $home_path.$this->current[0]."/openwall/";?>" title="OPEN">We (heart) Open.</a></li>
-   	  </ul>
-        
+        </ul>
+      </nav> 
     </div>
 </div>
 <!--Main-->
@@ -121,21 +138,61 @@ switch($this->current[0])
   </div>
 </div>
 </div>
+<!--social Mobile-->
+<ul class="sharing">
+  <li class="title">Follow Us!!<hr></li>
+  <li><a href="https://www.facebook.com/coscup"><img src="images/icon_fb.png" align="absmiddle" /><span>facebook</span></
+  <li><a href="http://www.plurk.com/coscup"><img src="images/icon_plurk.png" align="absmiddle" /><span>Plurk</span></a></
+  <li><a href="https://twitter.com/coscup"><img src="images/icon_twitter.png" align="absmiddle" /><span>twitter</span></a
+  <li><a href="http://blog.coscup.org"><img src="images/icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
+  <li><a href="http://www.flickr.com/people/coscup/"><img src="images/icon_flickr.png"  align="absmiddle" /><span>flickr</span></a></li
+  <li><a href="#"><img src="images/icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li
+</ul><!--social Mobile end-->
 <!--底-->
 <div id="footer">
 	<ul>
     	<li>© 2013 COSCUP |<a href="#"> 聯絡我們</a> | </li>
-        <li><a href="#">2006</a>|</li>
-        <li><a href="#">2007</a>|</li>
-        <li><a href="#">2008</a>|</li>
-        <li><a href="#">2009</a>|</li>
-        <li><a href="#">2010</a>|</li>
-        <li><a href="#">2011</a>|</li>
-        <li><a href="#">2012</a>|</li>
-        <div class="design">Design by <a href="http://www.lichenple.com">LICHENple</a></div>
+        <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
+        <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
+        <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
+        <li><a href="http://coscup.org/2009/zh-tw/" target="_blank">2009</a>|</li>
+        <li><a href="http://coscup.org/2010/" target="_blank">2010</a>|</li>
+        <li><a href="http://coscup.org/2011/zh-tw/" target="_blank">2011</a>|</li>
+        <li><a href="http://coscup.org/2012/zh-tw/" target="_blank" >2012</a>|</li>
+        <div class="design">Design by <a href="http://www.lichenple.com" target="_blank">LICHENple</a></div>
     </ul>
     
 </div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>script.js"></script></body>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>respond.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    /* prepend menu icon */
+    $('#nav-wrap').prepend('<div id="menu-icon"></div>');
+
+    /* toggle nav */
+    $("#menu-icon").on("click", function(){
+      $("#mainNav").slideToggle();
+      $(this).toggleClass("active");
+    });
+  });
+</script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>swipe.js"></script>
+<script>
+  // pure JS
+  var elem = document.getElementById('mySwipe');
+  window.mySwipe = Swipe(elem, {
+    // startSlide: 4,
+       auto: 3000,
+    // continuous: true,
+    // disableScroll: true,
+    // stopPropagation: true,
+    // callback: function(index, element) {},
+    // transitionEnd: function(index, element) {}
+  });
+
+  // with jQuery
+  // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+</script>
 </html>

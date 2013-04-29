@@ -37,7 +37,7 @@
     <!--u tube-->
     <div class="utube">
       <h1>COSCUP Youtube Channel</h1>
-      <div class="text"><iframe width="330" height="280" src="http://www.youtube.com/embed/dZs-OLcDfSs" frameborder="0" allowfullscreen></iframe></div>
+      <div class="text"><iframe width="330" height="280" src="http://www.youtube.com/embed/videoseries?list=PLqfib4St70XPyKy32xNrryEW7fC0y_qqA" frameborder="0" allowfullscreen></iframe></div>
       <div class="more"><a href="#">訂閱COSCUP 頻道 »</a></div>
     </div>
   </div>
