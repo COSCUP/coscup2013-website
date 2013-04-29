@@ -130,7 +130,7 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 				#mid .utube .more a:hover{color:#666;}
 		 
 	/*--右--*/
-	#sponsor{ width:177px; margin-left:25px; float:left}
+	#sponsor{ width:177px; margin-right: 17px; float: right}
 		#sponsor h2,#sponsor ul,#sponsor li{ float:left;} 
 		#sponsor h2{ width:177px; height:37px; font-size:17px; color:#fff; text-indent:15px; line-height:38px; background:#42cfda; margin:0; }
 		#sponsor ul{}
@@ -153,7 +153,7 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 /* pages
 --------------------------------------------------- */
 
-#content{ width:780px; float:left;}
+#content{ width:800px; float:left;}
 	#content h1{ font-size:20px; margin-bottom:17px;}
 	#content .article{ font-size:15px; line-height:28px;}
 		#content p{ font-size:15px; line-height:28px; margin:12px 0;}
