@@ -27,8 +27,8 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 
 /* ---Mobile Shut down----------*/
 .m_kv{ display:none;}
-#mySwipe{ display:none}
-.sharing{ display:none;}
+
+
 
 /* Main
 --------------------------------------------------- */
