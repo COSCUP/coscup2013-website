@@ -11,7 +11,7 @@ fieldset,img { border: none; }
 /* 基本
 --------------------------------------------------- */
 body {
-	background:url(../images/bg_main.jpg) repeat;
+	background:url(bg_main.jpg) repeat;
 	font: 12px/19px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 	color: #000;
 	}
@@ -46,7 +46,7 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 	.logo a{ 
 		width:100%; 
 		height:33px;
-		background:url(../images/mobile/logo.png) no-repeat center;
+		background:url(mobile/logo.png) no-repeat center;
 		display:block; 
 		text-indent:-9999px;
 		position:absolute; top:13px;
@@ -63,7 +63,7 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		
 #main{ 
 		width:100%; 
-		background:url(../images/bg_main.jpg) repeat;
+		background:url(bg_main.jpg) repeat;
 		float:left;
 		}
 		#main .wrap{ padding:0 15px; }
@@ -236,7 +236,7 @@ MOBILE
 		color: #000;
 		width: 30px;
 		height: 30px;
-		background: url(../images/mobile/menu-icon.png) no-repeat 10px center;
+		background: url(mobile/menu-icon.png) no-repeat 10px center;
 		padding: 8px 10px 0 42px;
 		cursor: pointer;
 		display: block; /* show menu icon */
