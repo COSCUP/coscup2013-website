@@ -103,7 +103,7 @@ if (isset($styles)) {
         <li><a href="https://twitter.com/coscup" title="twitter"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" /></a></li>
         <li><a href="http://blog.coscup.org" title="blog"><img src="<?php echo $theme_assets_uri;?>icon_blog.png" /></a></li>
         <li><a href="http://www.flickr.com/people/coscup/" title="flickr"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  /></a></li>
-        <li><a href="#" title="youtube"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
+        <li><a href="http://www.youtube.com/user/thecoscup?feature=watch" title="youtube"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
 	    </ul>
       <nav id="nav-wrap">
         <ul id="mainNav">
@@ -146,7 +146,7 @@ switch($this->current[0])
   <li><a href="https://twitter.com/coscup"><img src="images/icon_twitter.png" align="absmiddle" /><span>twitter</span></a
   <li><a href="http://blog.coscup.org"><img src="images/icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
   <li><a href="http://www.flickr.com/people/coscup/"><img src="images/icon_flickr.png"  align="absmiddle" /><span>flickr</span></a></li
-  <li><a href="#"><img src="images/icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li
+  <li><a href="http://www.youtube.com/user/thecoscup?feature=watch"><img src="images/icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li
 </ul><!--social Mobile end-->
 <!--底-->
 <div id="footer">
