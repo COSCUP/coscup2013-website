@@ -12,4 +12,4 @@ $contents = array(
   "openwall" => "Open"
 );
 
-$menu_hidden = array("index", "contact", "openwall");
+$menu_hidden = array("index", "openwall");

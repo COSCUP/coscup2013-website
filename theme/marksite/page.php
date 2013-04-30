@@ -23,17 +23,17 @@ switch($this->current[0])
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title><?php echo $title; ?> | 2013 COSCUP-Open x [Web | Mobile | Data]</title>
 
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="COMPANY" content="">
+<meta name="keywords" content="COSCUP, COSCUP2013, 開源人年會, Conference for Open Source Coders, Users and Promoters Open Source, Free Software, 自由軟體, 開放原始碼, 研討會, 社群, FLOSS">
+<meta name="description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
+<meta name="COMPANY" content="COSCUP">
 
 <!--fb shareing-->
 <meta property="og:title" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
-<meta name="og:description" content="" />
+<meta name="og:description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="" />
+<meta property="og:url" content="http://coscup.org/2013/" />
 <meta property="og:site_name" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
-<meta property="og:image" content="" />
+<meta property="og:image" content="http://coscup.org/2013-theme/assets/og-image.jpg" />
 
 <!--phone-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -63,6 +63,16 @@ if (isset($styles)) {
 
 <!-- GA -->
 <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12923351-1']);
+    _gaq.push(['_setDomainName', 'coscup.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 </script>
 </head>
 <body>
@@ -146,7 +156,7 @@ switch($this->current[0])
 <!--底-->
 <div id="footer">
 	<ul>
-    	<li>© 2013 COSCUP |<a href="#"> 聯絡我們</a> | </li>
+    	<li>© 2013 COSCUP |<a href="<?php echo $home_path.$this->current[0]."/contact/"?>"> 聯絡我們</a> | </li>
         <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
         <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
         <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
