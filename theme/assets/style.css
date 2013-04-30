@@ -107,27 +107,27 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		#left .whatiscoscup{width:430px;}
 		
 	/*--中--*/	
-	#mid{ width:330px; margin-left:25px;  float:left}
-		#mid .fb,#mid .socialbuzz,#mid .utube{ margin-bottom:20px; float:left}
+	#sidebar2{ width:330px; margin-left:25px;  float:left}
+		#sidebar2 .fb,#sidebar2 .socialbuzz,#sidebar2 .utube{ margin-bottom:20px; float:left}
 		
-		#mid .fb{ width:300px; height:65px; border:1px #CCC solid; padding:15px; }
+		#sidebar2 .fb{ width:300px; height:65px; border:1px #CCC solid; padding:15px; }
 		
-		#mid .socialbuzz{ width:330px;}
-			#mid .socialbuzz h1{ width:330px; height:37px; text-indent:15px; margin:0; line-height:35px; background:#42cfda; color:#fff;}
-				#mid .socialbuzz h1 em{ font-size:12px;}
-			#mid .socialbuzz .text{ width:330px; background:#c9f2f5; }
-			  #mid .socialbuzz .text > ul { line-height: 16px; margin: 0; padding: 0 1em 0 2em; text-align: left; }
-			    #mid .socialbuzz .text > ul li {list-style: square outside none; padding: 6px;}
-			    #mid .socialbuzz .text > ul .meta {display: block; text-align: right; }
-			#mid .socialbuzz .more{ width:322px; height:25px; text-align:right; padding:5px 8px 0 0; background:#afeff5; float:left;}
-				#mid .socialbuzz .more a{ color:#000; font-size:11px;}
-				#mid .socialbuzz .more a:hover{ color:#666;}
+		#sidebar2 .socialbuzz{ width:330px;}
+			#sidebar2 .socialbuzz h1{ width:330px; height:37px; text-indent:15px; margin:0; line-height:35px; background:#42cfda; color:#fff;}
+				#sidebar2 .socialbuzz h1 em{ font-size:12px;}
+			#sidebar2 .socialbuzz .text{ width:330px; background:#c9f2f5; }
+			  #sidebar2 .socialbuzz .text > ul { line-height: 16px; margin: 0; padding: 0 1em 0 2em; text-align: left; }
+			    #sidebar2 .socialbuzz .text > ul li {list-style: square outside none; padding: 6px;}
+			    #sidebar2 .socialbuzz .text > ul .meta {display: block; text-align: right; }
+			#sidebar2 .socialbuzz .more{ width:322px; height:25px; text-align:right; padding:5px 8px 0 0; background:#afeff5; float:left;}
+				#sidebar2 .socialbuzz .more a{ color:#000; font-size:11px;}
+				#sidebar2 .socialbuzz .more a:hover{ color:#666;}
 			
-			#mid .utube{width:330px; height:370px;}
-				#mid .utube h1{height:37px; text-indent:15px; margin:0; line-height:35px; background:#42cfda; color:#fff;}
-				#mid .utube .more {width:322px; height:25px; text-align:right; padding:5px 8px 0 0; background:#afeff5; float:left;}
-				#mid .utube .more a{color:#000; font-size:11px;}
-				#mid .utube .more a:hover{color:#666;}
+			#sidebar2 .utube{width:330px; height:370px;}
+				#sidebar2 .utube h1{height:37px; text-indent:15px; margin:0; line-height:35px; background:#42cfda; color:#fff;}
+				#sidebar2 .utube .more {width:322px; height:25px; text-align:right; padding:5px 8px 0 0; background:#afeff5; float:left;}
+				#sidebar2 .utube .more a{color:#000; font-size:11px;}
+				#sidebar2 .utube .more a:hover{color:#666;}
 		 
 	/*--右--*/
 	#sponsor{ width:177px; margin-right: 17px; float: right}
