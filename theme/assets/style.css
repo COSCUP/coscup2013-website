@@ -157,8 +157,9 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 	#content h1{ font-size:20px; margin-bottom:17px;}
 	#content .article{ font-size:15px; line-height:28px;}
 		#content p{ font-size:15px; line-height:28px; margin:12px 0;}
-		
-		
+      #content p .ab01{  float:left; margin:0 10px 10px 0;}
+      #content p .ab02{  float:right; margin:0 0px 10px 10px;}
+
 	/* sponsor------ */
 	.splist{ width:780px; margin-bottom:35px; float:left}
 	.splist img{ margin:5px 18px 0 0; float:left}

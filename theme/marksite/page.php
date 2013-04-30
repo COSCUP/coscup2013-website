@@ -54,10 +54,10 @@ switch($this->current[0])
 
 
 <!--phone-->
-<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <link rel="apple-touch-icon" href="<?php echo $theme_assets_uri;?>ios-fav.jpg" />
-<link media="only screen and (max-width:685px)" href="<?php echo $theme_assets_uri;?>mobile.css" type= "text/css" rel="stylesheet" />
-<link media="screen and (min-width:686px)" href="<?php echo $theme_assets_uri;?>style.css" type="text/css" rel="stylesheet" />
+<link media="only screen and (max-width:768px)" href="<?php echo $theme_assets_uri;?>mobile.css" type= "text/css" rel="stylesheet" />
+<link media="screen and (min-width:769px)" href="<?php echo $theme_assets_uri;?>style.css" type="text/css" rel="stylesheet" />
 <?php
 if (isset($styles)) {
   foreach ( $styles as $file ) {
