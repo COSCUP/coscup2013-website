@@ -92,11 +92,8 @@ if (isset($styles)) {
     <div class="wrap">
    	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2013</a></div>
       	<ul id="lan">
-	    	<li><a href="#">EN</a></li>                                                
-	        <li><a href="#">簡中</a></li>
-	        <li><a href="#">正體</a></li>
-	        <li><a href="#">日文</a></li>
-	    </ul>
+          <li><a href="#">正體</a></li>
+        </ul>
 	    <ul id="social">
         <li><a href="https://www.facebook.com/coscup" title="facebook"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
         <li><a href="http://www.plurk.com/coscup" title="plurk"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" /></a></li>
