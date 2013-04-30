@@ -52,10 +52,6 @@ switch($this->current[0])
 
 
 <!--phone-->
-<meta name="viewport" content="width=320" />
-<meta name="viewport" content="width=480" />
-<meta name="viewport" content="width=600" />
-<meta name="viewport" content="width=685" />
 <meta name="viewport" content="width=device-width" />
 <link rel="apple-touch-icon" href="<?php echo $theme_assets_uri;?>ios-fav.jpg" />
 <link media="only screen and (max-width:685px)" href="<?php echo $theme_assets_uri;?>mobile.css" type= "text/css" rel="stylesheet" />
