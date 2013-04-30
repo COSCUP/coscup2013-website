@@ -35,24 +35,6 @@ switch($this->current[0])
 <meta property="og:site_name" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
 <meta property="og:image" content="" />
 
-<!--RWD Revise-->
-<!--[if lt IE 7]>
-<style type="text/css">
-  body { overflow: hidden; }
-  #wrapper { height: 100%; overflow: auto; }
-  #fixed { position: absolute; right: 17px; }
-</style>
-<![endif]-->
-
-<!--[if lt IE 8]>
-<style type="text/css">
-  body { overflow: hidden; }
-  #wrapper { height: 100%; overflow: auto; }
-  #fixed { position: absolute; right: 17px; }
-</style>
-<![endif]-->
-
-
 <!--phone-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <link rel="apple-touch-icon" href="<?php echo $theme_assets_uri;?>ios-fav.jpg" />
