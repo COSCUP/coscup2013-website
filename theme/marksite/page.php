@@ -93,9 +93,6 @@ if (isset($styles)) {
 <!--Main-->
 <div id="main">
 <div class="wrap">
-  <div id="content">
-  <?php echo $transformed; ?>
-  </div>
   <!--Sponsor-->
   <div id="sponsor">
 <?php
@@ -112,6 +109,27 @@ switch($this->current[0])
     break;
 }
 ?>
+  </div>
+  <div id="mySwipe" style='max-width:500px;margin:0 auto' class="swipe">
+    <div class='swipe-wrap'>
+<?php
+switch($this->current[0])
+{
+  /* case "zh-tw": */
+  /*   echo $this->block['sponsors-zh-tw']; */
+  /*   break; */
+  /* case "zh-cn": */
+  /*   echo $this->block['sponsors-zh-cn']; */
+  /*   break; */
+  default:
+    echo $this->block['sponsors-mobile'];
+    break;
+}
+?>
+    </div>
+  </div>
+  <div id="content">
+    <?php echo $transformed; ?>
   </div>
 </div>
 </div>
