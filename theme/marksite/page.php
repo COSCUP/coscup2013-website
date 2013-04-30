@@ -136,7 +136,7 @@ switch($this->current[0])
 <!--social Mobile-->
 <ul class="sharing">
   <li class="title">Follow Us!!<hr></li>
-  <li><a href="https://www.facebook.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_fb.png" align="absmiddle" /><span>facebook</span></li>
+  <li><a href="https://www.facebook.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_fb.png" align="absmiddle" /><span>facebook</span></a></li>
   <li><a href="http://www.plurk.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" align="absmiddle" /><span>Plurk</span></a></li>
   <li><a href="https://twitter.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" align="absmiddle" /><span>twitter</span></a></li>
   <li><a href="http://blog.coscup.org"><img src="<?php echo $theme_assets_uri;?>icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
