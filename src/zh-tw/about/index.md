@@ -1,4 +1,4 @@
-## 關於活動
+# 關於活動
 
 <img src="images/a01.jpg" class="ab01">傳統商業軟體的開發者 (coders) 和使用者 (users) 很少交流，是大家都接受的事實。
 
