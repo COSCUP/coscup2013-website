@@ -3,7 +3,7 @@
     <div class="contributor">
       <span class="date">貢獻者報名專案</span><span class="call"><a href="http://registrano.com/events/coscup2013-osc-vip?utm_source=coscupweb&utm_medium=middlelinks&utm_campaign=landing">立即報名</a></span>
     </div>
-    <div class="register">
+    <div class="register" style="display:none;">
       <span class="date"><em>6</em>月<em>3</em>日開放報名</span><span class="call"><a href="http://registrano.com/events/coscup2013-regist">立即報名</a></span>
     </div>
     <!--news-->
