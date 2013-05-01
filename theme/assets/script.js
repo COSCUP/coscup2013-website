@@ -53,7 +53,7 @@ jQuery(function ($) {
             // skip external links
             if (
               this.hostname !== window.location.hostname
-              || !/2012/.test(this.pathname)
+              || !/2013/.test(this.pathname)
               || !(new RegExp(lang)).test(this.pathname.toLowerCase())
               || this.getAttribute('href').substr(0, 1) === '#'  // just a hash link
               || (/nocache/.test(this.getAttribute('rel')))
@@ -149,7 +149,7 @@ jQuery(function ($) {
 
       // mobile layout
       if (window._gaq)
-        _gaq.push(['_trackEvent', 'Mobile 2012', window.location.href]);
+        _gaq.push(['_trackEvent', 'Mobile 2013', window.location.href]);
 
       // Make sure we give back the desktop stuff if the user
       // had load the page in mobile layout but then resize the window
@@ -265,14 +265,14 @@ jQuery(function ($) {
   $('.sponsors a, #mobileSponsorLogo a').live(
     'click',
     function () {
-      if (window._gaq) _gaq.push(['_trackEvent', 'Sponsors 2012', this.href]);
+      if (window._gaq) _gaq.push(['_trackEvent', 'Sponsors 2013', this.href]);
       return true;
     }
   );
   $('#mobileSponsorLogo a').live(
     'click',
     function () {
-      if (window._gaq) _gaq.push(['_trackEvent', 'Sponsors 2012 (Mobile only)', this.href]);
+      if (window._gaq) _gaq.push(['_trackEvent', 'Sponsors 2013 (Mobile only)', this.href]);
       return true;
     }
   );
@@ -618,7 +618,7 @@ jQuery(function ($) {
       return;
 
     if (window.location.hostname === 'ipv6.coscup.org') {
-        if (window._gaq) _gaq.push(['_trackEvent', 'IPv6 2012', 'connected']);
+        if (window._gaq) _gaq.push(['_trackEvent', 'IPv6 2013', 'connected']);
       $('#ipv6block').addClass('show').append(
         '<h2>IPv6 Connectivity</h2>'
         + '<p>You are currently using IPv6 connection.</p>'
@@ -628,7 +628,7 @@ jQuery(function ($) {
         // See http://ipv6-test.com/api/
         'http://v6.ipv6-test.com/api/myip.php?json&callback=?',
         function (data) {
-          if (window._gaq) _gaq.push(['_trackEvent', 'IPv6 2012', 'ready but not connected']);
+          if (window._gaq) _gaq.push(['_trackEvent', 'IPv6 2013', 'ready but not connected']);
           $('#ipv6block').addClass('show').append(
             '<h2>Connect using IPv6</h2>'
             + '<p>Your network is IPv6 ready. Try it now by connect to <a href="http://ipv6.coscup.org/">ipv6.coscup.org</a>.</p>'
@@ -969,7 +969,7 @@ jQuery(function ($) {
 
         if ($div.hasClass('moving')) return false;
 
-        if (window._gaq) _gaq.push(['_trackEvent', 'Program 2012', this.hash]);
+        if (window._gaq) _gaq.push(['_trackEvent', 'Program 2013', this.hash]);
 
         // For mobile
         $(this).toggleClass('expend');
