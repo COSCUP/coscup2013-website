@@ -16,7 +16,7 @@
     <div class="info">
       <h1>COSCUP 2013 議程介紹</h1>
       <div class="text">
-        COSCUP 2013 的主題定為：Open x [Web, Mobile, Data]。2013 年是一個開放平台以及開放資料熱烈討論的一年，從 Android 的持續開發，到新一代開放源碼平台如 Firefox OS, Tizen, Sailfish OS 與 Ubuntu Touch 雨後春筍般地出現；而開放資料則由美國政府開始大力推廣後，其他各國的開放資料平台也逐漸浮出台面。這些都代表著科技以及資訊的趨勢都往開放的道路前進。這也是 COSCUP 2013 議程的三個大方向為 Open Web, Open Mobile 以及 Open Data 作為主軸的重要因素。因為開放的力量，政府能讓公眾資訊更有效率的利用，企業能利用開放平台共同創造影響力，民眾則有更多元的資訊以及選擇。
+        COSCUP 2013 的主題定為：Open x [Web, Mobile, Data]。2013 年是一個開放平台以及開放資料熱烈討論的一年，從 Android 的持續開發，到新一代開放源碼平台如 Firefox OS、Tizen、Sailfish OS 與 Ubuntu Touch 雨後春筍般地出現；而開放資料則由美國政府開始大力推廣後，其他各國的開放資料平台也逐漸浮出台面。這些都代表著科技以及資訊的趨勢都往開放的道路前進。這也是 COSCUP 2013 議程的三個大方向為 Open Web、Open Mobile 以及 Open Data 作為主軸的重要因素。因為開放的力量，政府能讓公眾資訊更有效率的利用，企業能利用開放平台共同創造影響力，民眾則有更多元的資訊以及選擇。
       </div>
     </div>
     <!--what is coscup-->
