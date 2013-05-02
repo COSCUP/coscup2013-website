@@ -1,4 +1,4 @@
-## 聯絡我們
+# 聯絡我們
 
 * 贊助相關事宜：<sponsorship@coscup.org>
 * 議程相關事宜：<program@coscup.org>
