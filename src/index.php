@@ -25,23 +25,23 @@ if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 }
 
 // look through sorted list and use first one that matches our languages
-//foreach ($langs as $lang => $val) {
-//        switch("$lang")
-//        {
-//                case 'zh-tw':
-//                        header("Location: zh-tw/");
-//                        return;
+foreach ($langs as $lang => $val) {
+        switch("$lang")
+        {
+                case 'zh-tw':
+                        header("Location: zh-tw/");
+                        return;
 //                case 'zh-cn':
 //                        header("Location: zh-cn/");
 //                        return;
 //                case 'zh':
 //                        header("Location: zh-tw/");
 //                        return;
-//                case 'en':
-//                        header("Location: en/");
-//                        return;
-//        }
-//}
+                case 'en':
+                        header("Location: en/");
+                        return;
+        }
+}
 
-header("Location: zh-tw/");
+//header("Location: zh-tw/");
 return;
