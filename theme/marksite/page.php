@@ -119,6 +119,20 @@ switch($this->current[0])
     break;
 }
 ?>
+<?php
+switch($this->current[0])
+{
+/*  case "zh-cn":
+    echo $this->block['sponsors-after-zh-cn'];
+    break;
+  default:
+    echo $this->block['sponsors-after'];
+    break;*/
+  default:
+    echo $this->block['sponsors-after'];
+    break;
+}
+?>
   </div>
   <div id="mySwipe" style='max-width:500px;margin:0 auto' class="swipe">
     <div class='swipe-wrap'>
