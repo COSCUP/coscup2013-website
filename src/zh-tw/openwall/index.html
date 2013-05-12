@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Open 牆 - COSCUP 2013</title>
+    <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
+    <link href='http://fonts.googleapis.com/css?family=Corben:bold' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="title" content="COSCUP 2013: Aug 3rd - 4th" />
+    <meta name="keywords" content="COSCUP, COSCUP2013, 開源人年會, Conference for Open Source Coders, Users and Promoters Open Source, Free Software, 自由軟體, 開放原始碼, 研討會, 社群, FLOSS">
+    <meta name="description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
+    <meta name="COMPANY" content="COSCUP">
+
+    <!--fb shareing-->
+    <meta property="og:title" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
+    <meta name="og:description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://coscup.org/2013-landingpage/" />
+    <meta property="og:site_name" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
+    <meta property="og:image" content="http://coscup.org/2013-landingpage/images/og-image.jpg" />
+
+    <!--phone-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <link rel="apple-touch-icon" href="coscup-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="coscup-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="coscup-icon-iphone4.png" />
+
+    <!--[if IE 8]> <script type="text/javascript" src="css3-mediaqueries.js"></script><![endif]-->
+    <!--[if IE 8]><link href="css/ie8-fix.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!--site css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/openwall.css?0401" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+        <div id="openwall" class="page current">
+          <div id="panel-container">
+            <div class="logo"><a href="http://coscup.org/2013/">COSCUP2013</a></div>
+            <div id="panel"></div>
+            <ul id="sharing">
+              <li class="title">Follow Us!<hr></li>
+              <li><a href="https://www.facebook.com/coscup"><img src="images/social_fb.png" /><span>facebook</span></a></li>
+              <li><a href="http://www.plurk.com/coscup"><img src="images/social_plurk.png" /><span>Plurk</span></a></li>
+              <li><a href="https://twitter.com/coscup"><img src="images/social_twitter.png" /><span>tiwtter</span></a></li>
+              <li><a href="http://blog.coscup.org"><img src="images/social_blog.png" /><span>Blog</span></a></li>
+            </ul>
+            <div style="clear: both;"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.openwall.js"></script>
+        <script type="text/javascript">
+          jQuery(function ($) {
+
+            <!-- hide browser address -->
+            //setTimeout(function() { window.scrollTo(0, 1); }, 10);
+
+            var options = {
+              imageDir: 'photo/',
+          mobile: false
+            };
+
+          function initState() {
+            var sAgent = navigator.userAgent.toLowerCase();
+            if (sAgent.indexOf("msie") == -1 && !this.isIE) {
+              var mq = window.matchMedia("(max-width: 360px)");
+              options.mobile = (mq.matches)? true: false;
+            }
+            if (navigator.userAgent.match(/(Android|iPhone|iPod|iPad|IEMobile|B2G)/)) {
+              options.mobile = true;
+              //XXX fallback plan?
+            }
+
+            $('#panel').empty().openWall(options);
+          }
+
+          $(window).resize(function() {
+            initState();
+          });
+          initState();
+
+          options.mobile && $('#openwall').hide(0);
+          $('#btn_open a').click(function(e) {
+            onButtonClick(e, '#mainpage', '#openwall');
+          });
+          $('#btn_back a').click(function(e) {
+            onButtonClick(e, '#openwall', '#mainpage');
+          });
+
+          $('#callforphoto .title').click(function() {
+            $('#callforphoto .content').toggle('slow');
+          });
+
+          });
+
+        </script>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-12923351-1']);
+          _gaq.push(['_setDomainName', 'coscup.org']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+      </body>
+    </html>
