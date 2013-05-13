@@ -34,14 +34,14 @@ foreach ($langs as $lang => $val) {
 //                case 'zh-cn':
 //                        header("Location: zh-cn/");
 //                        return;
-//                case 'zh':
-//                        header("Location: zh-tw/");
-//                        return;
-                case 'en':
-                        header("Location: en/");
+                case 'zh':
+                        header("Location: zh-tw/");
                         return;
+                // case 'en':
+                        // header("Location: en/");
+                        // return;
         }
 }
 
-//header("Location: zh-tw/");
+header("Location: zh-tw/");
 return;
