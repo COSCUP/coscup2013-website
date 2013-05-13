@@ -8,7 +8,7 @@ $langs = array();
 
 if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
         // break up string into pieces (languages and q factors)
-        preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $lang_parse);
+        preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i', strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']), $lang_parse);
 
         if (count($lang_parse[1])) {
                 // create a list like "en" => 0.8
@@ -34,14 +34,14 @@ foreach ($langs as $lang => $val) {
 //                case 'zh-cn':
 //                        header("Location: zh-cn/");
 //                        return;
-//                case 'zh':
-//                        header("Location: zh-tw/");
-//                        return;
-                case 'en':
-                        header("Location: en/");
+                case 'zh':
+                        header("Location: zh-tw/");
                         return;
+                // case 'en':
+                        // header("Location: en/");
+                        // return;
         }
 }
 
-//header("Location: zh-tw/");
+header("Location: zh-tw/");
 return;
