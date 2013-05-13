@@ -33,7 +33,7 @@
     <div class="socialbuzz">
       <h1>Social Buzz <em>(Tag: #coscup)</em></h1>
       <div id="socialbuzz" class="text"></div>
-      <div class="more">更多：<a href="https://twitter.com/search?q=%23coscup">Twitter</a>、<a href="http://www.plurk.com/psearch#q=COSCUP">噗浪</a> »</div>
+      <div class="more">更多：<a target="_blank" href="https://twitter.com/search?q=%23coscup">Twitter</a>、<a target="_blank" href="http://www.plurk.com/psearch#q=COSCUP">噗浪</a> »</div>
     </div>
     <!--u tube-->
     <div class="utube">
