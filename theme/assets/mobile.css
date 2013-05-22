@@ -166,6 +166,50 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		#content .news .title{ width:95%;font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif; font-weight:bold; color:#000; margin:10px 0;float:left;}
 		#content .news .text{ font-size:15px; line-height:28px;}
 
+/* program------ */		
+h2.pro{ width:100%; margin-bottom:18px; float:left}
+.track{ width:100%; min-height:40px; background:#fff; float:left;}
+	.track_push{ display:none;}
+	.track ul{font-size:15px; line-height:25px;  float:left}
+	.track li{ padding:8px; padding-right:12px;float:left}
+	.class_tag{ display:none}
+	
+	
+.time{ width:95%; height:32px;  background:#666; color:#fff; padding-left:15px; font-size:16px; line-height:28px;float:left}
+.time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width:100%; float:left;}
+.article{ width:93%; border:1px #d5d5d5 solid ; border-bottom:0; border-top:0; min-height:25px; text-align:center; padding:20px 10px 10px 10px; float:left}
+	.article .title{ color:#000; font-size:14px; font-weight:bold;}
+	.article .last{ margin-right:0}
+
+.track_tag{ display:none;}
+.t0{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
+	.t0 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
+	.t0 .title{  margin-bottom:5px; }
+	.t0 .name{ color:#666; font-size:12px;}
+	.t0 .text{color:#666;}
+	.t0 .camera{ position:absolute; top:5px; right:5px;}
+	
+.t1{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
+	.t1 .place{font-weight:bold; margin-bottom:8px; color:#999;}
+	.t1 .title{  margin-bottom:5px; }
+	.t1 .name{ color:#666; font-size:12px;}
+	.t1 .text{color:#666;}
+	.t1 .camera{ position:absolute; top:5px; right:5px;}
+	.t1 .ps{color:#900; bottom:5px;}
+	
+/**Color Tag**/
+	.red{ background:#f00;}
+	.green01{ background:#73ff00;}
+	.blue01{ background:#00ffff;}
+	.pruple{ background:#4800a2;}
+	.orange{ background:#ff7300;}
+	.green02{ background:#339333;}
+	.blue02{ background:#57a1ff;}
+	.pink01{ background:#c420c4;}
+	.blue02{ background:#1e1eb0;}
+	.blue03{ background:#399a9a;}
+	.yellow{ background:#f2f22f;}
+	.pink02{ background:#f04e97;}
 
 /************************************************************************************
 mobile
@@ -513,7 +557,50 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		#content .news .title{ width:95%;font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif; font-weight:bold; color:#000; margin:10px 0;float:left;}
 		#content .news .text{ font-size:15px; line-height:28px;}
 
+/* program------ */		
+h2.pro{ width:100%; margin-bottom:18px; float:left}
+.track{ width:100%; min-height:40px; background:#fff; float:left;}
+	.track_push{ display:none;}
+	.track ul{font-size:15px; line-height:25px;  float:left}
+	.track li{ padding:8px; padding-right:12px;float:left}
+	.class_tag{ display:none}
+	
+	
+.time{ width:95%; height:32px;  background:#666; color:#fff; padding-left:15px; font-size:16px; line-height:28px;float:left}
+.time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width:100%; float:left;}
+.article{ width:94%; border:1px #d5d5d5 solid ; border-bottom:0; border-top:0; min-height:25px; text-align:center; padding:20px 10px 10px 10px; float:left}
+	.article .title{ color:#000; font-size:14px; font-weight:bold;}
+	.article .last{ margin-right:0}
 
+.track_tag{ display:none;}
+.t0{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
+	.t0 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
+	.t0 .title{  margin-bottom:5px; }
+	.t0 .name{ color:#666; font-size:12px;}
+	.t0 .text{color:#666;}
+	.t0 .camera{ position:absolute; top:5px; right:5px;}
+	
+.t1{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
+	.t1 .place{font-weight:bold; margin-bottom:8px; color:#999;}
+	.t1 .title{  margin-bottom:5px; }
+	.t1 .name{ color:#666; font-size:12px;}
+	.t1 .text{color:#666;}
+	.t1 .camera{ position:absolute; top:5px; right:5px;}
+	.t1 .ps{color:#900; bottom:5px;}
+	
+/**Color Tag**/
+	.red{ background:#f00;}
+	.green01{ background:#73ff00;}
+	.blue01{ background:#00ffff;}
+	.pruple{ background:#4800a2;}
+	.orange{ background:#ff7300;}
+	.green02{ background:#339333;}
+	.blue02{ background:#57a1ff;}
+	.pink01{ background:#c420c4;}
+	.blue02{ background:#1e1eb0;}
+	.blue03{ background:#399a9a;}
+	.yellow{ background:#f2f22f;}
+	.pink02{ background:#f04e97;}
 /************************************************************************************
 mobile
 *************************************************************************************/
