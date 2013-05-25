@@ -175,4 +175,69 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		#content .news .title{ width:95%;font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif; font-weight:bold; color:#000; margin:10px 0;float:left;}
 		#content .news .text{ font-size:15px; line-height:28px;}
 
+	/* Program------ */
+h2.pro{ width:780px; margin-bottom:18px; float:left}
+.track{ width:780px; height:40px; background:#fff; float:left;}
+	.track_push{ width:40%; font-size:15px; padding:8px; float:left}
+	.track_push a{border-right: 1px #CCC solid; display:block} 
+	.track ul{font-size:15px; line-height:25px;  float:left}
+	.track li{ padding:8px; padding-right:18px;float:left}
+	
+	.class_tag{ width:750px; padding:15px; display:none; background:#e8e8e8; float:left }
+	.class_tag li{ width:30%; margin-bottom:8px; line-height:22px; float:left}
+	.class_tag em{ width:5px; height:20px; margin-right:8px; float:left}
+	
+	.f-nav{z-index: 9999; position: fixed;  top: 0; border-bottom:1px solid #CCC}
+	
+.time{ width:765px; height:32px;  background:#666; color:#fff; padding-left:15px; font-size:16px; line-height:28px;float:left}
+.time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width:100%; float:left;}
+.article{ width:758px; border:1px #d5d5d5 solid ; border-bottom:0; border-top:0; min-height:25px; text-align:center; padding:20px 10px 10px 10px; float:left}
+	.article .title{ color:#000; font-size:14px; font-weight:bold;}
+	.article .last{ margin-right:0}
+
+.track_tag{ width:3px; min-height:90px; padding:1px; margin-right:15px; float:left;}
+.t0{ width:47%; position:relative; min-height:80px; padding:5px; padding-left:1px; margin:0 20px 15px 0; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
+.t0:hover{ background:#ebebeb}
+	.t0 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
+	.t0 .title{ width:150px;min-height:63px; margin-right:10px; float:left;}
+	.t0 .name{ color:#666; font-size:12px;}
+	.t0 .text{color:#666;}
+	.t0 .camera{ position:absolute; top:5px; right:5px;}
+	
+.t1{ width:98%; position:relative; min-height:80px; padding:5px; padding-left:1px; margin:0 20px 15px 0; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
+.t1:hover{ background:#ebebeb}
+	.t1 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
+	.t1 .title{ width:150px;min-height:63px; margin-right:10px; float:left;}
+	.t1 .name{ color:#666; font-size:12px;}
+	.t1 .text{color:#666;}
+	.t1 .camera{ position:absolute; top:5px; right:5px;}
+	.t1 .ps{ position:absolute; right:5px; color:#900; bottom:5px;}
+	
+/**Color Tag**/
+
+	.red{ background:#f00;}
+	.green01{ background:#73ff00;}
+	.blue01{ background:#00ffff;}
+	.pruple{ background:#4800a2;}
+	.orange{ background:#ff7300;}
+	.green02{ background:#339333;}
+	.blue02{ background:#57a1ff;}
+	.pink01{ background:#c420c4;}
+	.blue02{ background:#1e1eb0;}
+	.blue03{ background:#399a9a;}
+	.yellow{ background:#f2f22f;}
+	.pink02{ background:#f04e97;}
+	
+	
+/**program View**/	
+#pg_v{ font-size:15px; line-height:28px;}
+	#pg_v .head{ width:100%; background:#fff;}
+	#pg_v .place{ width:200px; padding:15px; border-right:1px #ebebeb solid; float:left; margin-bottom:10px; margin-right:15px;}
+	#pg_v .name{  color:#000; font-weight:bold;}
+	#pg_v .exp{margin-bottom:10px; font-size:12px;color:#666;}
+	#pg_v .text{ margin-bottom:10px; padding-top:15px; border-top:1px #ebebeb solid; clear:both;}
+	#pg_v .backtolist a{ width:100px; color:#000; margin-top:10px; text-align:center; padding:4px; font-size:13px; border:1px #333 solid; display:block;}
+		#pg_v .backtolist a:hover{ background:#ebebeb;}
+		
+			
 	
