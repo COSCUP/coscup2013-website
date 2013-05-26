@@ -29,36 +29,39 @@ define('RUNNING_USER', 'www-data');
 
 $sponsors_output = array(
 	"sidebar" => array(
-		"zh-tw" => "src/blocks/sponsors-zh-tw.html",
-		"zh-cn" => "src/blocks/sponsors-zh-cn.html",
-		"en" => "src/blocks/sponsors.html"
+		"zh-tw" => "../src/blocks/sponsors-zh-tw.html",
+		"zh-cn" => "../src/blocks/sponsors-zh-cn.html",
+		"en" => "../src/blocks/sponsors-en.html"
+	),
+	"mobile-sidebar" => array(
+		"zh-tw" => "../src/blocks/sponsors-mobile.html"
 	),
 	"page" => array(
-		"zh-tw" => "src/zh-tw/sponsors/index.md",
-		"zh-cn" => "src/zh-cn/sponsors/index.md",
-		"en" => "src/en/sponsors/index.md"
+		"zh-tw" => "../src/zh-tw/sponsors/index.md",
+		"zh-cn" => "../src/zh-cn/sponsors/index.md",
+		"en" => "../src/en/sponsors/index.md"
 	)
 );
 
 $program_list_output = array(
 	"zh-tw" => array(
-		"program" => "src/zh-tw/program/testing/index.html",
-		"abstract" => "src/zh-tw/program/testing/abstract/index.html"
+		"program" => "../src/zh-tw/program/testing/index.html",
+		"abstract" => "../src/zh-tw/program/testing/abstract/index.html"
 		),
 	"zh-cn" => array(
-		"program" => "src/zh-cn/program/testing/index.html",
-		"abstract" => "src/zh-cn/program/testing/abstract/index.html"
+		"program" => "../src/zh-cn/program/testing/index.html",
+		"abstract" => "../src/zh-cn/program/testing/abstract/index.html"
 		),
 	"en" => array(
-		"program" => "src/en/program/testing/index.html",
-		"abstract" => "src/en/program/testing/abstract/index.html"
+		"program" => "../src/en/program/testing/index.html",
+		"abstract" => "../src/en/program/testing/abstract/index.html"
 		)
 );
 
 
 $json_output = array(
 	"menu" => "tmp/api/menu/menu.json.js",
-	"sponsors" => "src/api/sponsors/sponsors.json.js",
-	"program" => "src/api/program/program.json.js"
+	"sponsors" => "tmp/api/sponsors/sponsors.json.js",
+	"program" => "tmp/api/program/program.json.js"
 );
 

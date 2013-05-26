@@ -18,6 +18,12 @@ if ( trim(exec('whoami')) !== RUNNING_USER )
 	die("Error: Please run with the specified user: ".RUNNING_USER);
 }
 
+print ("= Create ".TMP_PATH."/api folder structure =\n");
+system("rm -rf ".escapeshellarg(TMP_PATH));
+mkdir(dirname($json_output['menu']), 0777, true);
+mkdir(dirname($json_output['sponsors']), 0777, true);
+mkdir(dirname($json_output['program']), 0777, true);
+
 $cwd = getcwd();
 
 function recompile_and_sync()

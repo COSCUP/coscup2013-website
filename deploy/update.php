@@ -48,11 +48,11 @@ print ("\n");
 	print ("= Syncing Theme =\n");
 	system ('rsync -av --delete ' . THEME_PATH.'drupal/' . ' ' . CMS_THEME_PATH . ' 2>&1');
 	print ("\n");
-}
+}*/
 
-/* print ("= Updating GDoc =\n"); */
-/* include ("update-gdoc-functions.php"); */
-/* print ("\n"); */
+print ("= Updating GDoc =\n");
+include ("update-gdoc-functions.php");
+print ("\n");
 
 
 recompile_and_sync();

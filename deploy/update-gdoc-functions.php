@@ -516,16 +516,20 @@ function get_sponsors_list_from_gdoc() {
 			$SPONS[$level] = array();
 		}
 
-		$SPON_obj = array(
-			'name' => array(
-				'zh-tw' => $SPON[0]
-			),
-			'desc' => array(
-				'zh-tw' => Markdown_Without_Markup($SPON[4])
-			),
-			'url' => $SPON[2],
-			'logoUrl' => $SPON[3],
-		);
+    // only show the sponsor who has logo image
+    if (trim($SPON[3]) === "") continue;
+    
+    $SPON_obj = array(
+      'name' => array(
+        'zh-tw' => $SPON[0]
+      ),
+      'desc' => array(
+        'zh-tw' => Markdown_Without_Markup($SPON[4])
+      ),
+      'url' => $SPON[2],
+      'logoUrl' => $SPON[3],
+    );
+    
 
 		if (trim($SPON[5]))
 		{
@@ -572,21 +576,24 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'gold' => 'Gold Level Sponsors',
 			'silver' => 'Silver Level Sponsors',
 			'bronze' => 'Bronze Level Sponsors',
-			'media' => 'Media Partners'
+      'media' => 'Media Partners',
+      'special' => 'Special Thanks'
 		),
 		'zh-tw' => array(
 			'diamond' => '鑽石級贊助',
 			'gold' => '黃金級贊助',
 			'silver' => '白銀級贊助',
 			'bronze' => '青銅級贊助',
-			'media' => '媒體夥伴'
+      'media' => '媒體夥伴',
+      'special' => '特別感謝'
 		),
 		'zh-cn' => array(
 			'diamond' => '钻石级赞助商',
-                        'gold' => '黄金级赞助',
-                        'silver' => '白银级赞助',
-                        'bronze' => '青铜级赞助',
-                        'media' => '媒体伙伴'
+      'gold' => '黄金级赞助',
+      'silver' => '白银级赞助',
+      'bronze' => '青铜级赞助',
+      'media' => '媒体伙伴',
+      'special' => '特别感谢'
 		)
 	);
 
@@ -600,68 +607,100 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 	);
 
 	$levelTitles = $levelTitlesL10n[$lang];
+  $specialThanks = array(
+    'zh-tw' => '請點選看看有那些支持 COSCUP 的夥伴們!',
+    'zh-cn' => '请点选看看有那些支持 COSCUP 的伙伴们!',
+    'en' => 'Click here to know more supporting partners!'
+  );
 
 	$html = '';
 	switch ($type)
 	{
 		case 'sidebar':
-		foreach ($levels as &$level)
-		{
-			if (!$SPONS[$level]) continue;
+      foreach ($levels as &$level)
+      {
+        if (!$SPONS[$level]) continue;
 
-			$html .= sprintf("<h2>%s</h2>\n", htmlspecialchars($levelTitles[$level]));
-			$html .= sprintf('<ul class="%s">'."\n", $level);
+        $html .= sprintf("<h2>%s</h2>\n", htmlspecialchars($levelTitles[$level]));
+        $html .= sprintf('<ul class="%s">'."\n", $level);
 
-			foreach ($SPONS[$level] as $i => &$SPON)
-			{
-				$html .= sprintf('<li><a href="%s" target="_blank" title="%s">'.
-						 '<img src="%s" width="178" height="72" alt="%s"/></a></li>'."\n",
-						htmlspecialchars($SPON['url']),
-						htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang)),
-						htmlspecialchars($SPON['logoUrl']),
-						htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang))
-						);
-			}
+        foreach ($SPONS[$level] as $i => &$SPON)
+        {
+          $html .= sprintf('  <li><a href="%s" target="_blank" title="%s">'.
+               '<img src="%s" alt="%s"/></a></li>'."\n",
+              htmlspecialchars($SPON['url']),
+              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang)),
+              htmlspecialchars($SPON['logoUrl']),
+              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang))
+              );
+        }
 
-			$html .= "</ul>\n";
-		}
-		break;
+        $html .= "</ul>\n\n";
+      }
+      // add special thank
+      $sponsorLink = 'http://coscup.org/2013/'.$lang.'/sponsors/';
+      $html .= sprintf('<h2>%s</h2>'."\n", htmlspecialchars($levelTitles['special']));
+      $html .= sprintf('<ul>'."\n".'  <li><a href="%s" title="%s">%s</a></li>'."\n".'</ul>',
+                      $sponsorLink, 
+                      htmlspecialchars($levelTitles['special']),
+                      htmlspecialchars($specialThanks[$lang])
+               );
+      break;
+    case 'mobile-sidebar':
+      $counter = 0;
+      foreach ($levels as &$level)
+      {
+        if (!$SPONS[$level]) continue;
+
+        foreach ($SPONS[$level] as $i => &$SPON)
+        {
+          if ($counter%2 === 0)  $html .= "<div><span>\n";
+
+          $html .= sprintf('  <a href="%s" target="_blank" title="%s">'.
+               '<img src="%s" alt="%s" /></a>'."\n",
+              htmlspecialchars($SPON['url']),
+              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang)),
+              htmlspecialchars($SPON['logoUrl']),
+              htmlspecialchars(get_sponsor_info_localize($SPON, 'name', $lang))
+              );
+
+          if ($counter%2 === 1)  $html .= "</span></div>\n";
+          $counter += 1;
+        }
+      }
+      if ($counter%2 === 1)  $html .= "</b></div>\n";
+      break;
 
 		case 'page':
-		$html .= '<div class="sponsors">';
-		foreach ($levels as &$level)
-		{
-			if (!$SPONS[$level]) continue;
+      foreach ($levels as &$level)
+      {
+        if (!$SPONS[$level]) continue;
 
-			$html .= '<h2>' . htmlspecialchars($levelTitles[$level]) . '</h2>'."\n";
+        $html .= '<h1>' . htmlspecialchars($levelTitles[$level]) . '</h1>'."\n";
 
-			foreach ($SPONS[$level] as $i => &$SPON)
-			{
+        foreach ($SPONS[$level] as $i => &$SPON)
+        {
 
-				/* for sponsors who has another logo space, exclude media partners */
-				if ($level !== 'media' && !trim(get_sponsor_info_localize($SPON, 'desc', $lang)))
-				{
-					continue;
-				}
+          $html .= '<div class="splist">'."\n";
+          $html .= sprintf('<a href="%s" target="_blank"><img src="%s" alt="%s" />'."\n",
+              htmlspecialchars($SPON['url']),
+              htmlspecialchars($SPON['logoUrl']),
+              get_sponsor_info_localize($SPON, 'name', $lang)
+              );
 
-				$html .= sprintf('<h3><a href="%s" target="_blank"><img src="%s" width="178" height="72" alt="%s" />%s</a></h3>'."\n",
-						htmlspecialchars($SPON['url']),
-						htmlspecialchars($SPON['logoUrl']),
-						get_sponsor_info_localize($SPON, 'name', $lang),
-						get_sponsor_info_localize($SPON, 'name', $lang)
-						);
+          $html .= '  <div class="spinfo">'."\n";
+          $html .= sprintf('    <h2>%s</h2>'."\n", get_sponsor_info_localize($SPON, 'name', $lang));
+          if (trim(get_sponsor_info_localize($SPON, 'desc', $lang)))
+          {
+            $html .= sprintf('    %s', get_sponsor_info_localize($SPON, 'desc', $lang));
+          }
+          $html .= "  </div>\n</a></div>\n";
+        }
+      }
 
-				if (trim(get_sponsor_info_localize($SPON, 'desc', $lang)))
-				{
-					$html .= sprintf('<div class="sponsor_content">%s</div>'."\n",
-							get_sponsor_info_localize($SPON, 'desc', $lang));
-				}
+      //TODO add special thanks
 
-				$html .= "\n";
-			}
-		}
-		$html .= '</div>';
-		break;
+      break;
 	}
 	return $html;
 }
@@ -686,7 +725,7 @@ else
 		foreach ($l10n as $lang => $path)
 		{
 			print "Write sponsors into " . $path . " .\n";
-			$fp = fopen($path, "a");
+			$fp = fopen($path, "w");
 			fwrite($fp, get_sponsors_html($SPONS, $type, $lang));
 			fclose($fp);
 		}
@@ -697,7 +736,7 @@ else
 	fwrite ($fp, json_encode($SPONS));
 	fclose ($fp);
 }
-
+/*
 $program_list = get_program_list_from_gdoc();
 $program_types_list = get_program_types_from_gdoc();
 $program_rooms_list = get_program_rooms_from_gdoc();
@@ -734,4 +773,4 @@ else
 			'room' => $program_rooms_list
 		)));
 	fclose ($fp);
-}
+}*/

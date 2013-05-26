@@ -114,8 +114,11 @@ switch($this->current[0])
   /* case "zh-cn": */
   /*   echo $this->block['sponsors-zh-cn']; */
   /*   break; */
+  /* case "en": */
+  /*   echo $this->block['sponsors-en']; */
+  /*   break; */
   default:
-    echo $this->block['sponsors'];
+    echo $this->block['sponsors-zh-tw'];
     break;
 }
 ?>

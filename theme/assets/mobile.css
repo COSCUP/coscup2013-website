@@ -349,18 +349,19 @@ MOBILE NAV
   overflow: auto;
 }
 
-#mySwipe div b {
+#mySwipe div span {
   display:block;
-  font-weight:bold;
-  color:#14ADE5;
-  font-size:20px;
   text-align:center;
   padding:10px 10px;
   margin-bottom:10px;
   box-shadow: 0 1px #EBEBEB;
   background: #fff;
   border-radius: 3px;
+}
 
+#mySwipe div span img {
+  width: 40%;
+  vertical-align: middle;
 }
 /* Swipe 2 required styles */
 
