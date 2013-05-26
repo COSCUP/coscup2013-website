@@ -1,1 +1,4 @@
 .DS_Store
+deploy/marksite/
+deploy/tmp/
+deploy/config.php
