@@ -84,9 +84,9 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		#left .news .text,#left .info,#left .whatiscoscup{font-size:15px;line-height:28px;}
 	
 		#left .register{ width:415px; height:75px; border-top:1px #CCC solid; border-bottom:1px #CCC solid;  padding:30px 0 0 15px;}
-			#left .register em{ font-size:65px; position:relative; top:16px;}
-			#left .register .date{ margin-right:12px; float:left;}
-			#left .register .call{ width:83px; font-size:20px; padding:8px; margin-top:10px; background:#97edf4; float:left}
+			#left .register em { font-size:50px; position:relative; top:10px;}
+			#left .register .date { margin-right: 12px; float:left; font-size: 20px;}
+			#left .register .call{ width:83px; font-size:20px; padding:8px; margin-top:3px; background:#97edf4; float:left}
 				#left .register .call a{ color:#000;}
 				
 		#left .contributor{ width:415px; height:45px; background:#c9f1f5;  padding:10px 0 0 15px;}
