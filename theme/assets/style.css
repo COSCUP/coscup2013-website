@@ -183,7 +183,7 @@ h2.pro{ width:780px; margin-bottom:18px; float:left}
 	.track ul{font-size:15px; line-height:25px;  float:left}
 	.track li{ padding:8px; padding-right:18px;float:left}
 	
-	.class_tag{ width:750px; padding:15px; display:none; background:#e8e8e8; float:left }
+	.class_tag{ width:750px; padding:15px; background:#e8e8e8; float:left }
 	.class_tag li{ width:30%; margin-bottom:8px; line-height:22px; float:left}
 	.class_tag em{ width:5px; height:20px; margin-right:8px; float:left}
 	
@@ -199,15 +199,15 @@ h2.pro{ width:780px; margin-bottom:18px; float:left}
 .t0{ width:47%; position:relative; min-height:80px; padding:5px; padding-left:1px; margin:0 20px 15px 0; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
 .t0:hover{ background:#ebebeb}
 	.t0 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
-	.t0 .title{ width:150px;min-height:63px; margin-right:10px; float:left;}
+	.t0 .title{ width:60%;min-height:63px; margin-right:10px; float:left; line-height:19px;}
 	.t0 .name{ color:#666; font-size:12px;}
 	.t0 .text{color:#666;}
 	.t0 .camera{ position:absolute; top:5px; right:5px;}
 	
 .t1{ width:98%; position:relative; min-height:80px; padding:5px; padding-left:1px; margin:0 20px 15px 0; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
 .t1:hover{ background:#ebebeb}
-	.t1 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
-	.t1 .title{ width:150px;min-height:63px; margin-right:10px; float:left;}
+	.t1 .place{ font-weight:bold; color:#999;}
+	.t1 .title{ width:50%;min-height:63px; padding-right:10px; float:left;}
 	.t1 .name{ color:#666; font-size:12px;}
 	.t1 .text{color:#666;}
 	.t1 .camera{ position:absolute; top:5px; right:5px;}
@@ -215,18 +215,19 @@ h2.pro{ width:780px; margin-bottom:18px; float:left}
 	
 /**Color Tag**/
 
-	.red{ background:#f00;}
-	.green01{ background:#73ff00;}
-	.blue01{ background:#00ffff;}
-	.pruple{ background:#4800a2;}
-	.orange{ background:#ff7300;}
-	.green02{ background:#339333;}
-	.blue02{ background:#57a1ff;}
-	.pink01{ background:#c420c4;}
-	.blue02{ background:#1e1eb0;}
-	.blue03{ background:#399a9a;}
-	.yellow{ background:#f2f22f;}
-	.pink02{ background:#f04e97;}
+	.colorTag-1{ background:#f00;}
+	.colorTag-2{ background:#73ff00;}
+	.colorTag-3{ background:#00ffff;}
+	.colorTag-4{ background:#4800a2;}
+	.colorTag-5{ background:#ff7300;}
+	.colorTag-6{ background:#339333;}
+	.colorTag-7{ background:#57a1ff;}
+	.colorTag-8{ background:#c420c4;}
+	.colorTag-9{ background:#1e1eb0;}
+	.colorTag-10{ background:#399a9a;}
+	.colorTag-11{ background:#f2f22f;}
+	.colorTag-12{ background:#f04e97;}
+	.colorTag-13{ background:#eeeeee;}
 	
 	
 /**program View**/	

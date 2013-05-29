@@ -22,9 +22,10 @@ function get_program_list_from_gdoc() {
 
 	$program_list = array();
 
-	// name, from, to, room, type, speaker, speakerTitle, desc, language, slide, youtube
+	// name, from, to, room, type, speaker, speakerTitle, bio, abstract, language, slide, youtube
 	while (($program = fgetcsv($handle)) !== FALSE)
 	{
+		if (trim($program[0]) === '') continue;
 
 		$program_obj = array(
 			'name' => $program[0],
@@ -35,8 +36,6 @@ function get_program_list_from_gdoc() {
 
 			'room' => intval($program[3])
 		);
-
-		if (trim($program[0]) === '') continue;
 
 		if (trim($program[4]) !== '')
 		{
@@ -55,11 +54,10 @@ function get_program_list_from_gdoc() {
 			{
 				$program_obj['bio'] = Markdown_Without_Markup(linkify($program[7]));
 			}
-		}
-
-		if (trim($program[8]))
-		{
-			$program_obj['abstract'] = Markdown_Without_Markup(linkify($program[8]));
+      if (trim($program[8]))
+      {
+        $program_obj['abstract'] = Markdown_Without_Markup(linkify($program[8]));
+      }
 		}
 
 		if (trim($program[9]))
@@ -160,18 +158,24 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $lang =
 	$l10n = array(
 		'en' => array(
 			'time' => 'Time',
-			'day_1' => 'Day 1',
-			'day_2' => 'Day 2'
+			'am_day_1' => 'Day 1 Morning',
+			'pm_day_1' => 'Day 1 Afternoon',
+			'am_day_2' => 'Day 2 Morning',
+			'pm_day_2' => 'Day 2 Afternoon'
 		),
 		'zh-tw' => array(
 			'time' => '時間',
-			'day_1' => '第一天',
-			'day_2' => '第二天'
+			'am_day_1' => '第一天上午',
+			'pm_day_1' => '第一天下午',
+			'am_day_2' => '第二天上午',
+			'pm_day_2' => '第二天下午'
 		),
 		'zh-cn' => array(
 			'time' => '时间',
-			'day_1' => '第一天',
-			'day_2' => '第二天'
+			'am_day_1' => '第一天上午',
+			'pm_day_1' => '第一天下午',
+			'am_day_2' => '第二天上午',
+			'pm_day_2' => '第二天下午'
 		)
 	);
 
@@ -214,50 +218,41 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $lang =
 	$time_structure = array_unique($time_structure);
 	sort($time_structure);
 
-
-
-
-
-
-
-
-
+  // start generate html
 
 	$html = array();
 
 	$html['program'] = '';
 	$html['abstract'] = '';
 
-	$html['program'] .= '<ul class="shortcuts">';
+	$html['program'] .= '<div class="track"><ul>';
 
 	foreach (array(1, 2) as $day) {
-		$html['program'] .= sprintf('<li><a href="#day%d">%s</a></li>'."\n",
+		$html['program'] .= sprintf('<li><a href="#day%d_morning">%s</a></li>'."\n",
 				$day,
-				$l10n[$lang]["day_$day"]
+				$l10n[$lang]["am_day_$day"]
+				);
+		$html['program'] .= sprintf('<li><a href="#day%d_afternoon">%s</a></li>'."\n",
+				$day,
+				$l10n[$lang]["pm_day_$day"]
 				);
 	}
 
-	$html['program'] .= '</ul>' . "\n\n";
+	$html['program'] .= '</ul></div>' . "\n\n";
 
-	$html['program'] .= '<ul class="types">';
+	$html['program'] .= '<ul class="class_tag">';
 	foreach($type_list as $type_id => $type_name)
 	{
 		if ($type_id <= 0)
 		{
 			continue;
 		}
-		$html['program'] .= sprintf('<li class="program_type_%d">%s</li>'."\n",
+		$html['program'] .= sprintf('<li><em class="colorTag-%d"></em>%s</li>'."\n",
 				$type_id,
 				htmlspecialchars($type_name)
 				);
 	}
 	$html['program'] .= '</ul>' . "\n\n";
-
-
-
-
-
-
 
 
 	$last_stamp = 0;
@@ -279,11 +274,11 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $lang =
 		{
 			if($day_increment > 0)
 			{
-				$html['program'] .= '</tbody></table>'."\n";
+				$html['program'] .= '<div class="time_finish"></div>'."\n";
 			}
 			$day_increment += 1;
-			$html['program'] .= '<h2 id="day' . $day_increment . '">'
-				. $l10n[$lang]["day_$day_increment"]
+			$html['program'] .= '<h2 class="pro" id="day' . $day_increment . '_morning">'
+				. $l10n[$lang]["am_day_$day_increment"]
 				. ' (' . $this_time['mon'] . '/' . $this_time['mday'] . ')'
 				. '</h2>'
 				."\n";
@@ -293,205 +288,69 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $lang =
 				. ' (' . $this_time['mon'] . '/' . $this_time['mday'] . ')'
 				. '</h2>'
 				."\n";
+     }
 
-			$html['program'] .= <<<EOT
-<table class="program">
-<thead>
-	<tr><th>{$l10n[$lang]['time']}</th>
+     $html['program'] .= sprintf('<div rel="%d" class="time">%s — %s</div>',
+       $time_stamp,  $this_time_formatted, $to_time_formatted);
 
-EOT;
+     $counter = 0;
+     $html['program'] .= '<div class="article">'."\n";
 
-			foreach($room_list as $k => $v)
-			{
-				if ($k <= 0)
-				{
-					continue;
-				}
+	 	 ksort($structure[$time_stamp]);
+		 foreach ($structure[$time_stamp] as &$program)
+     {
+       // check in & break & lunch
+       if ($program['isBreak'] && isset($name_replace[$program['name']]))
+       {
+         $html['program'] .= sprintf('<span class="title">%s</span>',
+           htmlspecialchars($name_replace[$program['name']][$lang]));
+         break;
+       }
 
-				$html['program'] .= "<th>$v[$lang]</th>";
-			}
+       // opening, anouncement, closing
+       if ($program['room'] === 0 && $program['type'] === 0)
+       {
+         $html['program'] .= sprintf('<span class="title">%s</span>',
+           htmlspecialchars($program['name']));
+         $html['program'] .= sprintf('<br/><span class="sub_title">%s</span>',
+           htmlspecialchars($program['speaker']));
+         break;
+       }
+       //keynote
+       if ($program['room'] === 0) 
+       {
+         $html['program'] .= '<div class="t1">';
+         $html['program'] .= sprintf('  <div class="track_tag colorTag-%d"></div>', $program['type']);
+         $html['program'] .= sprintf('  <div class="place">%s</div>', 
+                            htmlspecialchars($room_list[$program['room']][$lang]));
+         $html['program'] .= sprintf('  <div class="title">%s</div>', htmlspecialchars($program['name']));
+         $html['program'] .= sprintf('  <div class="name">%s</div>', htmlspecialchars($program['speaker']));
+         $html['program'] .= sprintf('  <div class="text">%s</div>', htmlspecialchars($program['speakerTitle']));
+         $html['program'] .= sprintf('  <div class="ps">%s</div>', "");
+         $html['program'] .= "</div>\n";
+         break;
+       }
+       $counter++;
+       $evenClass = ($counter % 2)? "" : "last";
+       $html['program'] .= sprintf('<div class="t0 %s">', $evenClass);
+       $html['program'] .= sprintf('  <div class="track_tag colorTag-%d"></div>', $program['type']);
+       $html['program'] .= sprintf('  <div class="place">%s</div>', 
+                          htmlspecialchars($room_list[$program['room']][$lang]));
+       $html['program'] .= sprintf('  <div class="title">%s</div>', htmlspecialchars($program['name']));
+       $html['program'] .= sprintf('  <div class="name">%s</div>', htmlspecialchars($program['speaker']));
+       $html['program'] .= sprintf('  <div class="text">%s</div>', htmlspecialchars($program['speakerTitle']));
+       $html['program'] .= sprintf('  <div class="ps">%s</div>', "");
+       $html['program'] .= "</div>\n";
+     }
+     $html['program'] .= "</div>\n";   //end <article>
+     $last_stamp = $time_stamp;
+  }
 
-			$html['program'] .= <<<EOT
-	</tr>
-</thead>
-<tbody>
+  $html['program'] .= '<div class="time_finish"></div>'."\n";
 
-EOT;
-
-		}
-
-
-
-		$html['program'] .= <<<EOT
-	<tr>
-		<th rel="{$time_stamp}"><span>{$this_time_formatted}</span> — {$to_time_formatted}</th>
-
-EOT;
-
-		ksort($structure[$time_stamp]);
-		foreach ($structure[$time_stamp] as &$program)
-		{
-			// calculate colspan and rowspan
-            if ($program['room'] === 0)
-            {
-			    $colspan = $program['room'] === 0 ? sizeof($room_list)-1 : 1;
-            }
-            else if ($program['room'] < 0)
-            {
-			    $colspan = abs($program['room']);
-            }
-            else
-            {
-			    $colspan = 1;
-            }
-
-			$rowspan = 1;
-			while ($time_structure[$time_id + $rowspan] < $program['to'])
-			{
-				$rowspan += 1;
-			}
-
-
-
-
-			// build classlist
-			$class_list = array();
-			//$class_list[] = "program_content";
-
-			if (isset($program['lang']))
-			{
-				$class_list[] = "program_lang_{$program['lang']}";
-			}
-
-			if (isset($program['type']))
-			{
-				$class_list[] = "program_type_{$program['type']}";
-			}
-
-			if (isset($program['room']))
-			{
-                if ($program['room'] <= 0)
-                {
-				    $class_list[] = "program_room_0";
-                }
-                else
-                {
-				    $class_list[] = "program_room_{$program['room']}";
-                }
-			}
-
-			if ($program['isBreak'])
-			{
-				$class_list[] = "program_break";
-			}
-
-			$class_list_string = implode(" ", $class_list);
-
-			$html['program'] .= <<<EOT
-		<td data-pid="{$program['id']}" class="{$class_list_string}" colspan="{$colspan}" rowspan="{$rowspan}">
-EOT;
-
-
-
-			if (
-				isset($program['type']) && $program['type'] !== 0
-			)
-			{
-				$html['program'] .= '<p class="name"><a rel="nocache" href="abstract/#'.anchor_name($program['name']).'">'.htmlspecialchars($program['name']).'</a></p>';
-			}
-			else
-			{
-				if (
-					isset($name_replace[$program['name']]) &&
-					isset($name_replace[$program['name']][$lang])
-				)
-				{
-					$html['program'] .= '<p class="name">'.htmlspecialchars($name_replace[$program['name']][$lang]).'</p>';
-				}
-				else
-				{
-					$html['program'] .= '<p class="name">'.htmlspecialchars($program['name']).'</p>';
-				}
-			}
-
-
-
-			if (
-				isset($program['room'])
-				&& !$program['isBreak']
-			)
-			{
-				$html['program'] .= '<p class="room">' . htmlspecialchars($room_list[$program['room']][$lang]) . '</p>';
-			}
-
-			if (isset($program['speaker']))
-			{
-				$html['program'] .= '<p class="speaker">' . htmlspecialchars($program['speaker']) . '</p>';
-
-				if (isset($program['speakerTitle']))
-				{
-					$html['program'] .= '<p class="speakerTitle">' . htmlspecialchars($program['speakerTitle']) . '</p>';
-				}
-			}
-
-
-
-			$html['program'] .= "</td>\n";
-
-
-
-
-			// No abstract for program type = 0
-
-			if (
-				isset($program['type']) && $program['type'] !== 0
-			)
-			{
-				$html['abstract'] .= '<div class="article" id="'.anchor_name($program['name']).'">';
-				$html['abstract'] .= '<h3>'.htmlspecialchars($program['name']).'</h3>';
-
-				if (isset($program['slide']))
-				{
-					$html['abstract'] .= '<p class="slide"><a href="' . htmlspecialchars($program['slide']) . '" title="Slide">Slide</a></p>';
-				}
-
-				if (isset($program['youtube']))
-				{
-					foreach($program['youtube'] as $i => &$youtube_id) {
-						$html['abstract'] .= '<p class="youtube"><a href="http://www.youtube.com/watch?v=' . $youtube_id . '" title="Video ' . ($i+1) . '">Video ' . ($i+1) . '</a></p>';
-					}
-				}
-
-				if (isset($program['speaker']))
-				{
-					$html['abstract'] .= '<p class="speaker">' . htmlspecialchars($program['speaker']) . '</p>';
-				}
-
-				if (isset($program['abstract']))
-				{
-					$html['abstract'] .= '<div class="abstract">' . $program['abstract'] . '</div>';
-				}
-
-				if (isset($program['bio']))
-				{
-					$html['abstract'] .= '<div class="bio">' . $program['bio'] . '</div>';
-				}
-
-				$html['abstract'] .= "</div>\n";
-			}
-
-			$html['program'] .= "</td>\n";
-		}
-
-		$html['program'] .= "</tr>\n\n";
-
-		$last_stamp = $time_stamp;
-	}
-
-	$html['program'] .= '</tbody></table>'."\n";
-
-	return $html;
+  return $html;
 }
+
 
 function get_sponsors_list_from_gdoc() {
 
@@ -736,7 +595,7 @@ else
 	fwrite ($fp, json_encode($SPONS));
 	fclose ($fp);
 }
-/*
+
 $program_list = get_program_list_from_gdoc();
 $program_types_list = get_program_types_from_gdoc();
 $program_rooms_list = get_program_rooms_from_gdoc();
@@ -758,7 +617,7 @@ else
 		foreach ($lang_array as $type => $path)
 		{
 			print "Write program into " . $path . " .\n";
-			$fp = fopen($path, "a");
+			$fp = fopen($path, "w");
 			fwrite($fp, $program_list_html[$type]);
 			fclose($fp);
 		}
@@ -773,4 +632,4 @@ else
 			'room' => $program_rooms_list
 		)));
 	fclose ($fp);
-}*/
+}
