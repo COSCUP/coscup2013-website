@@ -5,13 +5,14 @@
     <title>COSCUP Website Deployment System</title>
     <style>
     body {
-        text-align: center;
-        width: 600px;
-        margin: 100px auto;
         background: #ccc;
         color: #666;
         font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans;
         font-weight: 300;
+    }
+    .container {
+      margin: 100px auto;
+      width: 700px;
     }
 
     input {
@@ -37,6 +38,7 @@
         border: 3px solid rgba(255,255,255,0.2);
         color: #fff;
         font-size: 64px;
+        font-family: "Lucida Grande";
 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -52,45 +54,71 @@
         float: right;
     }
     #file_containor {
-            width: 400px; height: 200px;
-            background: #ddd;
-            border: 10px solid #ddd;
-            -moz-border-radius: 100px;
-            -webkit-border-radius: 100px;
-            overflow: hidden;
+        width: 300px;
+        height: 300px;
+
+        border-radius: 150px;
+        -moz-border-radius: 150px;
+        -webkit-border-radius: 150px;
+        -o-border-radius: 150px;
+
+        background: green;
+        border: 3px solid rgba(255,255,255,0.2);
+        color: #fff;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+        margin: 0;
     }
     #file_containor:hover {
-            border: 10px outset #ccc;
+        background: #17c91e;
     }
     #file_containor:active, #file_containor.dragover {
-            border: 10px inset #ccc;
+        background: darkgreen;
     }
     #file_containor input {
-            font-size: 400px;
-            opacity: 0;
-            cursor: pointer; /* Won't work in Fx 3.6 */
+        opacity: 0;
+        cursor: pointer; /* Won't work in Fx 3.6 */
+        font-size: 300px;
+        height: 300px;
+        width: 300px;
     }
     #status {
-            width: 800px; height: auto;
-            overflow: visible;
-            font: 0.92em sans-serif;
-            text-align: center;
+      overflow: visible;
+      text-align: center;
+      color: black;
+      font-size: 18px;
+    }
+    #upload {
+      pointer-events: none;
+      font-size: 64px;
+      line-height: 0;
+      position: relative;
+      top: -155px;
+      left: 45px;
+      color: #FFFFFF;
+      font-weight: 400;
+      font-family: "Lucida Grande";
     }
     </style>
   </head>
   <body>
-    <form method="post" accept-charset="utf-8" action="update.php">
-      <input id="shiny_red_button" type="submit" value="Update" />
-    </form>
+    <div class="container">
+      <form method="post" accept-charset="utf-8" action="update.php">
+        <input id="shiny_red_button" type="submit" value="Update" />
+      </form>
 
-    <form action="#" method="get">
-      <div id="file_upload">
-      <p id="file_containor"><input type="file" id="files" multiple /></p>
-      <p id="status">Drop files on above button, or click to select files.
-        You may select more files while uploading.</p>
-      <p>把檔案拖進上面的按鈕，或是按按鈕選檔案。</p>
-      </div>
-    </form>
+      <form action="#" method="get">
+        <div id="file_upload">
+          <div id="file_containor"><input type="file" id="files" multiple /></div>
+          <span id="upload">Upload</span>
+          <p id="status"></p>
+        </div>
+      </form>
+    </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="./drop.js" enctype="UTF-8"></script>
   </body>
