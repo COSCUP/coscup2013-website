@@ -6,3 +6,4 @@ src/blocks/*.html
 src/zh-tw/sponsors/index.md
 src/zh-cn/sponsors/index.md
 src/en/sponsors/index.md
+deploy/files/
