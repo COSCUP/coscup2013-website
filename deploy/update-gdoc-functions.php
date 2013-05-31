@@ -222,6 +222,12 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 		)
 	);
 
+  $draft = array(
+    'zh-tw' => '* 議程表仍有變動，請常回來查看本網頁，不另通知',
+    'zh-cn' => '* 议程表仍有变动，请常回来查看本网页，不另通知',
+    'en' => '* We are still updating, check out often!'
+  );
+
 	// constructing data structures
 
 	$structure = array();
@@ -278,6 +284,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 				);
 	}
 	$html['program'] .= '</ul></div>' . "\n\n";
+  $html['program'] .= '<span style="color:red">' . $draft[$lang].'</span>';
 
 	$last_stamp = 0;
 	$day_increment = 0;
