@@ -210,7 +210,7 @@ h2.pro{ width:780px; margin-bottom:18px; float:left}
 	
 	
 .time{ width:765px; height:32px;  background:#666; color:#fff; padding-left:15px; font-size:16px; line-height:28px;float:left}
-.time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width:100%; float:left;}
+.time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width: 780px;; float:left;}
 .article{ width:768px; border:1px #d5d5d5 solid ; border-bottom:0; border-top:0; min-height:25px; text-align:center; padding:10px 5px; float:left}
 	.article .title{ color:#000; font-size:14px; font-weight:bold;}
 
