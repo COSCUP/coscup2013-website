@@ -168,48 +168,47 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 
 /* program------ */		
 h2.pro{ width:100%; margin-bottom:18px; float:left}
-.track{ width:100%; min-height:40px; background:#fff; float:left;}
-	.track_push{ display:none;}
-	.track ul{font-size:15px; line-height:25px;  float:left}
-	.track li{ padding:8px; padding-right:12px;float:left}
+#navTab{ width: 315px; background:#fff; float:left; padding: 3px;}
+	#navTab ul{font-size:15px; line-height:25px;  float:left}
+	#navTab li{ margin: 5px 0; padding:0 6px; float:left; font-size: 13px;}
+	#navTab li:not(:first-child) {
+	  border-left: 1px #666 solid;
+  }
+.floatTab{z-index: 9999; position: fixed;  top: 0; border-bottom:1px solid #CCC; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
 	.class_tag{ display:none}
-	
 	
 .time{ width:95%; height:32px;  background:#666; color:#fff; padding-left:15px; font-size:16px; line-height:28px;float:left}
 .time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width:100%; float:left;}
 .article{ width:93%; border:1px #d5d5d5 solid ; border-bottom:0; border-top:0; min-height:25px; text-align:center; padding:20px 10px 10px 10px; float:left}
 	.article .title{ color:#000; font-size:14px; font-weight:bold;}
-	.article .last{ margin-right:0}
 
-.track_tag{ display:none;}
-.t0{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
-	.t0 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
-	.t0 .title{  margin-bottom:5px; }
-	.t0 .name{ color:#666; font-size:12px;}
-	.t0 .text{color:#666;}
-	.t0 .camera{ position:absolute; top:5px; right:5px;}
+.track_tag{ width:3px; min-height:90px; padding:1px; margin-right:5px; float:left;}
+
+.program{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left; line-height: 15px;}
+.program .place{font-weight:bold; margin-bottom:8px; color:#999;}
+.program .community{ font-size: 13px; display; color: #999; margin-bottom: 4px;}
+.program .title{  margin-bottom:5px; }
+.program .name{ color:#666; margin-bottom:8px;}
+.program .text{color:#666; font-size:12px;}
+.program .camera{ position:absolute; top:5px; right:5px; display: none;}
+.program .ps{color:#900; bottom:5px;}
 	
-.t1{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
-	.t1 .place{font-weight:bold; margin-bottom:8px; color:#999;}
-	.t1 .title{  margin-bottom:5px; }
-	.t1 .name{ color:#666; font-size:12px;}
-	.t1 .text{color:#666;}
-	.t1 .camera{ position:absolute; top:5px; right:5px;}
-	.t1 .ps{color:#900; bottom:5px;}
-	
-/**Color Tag**/
-	.red{ background:#f00;}
-	.green01{ background:#73ff00;}
-	.blue01{ background:#00ffff;}
-	.pruple{ background:#4800a2;}
-	.orange{ background:#ff7300;}
-	.green02{ background:#339333;}
-	.blue02{ background:#57a1ff;}
-	.pink01{ background:#c420c4;}
-	.blue02{ background:#1e1eb0;}
-	.blue03{ background:#399a9a;}
-	.yellow{ background:#f2f22f;}
-	.pink02{ background:#f04e97;}
+  /**Color Tag**/
+	.colorTag-1{ border-left:#f00 5px solid;}
+	.colorTag-2{ border-left:#73ff00 5px solid;}
+	.colorTag-3{ border-left:#00ffff 5px solid;}
+	.colorTag-4{ border-left:#4800a2 5px solid;}
+	.colorTag-5{ border-left:#ff7300 5px solid;}
+	.colorTag-6{ border-left:#339333 5px solid;}
+	.colorTag-7{ border-left:#57a1ff 5px solid;}
+	.colorTag-8{ border-left:#c420c4 5px solid;}
+	.colorTag-9{ border-left:#1e1eb0 5px solid;}
+	.colorTag-10{ border-left:#399a9a 5px solid;}
+	.colorTag-11{ border-left:#f2f22f 5px solid;}
+	.colorTag-12{ border-left:#f04e97 5px solid;}
+	.colorTag-13{ border-left:#eeeeee 5px solid;}
 
 /************************************************************************************
 mobile
@@ -453,7 +452,7 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 		
 #main{ 
 		width:100%; 
-		background:url(../images/bg_main.jpg) repeat;
+		background:url(bg_main.jpg) repeat;
 		float:left;
 		}
 		#main .wrap{ padding:0 15px; }
@@ -560,10 +559,11 @@ h2{font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Ari
 
 /* program------ */		
 h2.pro{ width:100%; margin-bottom:18px; float:left}
-.track{ width:100%; min-height:40px; background:#fff; float:left;}
-	.track_push{ display:none;}
-	.track ul{font-size:15px; line-height:25px;  float:left}
-	.track li{ padding:8px; padding-right:12px;float:left}
+#navTab{ width:100%; min-height:40px; background:#fff; float:left;}
+	#navTab ul{font-size:15px; line-height:25px;  float:left}
+	#navTab li{ padding:8px; padding-right:12px;float:left}
+.floatTab{z-index: 9999; position: fixed;  top: 0; border-bottom:1px solid #CCC; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 	.class_tag{ display:none}
 	
 	
@@ -571,38 +571,34 @@ h2.pro{ width:100%; margin-bottom:18px; float:left}
 .time_finish{ border-bottom:1px #d5d5d5 solid; height:1px; width:100%; float:left;}
 .article{ width:94%; border:1px #d5d5d5 solid ; border-bottom:0; border-top:0; min-height:25px; text-align:center; padding:20px 10px 10px 10px; float:left}
 	.article .title{ color:#000; font-size:14px; font-weight:bold;}
-	.article .last{ margin-right:0}
 
-.track_tag{ display:none;}
-.t0{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
-	.t0 .place{ font-weight:bold; margin-bottom:8px; color:#999;}
-	.t0 .title{  margin-bottom:5px; }
-	.t0 .name{ color:#666; font-size:12px;}
-	.t0 .text{color:#666;}
-	.t0 .camera{ position:absolute; top:5px; right:5px;}
+.track_tag{ width:3px; min-height:90px; padding:1px; margin-right:5px; float:left;}
+
+.program{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left; line-height: 15px;}
+.program .place{ font-weight:bold; margin-bottom:8px; color:#999;}
+.program .community{ font-size: 13px; display; color: #999; margin-bottom: 4px;}
+.program .title{  margin-bottom:5px; }
+.program .name{ color:#666; margin-bottom:8px;}
+.program .text{color:#666; font-size:12px;}
+.program .camera{ position:absolute; top:5px; right:5px; display: none;}
 	
-.t1{ width:93%; position:relative; min-height:80px; padding:10px;  margin-bottom:20px ; text-align:left; border:1px #d5d5d5 solid; background:#fff; float:left}
-	.t1 .place{font-weight:bold; margin-bottom:8px; color:#999;}
-	.t1 .title{  margin-bottom:5px; }
-	.t1 .name{ color:#666; font-size:12px;}
-	.t1 .text{color:#666;}
-	.t1 .camera{ position:absolute; top:5px; right:5px;}
-	.t1 .ps{color:#900; bottom:5px;}
 	
-/**Color Tag**/
-	.red{ background:#f00;}
-	.green01{ background:#73ff00;}
-	.blue01{ background:#00ffff;}
-	.pruple{ background:#4800a2;}
-	.orange{ background:#ff7300;}
-	.green02{ background:#339333;}
-	.blue02{ background:#57a1ff;}
-	.pink01{ background:#c420c4;}
-	.blue02{ background:#1e1eb0;}
-	.blue03{ background:#399a9a;}
-	.yellow{ background:#f2f22f;}
-	.pink02{ background:#f04e97;}
+  /**Color Tag**/
+	.colorTag-1{ border-left:#f00 5px solid;}
+	.colorTag-2{ border-left:#73ff00 5px solid;}
+	.colorTag-3{ border-left:#00ffff 5px solid;}
+	.colorTag-4{ border-left:#4800a2 5px solid;}
+	.colorTag-5{ border-left:#ff7300 5px solid;}
+	.colorTag-6{ border-left:#339333 5px solid;}
+	.colorTag-7{ border-left:#57a1ff 5px solid;}
+	.colorTag-8{ border-left:#c420c4 5px solid;}
+	.colorTag-9{ border-left:#1e1eb0 5px solid;}
+	.colorTag-10{ border-left:#399a9a 5px solid;}
+	.colorTag-11{ border-left:#f2f22f 5px solid;}
+	.colorTag-12{ border-left:#f04e97 5px solid;}
+	.colorTag-13{ border-left:#eeeeee 5px solid;}
 /************************************************************************************
+ *
 mobile
 *************************************************************************************/
 #nav-wrap {
