@@ -24,12 +24,12 @@ switch($this->current[0])
 <title><?php echo $title; ?> | 2013 COSCUP-Open x [Web | Mobile | Data]</title>
 
 <meta name="keywords" content="COSCUP, COSCUP2013, 開源人年會, Conference for Open Source Coders, Users and Promoters Open Source, Free Software, 自由軟體, 開放原始碼, 研討會, 社群, FLOSS">
-<meta name="description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
+<meta name="description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。">
 <meta name="COMPANY" content="COSCUP">
 
 <!--fb shareing-->
 <meta property="og:title" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
-<meta name="og:description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Opens Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。" />
+<meta name="og:description" content="COSCUP 2013, 8/3-4 台北國際會議中心。台灣 Open Source 相關社群聯合舉辦的大型開放源碼研討會。讓世界各地的 FLOSS 愛好者、專家藉由開源人年會齊聚一堂，分享經驗、想法與新技術，共同激發群眾投入貢獻開源 / 自由軟體。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://coscup.org/2013/" />
 <meta property="og:site_name" content="2013 COSCUP-Open x [Web | Mobile | Data]" />
