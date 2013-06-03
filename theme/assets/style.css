@@ -542,12 +542,21 @@ h2.pro {
     font-size: 0px;
 }
 .class_tag li {
-    width: 235px;
+    cursor: pointer;
+    width: 225px;
     margin-bottom: 8px;
     line-height: 22px;
     display: inline-block;
     font-size: 12px;
-    padding-left: 10px;
+    padding: 5px 0 5px 10px;
+    background-color: white;
+    margin: 5px;
+}
+.class_tag li:hover {
+    background: #fafaf3;
+}
+.class_tag li.inactive {
+    background-color: transparent;
 }
 /**Color Tag**/
 .colorTag-1 {
