@@ -655,7 +655,8 @@ else
 		array(
 			'program' => $program_list,
 			'type' => $program_types_list,
-			'room' => $program_rooms_list
+			'room' => $program_rooms_list,
+			'community' => $program_community_list
 		)));
 	fclose ($fp);
 }
