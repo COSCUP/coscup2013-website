@@ -1,5 +1,5 @@
 
-$(document).on('ready', function () {
+$(window).on('fullpageload', function () {
 
 $programs = $('#content .program');
 $times = $('#content .time');
