@@ -291,20 +291,17 @@ h2 {
     width: 330px;
     background: #c9f2f5;
 }
-#sidebar2 .socialbuzz .text &gt;
-ul {
+#sidebar2 .socialbuzz .text > ul {
     line-height: 16px;
     margin: 0;
     padding: 0 1em 0 2em;
     text-align: left;
 }
-#sidebar2 .socialbuzz .text &gt;
-ul li {
+#sidebar2 .socialbuzz .text > ul li {
     list-style: square outside none;
     padding: 6px;
 }
-#sidebar2 .socialbuzz .text &gt;
-ul .meta {
+#sidebar2 .socialbuzz .text > ul .meta {
     display: block;
     text-align: right;
 }

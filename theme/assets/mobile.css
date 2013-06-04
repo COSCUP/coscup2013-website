@@ -599,8 +599,7 @@
         margin: 0;
         padding: 0;
     }
-    #nav li: hover &gt;
-    ul {
+    #nav li: hover > ul {
         display: block;
         /* show dropdown on hover */
     }
@@ -705,8 +704,7 @@
         overflow: hidden;
         position: relative;
     }
-    .swipe-wrap &gt;
-    div {
+    .swipe-wrap > div {
         float: left;
         width: 100%;
         position: relative;
@@ -1304,8 +1302,7 @@
         margin: 0;
         padding: 0;
     }
-    #nav li: hover &gt;
-    ul {
+    #nav li: hover > ul {
         display: block;
         /* show dropdown on hover */
     }
@@ -1341,8 +1338,7 @@
         overflow: hidden;
         position: relative;
     }
-    .swipe-wrap &gt;
-    div {
+    .swipe-wrap > div {
         float: left;
         width: 100%;
         position: relative;
