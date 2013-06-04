@@ -185,8 +185,8 @@ switch($this->current[0])
     </ul>
     
 </div>
+</body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $theme_assets_uri;?>script.js"></script></body>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>respond.min.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($){
@@ -201,20 +201,13 @@ switch($this->current[0])
   });
 </script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>swipe.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>script.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>program.js"></script>
 <script>
   // pure JS
   var elem = document.getElementById('mySwipe');
   window.mySwipe = Swipe(elem, {
-    // startSlide: 4,
-       auto: 3000,
-    // continuous: true,
-    // disableScroll: true,
-    // stopPropagation: true,
-    // callback: function(index, element) {},
-    // transitionEnd: function(index, element) {}
+    auto: 3000,
   });
-
-  // with jQuery
-  // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
 </script>
 </html>

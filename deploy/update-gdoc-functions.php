@@ -353,7 +353,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
        $counter++;
        //room == 0 is a keynote, room == 9 is a cross rooms session
        $eventClass = ($program['room'] === 0 || $program['room'] === 9)? "program keynote" : "program";
-       $html['program'] .= sprintf('<div class="%s">', $eventClass);
+       $html['program'] .= sprintf('  <div class="%s" data-id="%d">', $eventClass, $program['id']);
        $html['program'] .= sprintf('  <div class="track_tag colorTag-%d"></div>', $program['type']);
        $html['program'] .= sprintf('  <div class="place">%s</div>', 
                           htmlspecialchars($room_list[$program['room']][$lang]));
@@ -643,8 +643,8 @@ else
 		{
 			print "Write program into " . $path . " .\n";
 			$fp = fopen($path, "w");
-			fwrite($fp, $program_list_html[$type]);
-      fwrite($fp, '<script defer src="/2013-theme/assets/program.js"></script>');
+      fwrite($fp, $program_list_html[$type]);
+      fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
 			fclose($fp);
 		}
 	}

@@ -12,7 +12,6 @@ print ("= Updating GDoc =\n");
 include ("update-gdoc-functions.php");
 print ("\n");
 
-
 recompile_and_sync();
 
 // Copy additional files
