@@ -39,7 +39,7 @@ $(window).bind('pageload', function(){
         $('#program_detail').append($('<div class="metadata"><div>')
           .append($('<div></div>').addClass('track_tag colorTag-' + program.type))
           .append($('<div></div>').addClass('place').html(data.room[program.room]['zh-tw']))
-//          .append($('<div></div>').addClass('community').html(data.community[program.community]))
+          .append($('<div></div>').addClass('community').html(data.community[program.community]))
           .append($('<div></div>').addClass('title').html(program.name))
           .append($('<div></div>').addClass('name').html(program.speaker))
           .append($('<div></div>').addClass('text').html(program.speakerTitle))

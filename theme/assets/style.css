@@ -730,6 +730,11 @@ h2.pro {
     width: 120px;
 }
 
+#program_detail.program .community {
+    right: 50px;
+    top: 10px;
+}
+
 #lock_background.show {
     display: block;
     z-index: 99999;
@@ -743,3 +748,4 @@ h2.pro {
     background: inherit;
     color: black;
 }
+
