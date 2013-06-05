@@ -36,18 +36,22 @@ $(window).bind('pageload', function(){
         var program = data.program[id];
 
         $('#program_detail').empty();
-        $('#program_detail').append($('<div class="metadata"><div>')
-          .append($('<div></div>').addClass('track_tag colorTag-' + program.type))
-          .append($('<div></div>').addClass('place').html(data.room[program.room]['zh-tw']))
-          .append($('<div></div>').addClass('community').html(data.community[program.community]))
-          .append($('<div></div>').addClass('title').html(program.name))
-          .append($('<div></div>').addClass('name').html(program.speaker))
-          .append($('<div></div>').addClass('text').html(program.speakerTitle))
-          .append($('<div></div>').addClass('time').html(getTime(program.from) + ' - ' + getTime(program.to))));
+        $('#program_detail')
+          .append($('<div class="metadata"></div>').addClass('track_tag colorTag-' + program.type)
+            .append($('<div></div>').addClass('head')
+              .append($('<div></div>').addClass('place').html(data.room[program.room]['zh-tw']))
+              .append($('<div></div>').addClass('timeinfo').html(getTime(program.from) + ' - ' + getTime(program.to)))
+              .append($('<div></div>').addClass('community').html(data.community[program.community])))
+            .append($('<div></div>').addClass('body')
+              .append($('<div></div>').addClass('topic').html(program.name))
+              .append($('<div></div>').addClass('speaker').html(program.speaker))
+              .append($('<div></div>').addClass('speaker-title').html(program.speakerTitle))));
 
-        $('#program_detail').append(
-          $('<div></div>').addClass('bio').html(program.bio)).append(
-          $('<div></div>').addClass('abstract').html(program.abstract));
+        $('#program_detail')
+          .append($('<div></div>').addClass('content-title').html('Abstract'))
+          .append($('<div></div>').addClass('abstract').html(program.abstract))
+          .append($('<div></div>').addClass('content-title').html('Biography'))
+          .append($('<div></div>').addClass('bio').html(program.bio));
         $('#lock_background').addClass('show');
       }
 

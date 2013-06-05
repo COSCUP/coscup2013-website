@@ -464,13 +464,6 @@
         font-size: 14px;
         font-weight: bold;
     }
-    .track_tag {
-        width: 3px;
-        min-height: 90px;
-        padding: 1px;
-        margin-right: 5px;
-        float: left;
-    }
     .program {
         width: 93%;
         position: relative;
@@ -483,37 +476,47 @@
         float: left;
         line-height: 15px;
     }
+    .program .metadata.track_tag {
+        min-height: 110px;
+        padding: 1px;
+    }
+    .program .metadata .head {
+        height: 25px;
+        line-height: 25px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    .program .metadata .body {
+        margin-left: 5px;
+    }
     .program .place {
+        float: left;
         font-weight: bold;
-        margin-bottom: 8px;
         color: #999;
     }
     .program .community {
+        float: right;
         font-size: 13px;
-        display;
         color: #999;
         margin-bottom: 4px;
     }
-    .program .title {
+    .program .topic {
         margin-bottom: 5px;
+        line-height: 20px;
     }
-    .program .name {
+    .program .speaker {
         color: #666;
         margin-bottom: 8px;
     }
-    .program .text {
+    .program .speaker-title {
         color: #666;
         font-size: 12px;
     }
-    .program .camera {
+    .program .video {
         position: absolute;
         top: 5px;
         right: 5px;
         display: none;
-    }
-    .program .ps {
-        color: #900;
-        bottom: 5px;
     }
     /**Color Tag**/
     .colorTag-1 {
@@ -1169,13 +1172,6 @@
         font-size: 14px;
         font-weight: bold;
     }
-    .track_tag {
-        width: 3px;
-        min-height: 90px;
-        padding: 1px;
-        margin-right: 5px;
-        float: left;
-    }
     .program {
         width: 93%;
         position: relative;
@@ -1188,29 +1184,43 @@
         float: left;
         line-height: 15px;
     }
+    .program .metadata.track_tag {
+        min-height: 110px;
+        padding: 1px;
+    }
+    .program .metadata .head {
+        height: 25px;
+        line-height: 25px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    .program .metadata .body {
+        margin-left: 5px;
+    }
     .program .place {
+        float: left;
         font-weight: bold;
-        margin-bottom: 8px;
         color: #999;
     }
     .program .community {
+        float: right;
         font-size: 13px;
-        display;
         color: #999;
         margin-bottom: 4px;
     }
-    .program .title {
+    .program .topic {
         margin-bottom: 5px;
+        line-height: 20px;
     }
-    .program .name {
+    .program .speaker {
         color: #666;
         margin-bottom: 8px;
     }
-    .program .text {
+    .program .speak-title {
         color: #666;
         font-size: 12px;
     }
-    .program .camera {
+    .program .video {
         position: absolute;
         top: 5px;
         right: 5px;

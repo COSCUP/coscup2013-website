@@ -353,17 +353,18 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
        $counter++;
        //room == 0 is a keynote, room == 9 is a cross rooms session
        $eventClass = ($program['room'] === 0 || $program['room'] === 9)? "program keynote" : "program";
-       $html['program'] .= sprintf('  <div class="%s" data-id="%d">', $eventClass, $program['id']);
-       $html['program'] .= sprintf('  <div class="track_tag colorTag-%d"></div>', $program['type']);
-       $html['program'] .= sprintf('  <div class="place">%s</div>', 
+       $html['program'] .= sprintf('<div class="%s" data-id="%d">', $eventClass, $program['id']);
+       $html['program'] .= sprintf(' <div class="metadata track_tag colorTag-%d">', $program['type']);
+       $html['program'] .= sprintf('  <div class="head"><div class="place">%s</div>', 
                           htmlspecialchars($room_list[$program['room']][$lang]));
+       $html['program'] .= sprintf('  <div class="video"><a href="%s"><img src="/2013-theme/assets/icon_camera.png"></a></div>', "#"); 
        $html['program'] .= sprintf('  <div class="community">%s</div>',
            htmlspecialchars($community_list[$program['community']]));
-       $html['program'] .= sprintf('  <div class="title">%s</div>', htmlspecialchars($program['name']));
-       $html['program'] .= sprintf('  <div class="name">%s</div>', htmlspecialchars($program['speaker']));
-       $html['program'] .= sprintf('  <div class="text">%s</div>', htmlspecialchars($program['speakerTitle']));
-       $html['program'] .= sprintf('  <div class="camera"><a href="%s"><img src="/2013-theme/assets/icon_camera.png"></a></div>', "#"); 
-       $html['program'] .= "</div>\n";
+       $html['program'] .= '</div><div class="body">';
+       $html['program'] .= sprintf('  <div class="topic">%s</div>', htmlspecialchars($program['name']));
+       $html['program'] .= sprintf('  <div class="speaker">%s</div>', htmlspecialchars($program['speaker']));
+       $html['program'] .= sprintf('  <div class="speaker-title">%s</div>', htmlspecialchars($program['speakerTitle']));
+       $html['program'] .= "</div></div></div>\n";
      }
      $html['program'] .= "</div>\n";   //end <article>
      $last_stamp = $time_stamp;
