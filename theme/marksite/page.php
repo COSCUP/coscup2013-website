@@ -82,7 +82,9 @@ if (isset($styles)) {
     <div class="wrap">
    	  <div class="logo"><a href="<?php echo $home_path.$this->current[0]."/index.html"?>">coscup 2013</a></div>
       	<ul id="lan">
-          <li><a href="#">正體</a></li>
+          <li><a href="/2013/en/" title="English" lang="en">EN</a></li>
+		  <li><a href="/2013/zh-tw/" title="正體中文" lang="zh-TW">正體</a></li>
+		  <li><a href="/2013/zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="social">
         <li><a href="https://www.facebook.com/coscup" title="facebook"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
@@ -108,15 +110,15 @@ if (isset($styles)) {
 <?php
 switch($this->current[0])
 {
-  /* case "zh-tw": */
-  /*   echo $this->block['sponsors-zh-tw']; */
-  /*   break; */
-  /* case "zh-cn": */
-  /*   echo $this->block['sponsors-zh-cn']; */
-  /*   break; */
-  /* case "en": */
-  /*   echo $this->block['sponsors-en']; */
-  /*   break; */
+  case "zh-tw":
+    echo $this->block['sponsors-zh-tw'];
+    break;
+  case "zh-cn":
+    echo $this->block['sponsors-zh-cn'];
+    break;
+  case "en":
+    echo $this->block['sponsors-en'];
+    break;
   default:
     echo $this->block['sponsors-zh-tw'];
     break;
@@ -125,12 +127,12 @@ switch($this->current[0])
 <?php
 switch($this->current[0])
 {
-/*  case "zh-cn":
+  case "zh-cn":
     echo $this->block['sponsors-after-zh-cn'];
     break;
-  default:
-    echo $this->block['sponsors-after'];
-    break;*/
+  case "en":
+    echo $this->block['sponsors-after-en'];
+    break;
   default:
     echo $this->block['sponsors-after'];
     break;

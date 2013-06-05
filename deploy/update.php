@@ -18,4 +18,4 @@ recompile_and_sync();
 system ('rsync -a ./files/ ' . WEBSITE_PATH . '/logos');
 
 // Remove en and zh-cn temporarily
-system ('rm -rf ' . WEBSITE_PATH . '/en ' . WEBSITE_PATH . '/zh-cn');
+// system ('rm -rf ' . WEBSITE_PATH . '/en ' . WEBSITE_PATH . '/zh-cn');

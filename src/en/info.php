@@ -1,15 +1,14 @@
 <?php
 $contents = array(
-	"index" => "首頁",
-	//"http://registrano.com/events/coscup2013-regist" => "報名",
-	"about" => "活動簡介",
-	"program" => "議程",
-	"venue" => "地點",
-	"sponsors" => "贊助單位",
+  "index" => "Home",
+  "about" => "About Us",
+  "program" => "Program",
+  "venue" => "Venue",
+  "sponsors" => "Sponsors",
   "news" => "News",
-	"http://blog.coscup.org/" => "部落格",
-	"contact" => "聯絡資訊",
+  "http://blog.coscup.org/" => "Blog",
+  "contact" => "Contact",
   "openwall" => "Open"
 );
 
-$menu_hidden = array("index", "openwall");
+$menu_hidden = array("news", "openwall");

@@ -1,7 +1,7 @@
 <?php
 $contents = array(
-	"index" => "活動簡介",
-//	"team" => "籌備團隊"
+	"index" => "活动简介",
+//	"team" => "筹备团队"
 );
 
 $menu_hidden = array("index");

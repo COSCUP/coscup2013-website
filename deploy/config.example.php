@@ -28,20 +28,12 @@ $sponsors_output = array(
 );
 
 $program_list_output = array(
-	"zh-tw" => array(
-		"program" => "../src/zh-tw/program/index.html",
-		"abstract" => "../src/zh-tw/program/abstract/index.html"
-		),
-	"zh-cn" => array(
-		"program" => "../src/zh-cn/program/index.html",
-		"abstract" => "../src/zh-cn/program/abstract/index.html"
-		),
-	"en" => array(
-		"program" => "../src/en/program/index.html",
-		"abstract" => "../src/en/program/abstract/index.html"
-		)
+  "program" => array (
+    "zh-tw" => "../src/zh-tw/program/index.html",
+    "zh-cn" => "../src/zh-cn/program/index.html",
+    "en" => "../src/en/program/index.html"
+  )
 );
-
 
 $json_output = array(
 	"menu" => "tmp/api/menu/menu.json.js",

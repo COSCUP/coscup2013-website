@@ -455,28 +455,28 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 
 	$levelTitlesL10n = array(
 		'en' => array(
-			'diamond' => 'Diamond Level Sponsors',
-			'gold' => 'Gold Level Sponsors',
-			'silver' => 'Silver Level Sponsors',
-			'bronze' => 'Bronze Level Sponsors',
-      'media' => 'Media Partners',
-      'special' => 'Special Thanks'
+			'diamond' => 'Diamond',
+			'gold' => 'Gold',
+			'silver' => 'Silver',
+			'bronze' => 'Bronze',
+            'media' => 'Media Partners',
+            'special' => 'Special Thanks'
 		),
 		'zh-tw' => array(
 			'diamond' => '鑽石級贊助',
 			'gold' => '黃金級贊助',
 			'silver' => '白銀級贊助',
 			'bronze' => '青銅級贊助',
-      'media' => '媒體夥伴',
-      'special' => '特別感謝'
+            'media' => '媒體夥伴',
+            'special' => '特別感謝'
 		),
 		'zh-cn' => array(
 			'diamond' => '钻石级赞助商',
-      'gold' => '黄金级赞助',
-      'silver' => '白银级赞助',
-      'bronze' => '青铜级赞助',
-      'media' => '媒体伙伴',
-      'special' => '特别感谢'
+            'gold' => '黄金级赞助',
+            'silver' => '白银级赞助',
+            'bronze' => '青铜级赞助',
+            'media' => '媒体伙伴',
+            'special' => '特别感谢'
 		)
 	);
 
@@ -490,11 +490,11 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 	);
 
 	$levelTitles = $levelTitlesL10n[$lang];
-  $specialThanks = array(
-    'zh-tw' => '請點選看看有那些支持 COSCUP 的夥伴們!',
-    'zh-cn' => '请点选看看有那些支持 COSCUP 的伙伴们!',
-    'en' => 'Click here to know more supporting partners!'
-  );
+    $specialThanks = array(
+        'zh-tw' => '請點選看看有那些支持 COSCUP 的夥伴們!',
+        'zh-cn' => '请点选看看有那些支持 COSCUP 的伙伴们!',
+        'en' => 'Click here to know more supporting partners!'
+    );
 
 	$html = '';
 	switch ($type)
@@ -636,16 +636,15 @@ if (
 }
 else
 {
-	foreach ($program_list_output as $lang => $lang_array)
+	foreach ($program_list_output as $type => $l10n)
 	{
-		$program_list_html = get_program_list_html($program_list, $program_types_list, $program_rooms_list, $program_community_list, $lang);
-
-		foreach ($lang_array as $type => $path)
+		foreach ($l10n as $lang => $path)
 		{
+            $program_list_html = get_program_list_html($program_list, $program_types_list, $program_rooms_list, $program_community_list, $lang);
 			print "Write program into " . $path . " .\n";
 			$fp = fopen($path, "w");
-      fwrite($fp, $program_list_html[$type]);
-      fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
+            fwrite($fp, $program_list_html[$type]);
+            fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
 			fclose($fp);
 		}
 	}
