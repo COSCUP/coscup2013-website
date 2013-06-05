@@ -6,10 +6,11 @@ $contents = array(
 	"program" => "議程",
 	"venue" => "地點",
 	"sponsors" => "贊助單位",
-  "news" => "News",
+	"news" => "News",
 	"http://blog.coscup.org/" => "部落格",
 	"contact" => "聯絡資訊",
-  "openwall" => "Open"
+	"api" => "API",
+	"openwall" => "Open"
 );
 
 $menu_hidden = array("index", "openwall");
