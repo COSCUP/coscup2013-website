@@ -723,6 +723,7 @@ h2.pro {
     box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
     float: none;
     padding: 5px;
+    cursor: inherit;
 }
 
 #program_detail.program .head div {
