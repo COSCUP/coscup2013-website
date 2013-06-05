@@ -1,4 +1,6 @@
 $(window).bind('pageload', function(){
+  if ($('#navTab').length === 0)
+    return;
   var program_data = null;
   var navHeight = $('#navTab').get(0).offsetTop;
   /* Program fixed Nav */
