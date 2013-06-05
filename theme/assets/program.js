@@ -17,7 +17,6 @@ $(window).bind('pageload', function(){
       dataType: "json",
       url: "/2013/api/program/program.json.js",
       success: function (data) {
-        console.log("ajax");
         program_data = data;
         callback(data);
       }
@@ -32,6 +31,10 @@ $(window).bind('pageload', function(){
   });
 
   $('.program').each(function() {
+    // ignore pop up which is also with class "program" attribute
+    var eleId = $(this).attr('id');
+    if ( eleId && eleId === 'program_detail' )
+      return;
     $(this).on('click', function(event) {
       var id = $(this).data('id');
       function displayDetails(data) {
