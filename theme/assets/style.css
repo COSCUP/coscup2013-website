@@ -616,7 +616,7 @@ h2.pro {
 .program {
     width: 370px;
     position: relative;
-    min-height: 80px;
+    min-height: 110px;
     padding: 5px 1px;
     margin: 0 5px 15px 5px;
     text-align: left;
@@ -673,7 +673,7 @@ h2.pro {
     min-height: 63px;
     margin-right: 10px;
     float: left;
-    line-height: 18px;
+    line-height: 16px;
 }
 .program .speaker {
     color: #666;
