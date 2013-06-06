@@ -639,6 +639,7 @@ h2.pro {
     margin-left: 5px;
 }
 .program .metadata .body {
+    clear: both;
     margin-left: 5px;
     height: 80px;
     line-height: 80px;
@@ -765,9 +766,6 @@ h2.pro {
 }
 
 #program_detail.program .content-title {
-    border-radius: 5px 5px 5px 5px;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    display: inline-block;
     font-size: 16px;
     font-weight: bold;
     line-height: 26px;
