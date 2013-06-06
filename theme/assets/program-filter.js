@@ -1,5 +1,6 @@
-
 $(window).on('fullpageload', function () {
+  if ($('#navTab').length === 0)
+    return;
 
 $programs = $('#content .program');
 $times = $('#content .time');

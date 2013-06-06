@@ -205,6 +205,7 @@ switch($this->current[0])
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>swipe.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>script.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>program.js"></script>
+<script type="text/javascript" src="<?php echo $theme_assets_uri;?>program-filter.js"></script>
 <script>
   // pure JS
   var elem = document.getElementById('mySwipe');
