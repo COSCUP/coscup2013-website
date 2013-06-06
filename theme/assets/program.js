@@ -55,7 +55,7 @@ $(window).bind('pageload', function(){
           .append($('<div></div>').addClass('bio').html(program.bio));
 
         $(this).append($detail.hide());
-        $(this).on('click', function() {
+        $(this).on('touchend', function() {
           $detail.toggle();
         });
       });
