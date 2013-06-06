@@ -698,9 +698,10 @@ h2.pro {
 }
 .program .ps {
     position: absolute;
-    right: 5px;
     color: #900;
+    right: 5px;
     bottom: 5px;
+    line-height: 20px;
 }
 .program.keynote {
     width: 754px;

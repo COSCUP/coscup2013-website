@@ -228,6 +228,12 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
     'en' => '* We are still updating, check out often!'
   );
 
+  $ps_list = array(
+    'zh-tw' => '* 跨時段議程',
+    'zh-cn' => '* 跨时段议程',
+    'en' => '* cross-time session'
+  );
+
 	// constructing data structures
 
 	$structure = array();
@@ -344,7 +350,10 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
      {
        // We need to process multi-span session again
        if ($program['to'] !== $time_stamp_end)
+       {
+         $program['isMultiSlot'] = true;
          $continue[$program['room']] = $program;
+       }
 			 
        // check in & break & lunch
        if ($program['isBreak'] && isset($name_replace[$program['name']]))
@@ -379,6 +388,10 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
        $html['program'] .= sprintf('  <div class="topic">%s</div>', htmlspecialchars($program['name']));
        $html['program'] .= sprintf('  <div class="speaker">%s</div>', htmlspecialchars($program['speaker']));
        $html['program'] .= sprintf('  <div class="speaker-title">%s</div>', htmlspecialchars($program['speakerTitle']));
+       if ($program['isMultiSlot']) 
+       {
+         $html['program'] .= sprintf('  <div class="ps">%s</div>', htmlspecialchars($ps_list[$lang]));
+       }
        $html['program'] .= "</div></div></div>\n";
      }
      $html['program'] .= "</div>\n";   //end <article>

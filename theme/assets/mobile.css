@@ -497,6 +497,11 @@
         font-weight: bold;
         color: #999;
     }
+    .program .video {
+        float: right;
+        margin-right: 5px;
+        display: none;
+    }
     .program .community {
         float: right;
         font-size: 13px;
@@ -515,10 +520,9 @@
         color: #666;
         font-size: 12px;
     }
-    .program .video {
-        float: right;
-        margin-right: 5px;
-        display: none;
+    .program .ps {
+        color: #900;
+        text-align: right; 
     }
     .program .detail {
       padding: 0 5px;
@@ -1228,6 +1232,11 @@
         font-weight: bold;
         color: #999;
     }
+    .program .video {
+        float: right;
+        margin-right: 5px;
+        display: none;
+    }
     .program .community {
         float: right;
         font-size: 13px;
@@ -1246,10 +1255,9 @@
         color: #666;
         font-size: 12px;
     }
-    .program .video {
-        float: right;
-        margin-right: 5px;
-        display: none;
+    .program .ps {
+        color: #900;
+        text-align: right; 
     }
     .program .detail {
       padding: 0 5px;
