@@ -232,6 +232,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 
 	$structure = array();
 	$time_structure = array();
+	$continue = array();
 
 	foreach ($program_list as $id => &$program)
 	{
@@ -298,8 +299,9 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 
 		$last_time = getdate($last_stamp);
 		$this_time = getdate($time_stamp);
+		$time_stamp_end = $time_structure[$time_id+1];
 		$this_time_formatted = strftime("%R", $time_stamp);
-		$to_time_formatted = strftime("%R", $time_structure[$time_id+1]);
+		$to_time_formatted = strftime("%R", $time_stamp_end);
 
     if ( ($last_time['hours'] <= 12 && $this_time['hours'] > 12) || $last_time['yday'] != $this_time['yday'] )
 		{
@@ -327,10 +329,23 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
      $counter = 0;
      $html['program'] .= '<div class="article">'."\n";
 
-	 	 ksort($structure[$time_stamp]);
+     $structure[$time_stamp] = array_merge($structure[$time_stamp], $continue);
+     $continue = array();
+
+     usort($structure[$time_stamp], function ($a, $b) {
+       if ($a['room'] == 9)
+         return -1;
+       if ($b['room'] == 9)
+         return 1;
+       return ($a['room'] - $b['room']);
+     });
 
 		 foreach ($structure[$time_stamp] as &$program)
      {
+       // We need to process multi-span session again
+       if ($program['to'] !== $time_stamp_end)
+         $continue[$program['room']] = $program;
+			 
        // check in & break & lunch
        if ($program['isBreak'] && isset($name_replace[$program['name']]))
        {
