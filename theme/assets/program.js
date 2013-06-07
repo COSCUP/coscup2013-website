@@ -40,6 +40,10 @@ $(window).bind('pageload', function(){
     getDetailData(initDetailView);
     
     function initDetailView(data) {
+      var TAP_LIMIT = 500;
+      var moved = false,
+          startTime = 0;
+
       $('.program').each(function() {
         // ignore pop up which is also with class "program" attribute
         var eleId = $(this).attr('id');
@@ -55,8 +59,18 @@ $(window).bind('pageload', function(){
           .append($('<div></div>').addClass('bio').html(program.bio));
 
         $(this).append($detail.hide());
+
+        $(this).on('touchstart', function() {
+          moved = false;
+          startTime = +new Date()
+        });
+        $(this).on('touchmove', function() {
+          moved = true;
+        });
         $(this).on('touchend', function() {
-          $detail.toggle();
+          if (!moved && +new Date() - startTime < TAP_LIMIT) {
+            $detail.toggle();
+          }
         });
       });
     }
