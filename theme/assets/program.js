@@ -15,13 +15,9 @@ $(window).bind('pageload', function(){
   });
 
   function getDetailData(callback) {
-    $.ajax({
-      dataType: "json",
-      url: "/2013/api/program/program.json.js",
-      success: function (data) {
+    $.getJSON("/2013/api/program/").done(function (data) {
         program_data = data;
         callback(data);
-      }
     });
   }
 
