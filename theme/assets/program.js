@@ -2,6 +2,7 @@ $(window).bind('pageload', function(){
   if ($('#navTab').length === 0)
     return;
 
+  $('body').scrollspy();
 
   var program_data = null;
   var navHeight = $('#navTab').get(0).offsetTop;
