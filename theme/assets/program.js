@@ -30,7 +30,6 @@ $(window).bind('pageload', function(){
     initDesktopUI();
   }
   
-
   function initMobileUI() {
 
     getDetailData(initDetailView);
@@ -59,11 +58,19 @@ $(window).bind('pageload', function(){
   }
 
   function initDesktopUI() {
+    var disableWheel = function() {
+          $('body').css('overflow', 'hidden')
+        },
+        enableWheel = function() {
+          $('body').css('overflow', 'auto')
+        };
+
     $('#lock_background').on('click', function(evt) {
       // the user is not clicking on the background.
       if (this.id !== evt.target.id)
         return;
       $(this).removeClass('show');
+      enableWheel();
     });
 
     $('#content').on('click', '.article .program', function() {
@@ -90,6 +97,7 @@ $(window).bind('pageload', function(){
             .append($('<div></div>').addClass('content-title').html('Biography'))
             .append($('<div></div>').addClass('bio').html(program.bio)));
         $('#lock_background').addClass('show');
+        disableWheel();
       }
 
       if (!program_data) {
