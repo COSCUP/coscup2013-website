@@ -4,7 +4,7 @@
       <span class="date">COSCUP 2013 个人赞助方案</span><span class="call"><a href="http://registrano.com/events/personalsponsor" target="_blank">立即前往</a></span>
     </div>
     <div class="register">
-      <span class="date"><em>6</em>月<em>3</em>日开放</span><span class="call"><a href="http://registrano.com/events/coscup2013-regist">会众报名</a></span>
+      <span class="date"><em>6</em>月<em>13</em>日 20:00 UTC+8 开放</span><span class="call"><a href="http://registrano.com/events/coscup2013-regist">最后会众报名</a></span>
     </div>
     <!--news-->
     <div class="news" style="display: none;">
