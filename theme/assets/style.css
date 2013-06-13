@@ -512,6 +512,9 @@ h2.pro {
     padding: 0 15px;
     float: left;
 }
+#navTab li.active {
+    background-color: #ff7;
+}
 #navTab li:not(:first-child) {
     border-left: 1px #666 solid;
 }
