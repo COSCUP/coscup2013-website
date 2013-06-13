@@ -278,7 +278,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 	}
 	$html['program'] .= '</ul>' . "\n\n";
 
-	$html['program'] .= '<div id="navTab"><ul>';
+	$html['program'] .= '<div id="navTab" class="nav"><ul>';
 
 	foreach (array(1, 2) as $day) {
 		$html['program'] .= sprintf('<li><a href="#day%d_am">%s</a></li>'."\n",
