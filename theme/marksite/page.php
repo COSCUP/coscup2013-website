@@ -188,7 +188,7 @@ switch($this->current[0])
     
 </div>
 </body>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>respond.min.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($){
