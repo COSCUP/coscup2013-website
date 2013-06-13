@@ -422,7 +422,10 @@
         font-size: 13px;
     }
     #navTab li.active {
-        background-color: #ff7;
+        background-color: #95E9EE;
+    }
+    #navTab li.active a {
+        color: white;
     }
     #navTab li:not(:first-child) {
         border-left: 1px #666 solid;
@@ -1161,7 +1164,10 @@
         float:left
     }
     #navTab li.active {
-        background-color: #ff7;
+        background-color: #95E9EE;
+    }
+    #navTab li.active a {
+        color: white;
     }
     .floatTab {
         z-index: 9999;
