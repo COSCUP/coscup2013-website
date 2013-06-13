@@ -16,13 +16,9 @@ $(window).bind('pageload', function(){
   });
 
   function getDetailData(callback) {
-    $.ajax({
-      dataType: "json",
-      url: "/2013/api/program/program.json.js",
-      success: function (data) {
+    $.getJSON("/2013/api/program/").done(function (data) {
         program_data = data;
         callback(data);
-      }
     });
   }
 
@@ -35,7 +31,6 @@ $(window).bind('pageload', function(){
     initDesktopUI();
   }
   
-
   function initMobileUI() {
 
     getDetailData(initDetailView);
@@ -78,51 +73,53 @@ $(window).bind('pageload', function(){
   }
 
   function initDesktopUI() {
+    var disableWheel = function() {
+          $('body').css('overflow', 'hidden')
+        },
+        enableWheel = function() {
+          $('body').css('overflow', 'auto')
+        };
+
     $('#lock_background').on('click', function(evt) {
       // the user is not clicking on the background.
       if (this.id !== evt.target.id)
         return;
       $(this).removeClass('show');
+      enableWheel();
     });
 
-    $('.program').each(function() {
-      // ignore pop up which is also with class "program" attribute
-      var eleId = $(this).attr('id');
-      if ( eleId && eleId === 'program_detail' )
-        return;
-      $(this).on('click', function(event) {
-        var id = $(this).data('id');
-        function displayDetails(data) {
-          var program = data.program[id];
+    $('#content').on('click', '.article .program', function() {
+      var id = $(this).data('id');
+      function displayDetails(data) {
+        var program = data.program[id];
 
-          $('#program_detail').empty();
-          $('#program_detail')
-            .append($('<div class="metadata"></div>').addClass('track_tag colorTag-' + program.type)
-              .append($('<div></div>').addClass('head')
-                .append($('<div></div>').addClass('place').html(data.room[program.room]['zh-tw']))
-                .append($('<div></div>').addClass('timeinfo').html(getTime(program.from) + ' - ' + getTime(program.to)))
-                .append($('<div></div>').addClass('community').html(data.community[program.community])))
-              .append($('<div></div>').addClass('body')
-                .append($('<div></div>').addClass('topic').html(program.name))
-                .append($('<div></div>').addClass('speaker').html(program.speaker))
-                .append($('<div></div>').addClass('speaker-title').html(program.speakerTitle))));
+        $('#program_detail').empty();
+        $('#program_detail')
+          .append($('<div class="metadata"></div>').addClass('track_tag colorTag-' + program.type)
+            .append($('<div></div>').addClass('head')
+              .append($('<div></div>').addClass('place').html(data.room[program.room]['zh-tw']))
+              .append($('<div></div>').addClass('timeinfo').html(getTime(program.from) + ' - ' + getTime(program.to)))
+              .append($('<div></div>').addClass('community').html(data.community[program.community])))
+            .append($('<div></div>').addClass('body')
+              .append($('<div></div>').addClass('topic').html(program.name))
+              .append($('<div></div>').addClass('speaker').html(program.speaker))
+              .append($('<div></div>').addClass('speaker-title').html(program.speakerTitle))));
 
-          $('#program_detail')
-            .append($('<div></div>').addClass('detail')
-              .append($('<div></div>').addClass('content-title').html('Abstract'))
-              .append($('<div></div>').addClass('abstract').html(program.abstract))
-              .append($('<div></div>').addClass('content-title').html('Biography'))
-              .append($('<div></div>').addClass('bio').html(program.bio)));
-          $('#lock_background').addClass('show');
-        }
+        $('#program_detail')
+          .append($('<div></div>').addClass('detail')
+            .append($('<div></div>').addClass('content-title').html('Abstract'))
+            .append($('<div></div>').addClass('abstract').html(program.abstract))
+            .append($('<div></div>').addClass('content-title').html('Biography'))
+            .append($('<div></div>').addClass('bio').html(program.bio)));
+        $('#lock_background').addClass('show');
+        disableWheel();
+      }
 
-        if (!program_data) {
-          getDetailData(displayDetails);
-        } else {
-          displayDetails(program_data);
-        }
-          
-      });
+      if (!program_data) {
+        getDetailData(displayDetails);
+      } else {
+        displayDetails(program_data);
+      }
     });
   }
 
