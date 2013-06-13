@@ -4,7 +4,7 @@
       <span class="date"><a href="http://registrano.com/events/personalsponsor" target="_blank">Call for Individual Sponsorship</a></span>
     </div>
     <div class="register">
-      <span class="date"><em>6</em>/<em>3</em> <a href="http://registrano.com/events/coscup2013-regist">Registration open</a></span>
+      <span class="date"><em>6</em>/<em>13</em>, 8pm - <a href="http://registrano.com/events/coscup2013-regist">Last Registration</a></span>
     </div>
     <!--news-->
     <div class="news" style="display: none;">
