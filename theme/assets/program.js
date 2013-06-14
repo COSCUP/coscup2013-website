@@ -66,6 +66,7 @@ $(window).bind('pageload', function(){
         $(this).on('touchend', function() {
           if (!moved && +new Date() - startTime < TAP_LIMIT) {
             $detail.toggle();
+            $('body').scrollspy('refresh');
           }
         });
       });
