@@ -487,24 +487,27 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'gold' => 'Gold',
 			'silver' => 'Silver',
 			'bronze' => 'Bronze',
-            'media' => 'Media Partners',
-            'special' => 'Special Thanks'
+      'government' => 'Co-sponsor', 
+      'special' => 'Special Thanks',
+      'media' => 'Media Partners'
 		),
 		'zh-tw' => array(
 			'diamond' => '鑽石級贊助',
 			'gold' => '黃金級贊助',
 			'silver' => '白銀級贊助',
 			'bronze' => '青銅級贊助',
-            'media' => '媒體夥伴',
-            'special' => '特別感謝'
+      'government' => '協辦單位', 
+      'special' => '特別感謝',
+      'media' => '媒體夥伴'
 		),
 		'zh-cn' => array(
 			'diamond' => '钻石级赞助商',
-            'gold' => '黄金级赞助',
-            'silver' => '白银级赞助',
-            'bronze' => '青铜级赞助',
-            'media' => '媒体伙伴',
-            'special' => '特别感谢'
+      'gold' => '黄金级赞助',
+      'silver' => '白银级赞助',
+      'bronze' => '青铜级赞助',
+      'government' => '协办单位', 
+      'special' => '特别感谢',
+      'media' => '媒体伙伴'
 		)
 	);
 
@@ -514,7 +517,9 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 		'gold',
 		'silver',
 		'bronze',
-		'media'
+    'government',
+    'special',
+    'media'
 	);
 
 	$levelTitles = $levelTitlesL10n[$lang];
@@ -530,7 +535,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 		case 'sidebar':
       foreach ($levels as &$level)
       {
-        if (!$SPONS[$level]) continue;
+        if (!$SPONS[$level] || 
+          $level === 'government' || $level === 'special' || $level === 'media' ) continue;
 
         $html .= sprintf("<h2>%s</h2>\n", htmlspecialchars($levelTitles[$level]));
         $html .= sprintf('<ul class="%s">'."\n", $level);
@@ -561,7 +567,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
       $counter = 0;
       foreach ($levels as &$level)
       {
-        if (!$SPONS[$level]) continue;
+        if (!$SPONS[$level] ||
+          $level === 'government' || $level === 'special' || $level === 'media' ) continue;
 
         foreach ($SPONS[$level] as $i => &$SPON)
         {
