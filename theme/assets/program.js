@@ -102,7 +102,7 @@ $(window).bind('pageload', function(){
               .append($('<div></div>').addClass('timeinfo').html(getTime(program.from) + ' - ' + getTime(program.to)))
               .append($('<div></div>').addClass('community').html(data.community[program.community])))
             .append($('<div></div>').addClass('body')
-              .append($('<div></div>').addClass('topic').html(program.name))
+              .append($('<div></div>').addClass('topic').addClass(program.lang).html(program.name))
               .append($('<div></div>').addClass('speaker').html(program.speaker))
               .append($('<div></div>').addClass('speaker-title').html(program.speakerTitle))));
 

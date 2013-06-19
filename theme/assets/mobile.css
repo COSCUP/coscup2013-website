@@ -518,6 +518,18 @@
         margin-bottom: 5px;
         line-height: 20px;
     }
+    .program .topic.en:after {
+        font-size: 11px;
+        content: 'En';
+        border: 1px solid gray;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -o-border-radius: 5px;
+        background: red;
+        color: white;
+        margin: 2px;
+        padding: 2px 5px;
+    }
     .program .speaker {
         color: #666;
         margin-bottom: 8px;
@@ -1258,6 +1270,18 @@
     .program .topic {
         margin-bottom: 5px;
         line-height: 20px;
+    }
+    .program .topic.en:after {
+        font-size: 11px;
+        content: 'En';
+        border: 1px solid gray;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -o-border-radius: 5px;
+        background: red;
+        color: white;
+        margin: 2px;
+        padding: 2px 5px;
     }
     .program .speaker {
         color: #666;

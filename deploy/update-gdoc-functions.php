@@ -385,7 +385,7 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
        $html['program'] .= sprintf('  <div class="community">%s</div>',
            htmlspecialchars($community_list[$program['community']]));
        $html['program'] .= '</div><div class="body">';
-       $html['program'] .= sprintf('  <div class="topic">%s</div>', htmlspecialchars($program['name']));
+       $html['program'] .= sprintf('  <div class="topic %s">%s</div>', $program['lang'], htmlspecialchars($program['name']));
        $html['program'] .= sprintf('  <div class="speaker">%s</div>', htmlspecialchars($program['speaker']));
        $html['program'] .= sprintf('  <div class="speaker-title">%s</div>', htmlspecialchars($program['speakerTitle']));
        if ($program['isMultiSlot']) 
