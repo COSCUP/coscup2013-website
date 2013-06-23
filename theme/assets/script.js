@@ -197,13 +197,13 @@ jQuery(function ($) {
 
   // init: Load sponsors from API if it's empty (happen on sub-domain sites),
   // or if the page is loaded from AppCache
-  if ($('#sidebar > .sponsors.empty').length ||
+  if ($('#sponsor.empty').length ||
     (window.applicationCache && window.applicationCache.status !== 0)) {
     // Fetch sponsors from remove JSON api
     $.getJSON(
-      'http://coscup.org/2012/api/sponsors/?callback=?',
+      'http://coscup.org/2013/api/sponsors/?callback=?',
       function (data) {
-        var $sponsors = $('#sidebar > .sponsors').removeClass('empty');
+        var $sponsors = $('#sponsor').removeClass('empty');
         var titles = (
           {
             'en' : {
@@ -229,6 +229,11 @@ jQuery(function ($) {
             }
           }
         )[lang];
+
+        // Save existing nodes
+        var $existingSponsors = $sponsors.children();
+        console.log($existingSponsors);
+        $sponsors.empty();
 
         $.each(
           [
@@ -256,6 +261,8 @@ jQuery(function ($) {
             $sponsors.append($u);
           }
         );
+        // Restore existing sponsors
+        $sponsors.append($existingSponsors);
         mobileSponsorLogo();
       }
     );
