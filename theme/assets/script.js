@@ -204,6 +204,10 @@ jQuery(function ($) {
       'http://coscup.org/2013/api/sponsors/?callback=?',
       function (data) {
         var $sponsors = $('#sponsor').removeClass('empty');
+        var $mobileSponsors = null;
+        if ($('#mySwipe.empty').length) {
+          $mobileSponsors = $('#mySwipe.empty').removeClass('empty')
+        }
         var titles = (
           {
             'en' : {
@@ -263,7 +267,47 @@ jQuery(function ($) {
         );
         // Restore existing sponsors
         $sponsors.append($existingSponsors);
-        mobileSponsorLogo();
+
+        if ($mobileSponsors) {
+          var $allSponsors = [];
+          $.each(
+            [
+              'diamond',
+              'gold',
+              'silver',
+              'bronze',
+              'media'
+            ],
+            function (i, level) {
+              if (!data[level]) return;
+              $.each(
+                data[level],
+                function (i, sponsor) {
+                  $allSponsors.push(sponsor);
+                }
+              );
+            }
+          );
+          $mobileSponsors.append("<div class='swipe-wrap'>");
+          var $wrap = $mobileSponsors.children(0);
+          for (var j = 0; j < $allSponsors.length; j += 2) {
+            var sponsor1 = $allSponsors[j];
+            var sponsor2 = $allSponsors[j+1];
+            if (!sponsor2) {
+              sponsor2 = { url: '#', name: { 'zh-tw': '' }, logoUrl: '' };
+            }
+            $wrap.append(
+              '<div><span>'
+                + '<a href="' + sponsor1.url + '" target="_blank" title="' + sponsor1.name[lang] + '">'
+                + '<img alt="' + sponsor1.name[lang] + '" src="' + sponsor1.logoUrl + '" width="40%"/></a>'
+                + '<a href="' + sponsor2.url + '" target="_blank" title="' + sponsor2.name[lang] + '">'
+                + '<img alt="' + sponsor2.name[lang] + '" src="' + sponsor2.logoUrl + '" width="40%"/></a>'
+                + '</span></div>');
+          }
+          window.mySwipe = Swipe($mobileSponsors.get(0), {
+            auto: 3000,
+          });
+        }
       }
     );
   }

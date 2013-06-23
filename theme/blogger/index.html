@@ -163,42 +163,9 @@ head.appendChild(script);
 <h2>贊助 COSCUP</h2>
 <p>如果您欲贊助 COSCUP&#65292;請與 <a href='mailto:sponsorship@coscup.org'>sponsorship@coscup.org</a> 聯絡&#12290;</p>
 </div>
-<div class='swipe' id='mySwipe' style='max-width:500px;margin:0 auto'>
-    <div class='swipe-wrap'>
-<div><b>
-    <a href='http://aws.amazon.com/' target='_blank' title='AWS'><img alt='AWS' src='http://coscup.org/2013/logos/aws.png' width='40%'/></a>
-    <a href='http://www.kkbox.com' target='_blank' title='KKBOX'><img alt='KKBOX' src='http://coscup.org/2013/logos/kkbox.png' width='40%'/></a>
-</b></div>
-<div><b>
-  <a href='http://www.pixnet.net/' target='_blank' title='痞客邦'><img alt='痞客邦' src='http://coscup.org/2013/logos/pixnet.png' width='40%'/></a>
-      <a href='http://www.sharelike.com.tw' target='_blank' title='雪爾萊克'><img alt='雪爾萊克' src='http://coscup.org/2013/logos/sharelike.png' width='40%'/></a>
-</b></div>
-<div><b>
-    <a href='http://www.archilife.org/' target='_blank' title='佑生研究基金會'><img alt='佑生研究基金會' src='http://coscup.org/2013/logos/archilife.png' width='40%'/></a>
-    <a href='http://faria.co' target='_blank' title='Faria Systems'><img alt='Faria Systems' src='http://coscup.org/2013/logos/faria-systems.png' width='40%'/></a>
-</b></div>
-<div><b>
-    <a href='http://clbc.tw/' target='_blank' title='CLBC 慶隆商務俱樂部'><img alt='CLBC 慶隆商務俱樂部' src='http://coscup.org/2013/logos/clbc.png' width='40%'/></a>
-    <a href='http://verywed.com/' target='_blank' title='數位人性科技股份有限公司(非常婚禮)'><img src='http://coscup.org/2013/logos/very.png' width='40%'/></a>
-</b></div>
-<div><b>
-    <a href='http://www.gamer.com.tw/' target='_blank' title='巴哈姆特'><img alt='巴哈姆特' src='http://coscup.org/2013/logos/gamer.png' width='40%'/></a>
-    <a href='http://www.etusolution.com/index.php/en/' target='_blank' title='精誠資訊'><img alt='精誠資訊' src='http://coscup.org/2013/logos/etu.png' width='40%'/></a>
-</b></div>
-<div><b>
-  <a href=' http://www.acomotech.com/' target='_blank' title='AcoMo 杏昕科技股份有限公司'><img alt='AcoMo 杏昕科技股份有限公司' src='http://coscup.org/2013/logos/acomo.png' width='40%'/></a>
-   <a href='http://www.moko365.com/' target='_blank' title='仕橙3G'><img alt='仕橙3G' src='http://coscup.org/2013/logos/moko.png' width='40%'/></a>
-</b></div>
-<div><b>
-  <a href='http://infinitiessoft.com/' target='_blank' title='數位無限軟體'><img alt='數位無限軟體' src='http://coscup.org/2013/logos/infinities.png' width='40%'/></a>
-      <a href='http://www.dmp.com.tw/' target='_blank' title='瞻營全電子股份有限公司'><img alt='瞻營全電子股份有限公司' src='http://coscup.org/2013/logos/dmp.png' width='40%'/></a>
-</b></div>
-<div><b>
-  <a href='http://www.openfoundry.org/' target='_blank' title='OSSF 自由軟體'><img alt='OSSF 自由軟體' src='http://coscup.org/2013/logos/ossf.png' width='40%'/></a>
-</b></div>
-  
-    </div>
-  </div>
+<div class='swipe empty' id='mySwipe' style='max-width:500px;margin:0 auto'>
+<!-- 加上 class="empty" 會觸發 script 拉遠端資料顯示 -->
+</div>
 <div id='content'>
 <!-- content // -->
   <!-- blogger data -->
@@ -1223,9 +1190,9 @@ head.appendChild(script);
 </div>
 
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js' type='text/javascript'/>
+<script src='http://coscup.org/2013-theme/assets/swipe.js' type='text/javascript'/>
 <script src='http://coscup.org/2013-theme/assets/script.js' type='text/javascript'/>
 <script src='http://coscup.org/2013-theme/assets/respond.min.js' type='text/javascript'/>
-<script src='http://coscup.org/2013-theme/assets/swipe.js' type='text/javascript'/>
 <script type='text/javascript'>
 //<![CDATA[
   jQuery(document).ready(function($){
@@ -1237,16 +1204,6 @@ head.appendChild(script);
       $("#mainNav").slideToggle();
       $(this).toggleClass("active");
     });
-  });
-  var elem = document.getElementById('mySwipe');
-  window.mySwipe = Swipe(elem, {
-    // startSlide: 4,
-       auto: 3000,
-    // continuous: true,
-    // disableScroll: true,
-    // stopPropagation: true,
-    // callback: function(index, element) {},
-    // transitionEnd: function(index, element) {}
   });
 //]]>
 </script>
