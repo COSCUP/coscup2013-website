@@ -127,6 +127,13 @@ jQuery(function ($) {
             if (window._gaq)
               _gaq.push(['_trackPageview']);
 
+            var hash = window.location.hash;
+            if (hash !== '') {
+              if ($(hash).length > 0) {
+                $(window).scrollTop($(hash).offset().top);
+              }
+            }
+
             PageHandler._loadPage(samepage);
           }
         }

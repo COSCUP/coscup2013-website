@@ -555,7 +555,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
         $html .= "</ul>\n\n";
       }
       // add special thank
-      $sponsorLink = 'http://coscup.org/2013/'.$lang.'/sponsors/';
+      $sponsorLink = '/2013/'.$lang.'/sponsors/#special';
       $html .= sprintf('<h2>%s</h2>'."\n", htmlspecialchars($levelTitles['special']));
       $html .= sprintf('<ul>'."\n".'  <li><a href="%s" title="%s">%s</a></li>'."\n".'</ul>',
                       $sponsorLink, 
@@ -594,7 +594,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
       {
         if (!$SPONS[$level]) continue;
 
-        $html .= '<h1>' . htmlspecialchars($levelTitles[$level]) . '</h1>'."\n";
+        $html .= sprintf('<h1 id="%s">%s</h1>'."\n", $level, htmlspecialchars($levelTitles[$level]));
 
         foreach ($SPONS[$level] as $i => &$SPON)
         {
@@ -615,8 +615,6 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
           $html .= "  </div>\n</a></div>\n";
         }
       }
-
-      //TODO add special thanks
 
       break;
 	}

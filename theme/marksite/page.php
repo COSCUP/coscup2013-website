@@ -53,13 +53,12 @@ if (isset($styles)) {
 <link type="image/x-icon" href="<?php echo $theme_assets_uri;?>favicon.ico" rel="shortcut icon">
 
 <!--隱藏網址列-->
-<script>
+<!--script>
 	window.addEventListener("load",function() {  
-	setTimeout(function(){
-	window.scrollTo(0, 1); }, 10);
-});
- 
-</script>
+    setTimeout(function(){
+    window.scrollTo(0, 1); }, 10);
+  });
+</script-->
 
 <!-- GA -->
 <script>
