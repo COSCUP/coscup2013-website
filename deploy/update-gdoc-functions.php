@@ -487,7 +487,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'gold' => 'Gold',
 			'silver' => 'Silver',
 			'bronze' => 'Bronze',
-      'government' => 'Co-sponsor', 
+      'government' => 'Co-host', 
       'special' => 'Special Thanks',
       'media' => 'Media Partners'
 		),
