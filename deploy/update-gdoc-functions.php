@@ -535,8 +535,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 		case 'sidebar':
       foreach ($levels as &$level)
       {
-        if (!$SPONS[$level] || 
-          $level === 'government' || $level === 'special') continue;
+        if (!$SPONS[$level] || $level === 'special')
+          continue;
 
         $html .= sprintf("<h2>%s</h2>\n", htmlspecialchars($levelTitles[$level]));
         $html .= sprintf('<ul class="%s">'."\n", $level);
@@ -567,8 +567,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
       $counter = 0;
       foreach ($levels as &$level)
       {
-        if (!$SPONS[$level] ||
-          $level === 'government' || $level === 'special') continue;
+        if (!$SPONS[$level])
+          continue;
 
         foreach ($SPONS[$level] as $i => &$SPON)
         {
