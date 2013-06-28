@@ -222,6 +222,7 @@ jQuery(function ($) {
               'gold' : 'Gold Level Sponsors',
               'silver' : 'Silver Level Sponsors',
               'bronze' : 'Bronze Level Sponsors',
+              'cohost' : 'Co-host',
               'media' : 'Media Partners'
             },
             'zh-tw' : {
@@ -229,6 +230,7 @@ jQuery(function ($) {
               'gold' : '黃金級贊助',
               'silver' : '白銀級贊助',
               'bronze' : '青銅級贊助',
+              'cohost' : '協辦單位',
               'media' : '媒體夥伴'
             },
             'zh-cn' : {
@@ -236,6 +238,7 @@ jQuery(function ($) {
               'gold' : '黄金级赞助',
               'silver' : '白银级赞助',
               'bronze' : '青铜级赞助',
+              'cohost' : '协办单位',
               'media' : '媒体伙伴'
             }
           }
@@ -252,6 +255,7 @@ jQuery(function ($) {
             'gold',
             'silver',
             'bronze',
+            'cohost',
             'media'
           ],
           function (i, level) {

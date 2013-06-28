@@ -487,7 +487,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'gold' => 'Gold',
 			'silver' => 'Silver',
 			'bronze' => 'Bronze',
-      'government' => 'Co-host', 
+      'cohost' => 'Co-host', 
       'special' => 'Special Thanks',
       'media' => 'Media Partners'
 		),
@@ -496,7 +496,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'gold' => '黃金級贊助',
 			'silver' => '白銀級贊助',
 			'bronze' => '青銅級贊助',
-      'government' => '協辦單位', 
+      'cohost' => '協辦單位', 
       'special' => '特別感謝',
       'media' => '媒體夥伴'
 		),
@@ -505,7 +505,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
       'gold' => '黄金级赞助',
       'silver' => '白银级赞助',
       'bronze' => '青铜级赞助',
-      'government' => '协办单位', 
+      'cohost' => '协办单位', 
       'special' => '特别感谢',
       'media' => '媒体伙伴'
 		)
@@ -517,7 +517,7 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 		'gold',
 		'silver',
 		'bronze',
-    'government',
+    'cohost',
     'special',
     'media'
 	);
