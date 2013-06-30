@@ -356,7 +356,7 @@
         float:left
     }
     .spinfo {
-        width: 93%;
+        width: 90%;
         background: #fff;
         padding: 10px 15px;
         border-left: 4px #CCC solid;
@@ -368,6 +368,20 @@
         font-size: 15px;
         line-height: 28px;
     }
+    .personal {
+      width: 90%;
+      margin-bottom: 15px;
+      border-left: 4px solid rgb(204, 204, 204);
+      padding: 15px;
+      background: rgb(255, 255, 255);
+      float: left;
+    }
+    .personal li {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+
     /* news------ */
     #content .news {
         width: 100%;
@@ -1111,7 +1125,7 @@
         float:left
     }
     .spinfo {
-        width: 93%;
+        width: 95%;
         background: #fff;
         padding: 10px 15px;
         border-left: 4px #CCC solid;
@@ -1123,6 +1137,20 @@
         font-size: 15px;
         line-height: 28px;
     }
+    .personal {
+      width: 95%;
+      margin-bottom: 15px;
+      border-left: 4px solid rgb(204, 204, 204);
+      padding: 15px;
+      background: rgb(255, 255, 255);
+      float: left;
+    }
+    .personal li {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+    
     /* news------ */
     #content .news {
         width: 100%;

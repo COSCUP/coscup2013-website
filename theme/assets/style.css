@@ -439,11 +439,11 @@ h2 {
     margin-bottom: 35px;
 }
 .splist img {
-    margin: 5px 18px 0 0;
+    margin: 5px 15px 0 0;
     vertical-align: top;
 }
 .spinfo {
-    width: 580px;
+    width: 600px;
     background: #fff;
     padding: 10px 15px;
     border-left: 4px #CCC solid;
@@ -457,6 +457,21 @@ h2 {
     line-height: 28px;
     color: #333333
 }
+
+.personal {
+  width: 95%;
+  margin-bottom: 15px;
+  border-left: 4px solid rgb(204, 204, 204);
+  padding: 15px;
+  background: rgb(255, 255, 255);
+  float: left;
+}
+.personal li {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
 /* map------ */
 .map {
     width: 780px;

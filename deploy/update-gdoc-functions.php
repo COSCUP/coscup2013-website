@@ -470,6 +470,45 @@ function get_sponsors_list_from_gdoc() {
 	return $SPONS;
 }
 
+function get_donate_list_from_gdoc() {
+
+	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . SPONSOR_LIST_KEY . '&gid=6&range=A2%3AB999&output=csv', 'r');
+
+	if (!$handle)
+	{
+		return FALSE; // failed
+	}
+
+	$donate_list = array();
+
+	// name, money
+	while (($entry = fgetcsv($handle)) !== FALSE)
+  {
+    if ($entry[0] === 'anonymous') {
+      $donate_list[0] = $entry[1];
+      continue;
+    }
+    $money = intval($entry[1]);
+    if (!isset($donate_list[$money]))
+      $donate_list[$money] = array();
+		$donate_list[$money][] = $entry[0];
+	}
+
+  fclose($handle);
+
+  krsort($donate_list);
+  if (extension_loaded("intl")) {
+    $collator = new Collator('zh_TW_STROKE');
+    foreach ($donate_list as $m => &$names) {
+      if ($m === 0)
+        continue;
+      $collator->sort($names);  // sorting by name
+    }
+  }
+
+	return $donate_list;
+}
+
 function get_sponsor_info_localize($SPON, $type='name', $locale='zh-tw', $fallback='zh-tw')
 {
 	if ($SPON[$type][$locale])
@@ -479,7 +518,7 @@ function get_sponsor_info_localize($SPON, $type='name', $locale='zh-tw', $fallba
 	return $SPON[$type][$fallback];
 }
 
-function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
+function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw') {
 
 	$levelTitlesL10n = array(
 		'en' => array(
@@ -489,7 +528,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'bronze' => 'Bronze',
       'cohost' => 'Co-host', 
       'special' => 'Special Thanks',
-      'media' => 'Media Partners'
+      'media' => 'Media Partners',
+      'personal' => 'Individual Sponsorship'
 		),
 		'zh-tw' => array(
 			'diamond' => '鑽石級贊助',
@@ -498,7 +538,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 			'bronze' => '青銅級贊助',
       'cohost' => '協辦單位', 
       'special' => '特別感謝',
-      'media' => '媒體夥伴'
+      'media' => '媒體夥伴',
+      'personal' => '個人贊助'
 		),
 		'zh-cn' => array(
 			'diamond' => '钻石级赞助商',
@@ -507,7 +548,8 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
       'bronze' => '青铜级赞助',
       'cohost' => '协办单位', 
       'special' => '特别感谢',
-      'media' => '媒体伙伴'
+      'media' => '媒体伙伴',
+      'personal' => '个人赞助'
 		)
 	);
 
@@ -523,11 +565,22 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 	);
 
 	$levelTitles = $levelTitlesL10n[$lang];
-    $specialThanks = array(
-        'zh-tw' => '請點選看看有那些支持 COSCUP 的夥伴們!',
-        'zh-cn' => '请点选看看有那些支持 COSCUP 的伙伴们!',
-        'en' => 'Click here to know more supporting partners!'
-    );
+  $specialThanks = array(
+    'zh-tw' => '請點選看看有那些支持 COSCUP 的夥伴們!',
+    'zh-cn' => '请点选看看有那些支持 COSCUP 的伙伴们!',
+    'en' => 'Click here to know more supporting partners!'
+  );
+
+  $donateDesc = array(
+    'zh-tw' => '謝謝所有參與 COSCUP 2013 個人贊助方案的贊助者，因為有你們，促成了活動的舉行，感謝各位! 以下贊助者名字依贊助款金額與姓名筆劃順序排列：',
+    'zh-cn' => '谢谢所有参与 COSCUP 2013 个人赞助方案的赞助者，因为有你们，促成了活动的举行，感谢各位! 以下赞助者名字依赞助款金额与姓名笔划顺序排列：',
+    'en' => 'We appreciate your support! Because of you, COSCUP is doing better. The following names are ordered by sponsorship amount and number of strokes.'
+  );
+  $donateAnonymous = array(
+    'zh-tw' => '及不具明的好朋友 %s 名',
+    'zh-cn' => '及不具明的好朋友 %s 名',
+    'en' => '... and %s anonymous donors'
+  );
 
 	$html = '';
 	switch ($type)
@@ -598,7 +651,6 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
 
         foreach ($SPONS[$level] as $i => &$SPON)
         {
-
           $html .= '<div class="splist">'."\n";
           $html .= sprintf('<a href="%s" target="_blank"><img src="%s" alt="%s" />'."\n",
               htmlspecialchars($SPON['url']),
@@ -616,6 +668,25 @@ function get_sponsors_html($SPONS, $type = 'sidebar', $lang = 'zh-tw') {
         }
       }
 
+      if (count($DONATES) === 0) break;
+
+      $html .= sprintf('<h1>%s</h1>'."\n", htmlspecialchars($levelTitles['personal']));
+      $html .= sprintf('<p>%s</p>'."\n", htmlspecialchars($donateDesc[$lang]));
+      $html .= '<div class="personal"><ul>'."\n";
+      foreach ($DONATES as $m => &$names) {
+        if ($m === 0)
+          continue;
+        foreach ($names as $name) {
+          $html .= sprintf('<li>%s</li>'."\n", htmlspecialchars($name));
+        }
+      }
+      $html .= "</ul></div>\n";
+      if (isset($DONATES[0])) {
+        $html .= '<div class="personal"><div>'."\n";
+        $html .= sprintf($donateAnonymous[$lang], $DONATES[0]);
+        $html .= "</div></div>\n";
+      }
+
       break;
 	}
 	return $html;
@@ -629,6 +700,7 @@ function anchor_name($s)
 
 
 $SPONS = get_sponsors_list_from_gdoc();
+$DONATES = get_donate_list_from_gdoc();
 
 if ($SPONS === FALSE)
 {
@@ -642,14 +714,18 @@ else
 		{
 			print "Write sponsors into " . $path . " .\n";
 			$fp = fopen($path, "w");
-			fwrite($fp, get_sponsors_html($SPONS, $type, $lang));
+			fwrite($fp, get_sponsors_html($SPONS, $DONATES, $type, $lang));
 			fclose($fp);
 		}
 	}
 
 	print "Write sponsors into " . $json_output["sponsors"] . " .\n";
 	$fp = fopen ($json_output["sponsors"], "w");
-	fwrite ($fp, json_encode($SPONS));
+	fwrite ($fp, json_encode(
+		array(
+			'sponsors' => $SPONS,
+			'donates' => $DONATES
+		)));
 	fclose ($fp);
 }
 
@@ -673,11 +749,11 @@ else
 	{
 		foreach ($l10n as $lang => $path)
 		{
-            $program_list_html = get_program_list_html($program_list, $program_types_list, $program_rooms_list, $program_community_list, $lang);
-			print "Write program into " . $path . " .\n";
-			$fp = fopen($path, "w");
-            fwrite($fp, $program_list_html[$type]);
-            fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
+      $program_list_html = get_program_list_html($program_list, $program_types_list, $program_rooms_list, $program_community_list, $lang);
+      print "Write program into " . $path . " .\n";
+      $fp = fopen($path, "w");
+      fwrite($fp, $program_list_html[$type]);
+      fwrite($fp, '<div id="lock_background"><div id="program_detail" class="program"></div></div>');
 			fclose($fp);
 		}
 	}
