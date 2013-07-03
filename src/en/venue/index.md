@@ -24,3 +24,5 @@ Taipei International Convention Center (TICC)(1 Hsin-Yi Rd.,Sec.5,Taipei 11049,T
     Take MRT to "Taipei Main Station" and take MRT Blue Line to "Taipei City Hall". Then transfer to B5 or No. 266 bus to "World Trade Center (Zhungjing)" and walk to TICC.
 * **b. From MRT Brown Line:**
     Take MRT to "Zhongxiao Fuxing Station" and take MRT Blue line to "Taipei City Hall". Then transfer to  B5 or No. 266 bus to "World Trade Center (Zhungjing)" and walk to TICC.
+
+**For more detail, please <a href='http://www.ticc.com.tw/DB/FCKFiles/File/pdf/atlas_en.pdf' target='_blank'>see here</a>.**
