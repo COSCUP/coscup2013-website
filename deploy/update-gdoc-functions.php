@@ -752,7 +752,7 @@ function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
         $html .= "    <div class=\"list\">\n";
         $html .= sprintf("        <span>%s</span>\n", htmlspecialchars($news['date']));
         $html .= sprintf("        <div class=\"title\">%s</div>\n", htmlspecialchars($news['desc']));
-        $html .= sprintf("        <div class=\"link\"><a href=\"%s\">%s</a></div>\n",
+        $html .= sprintf("        <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n",
                          htmlspecialchars($news['link']),
                          htmlspecialchars($news['link']));
         $html .= "    </div>\n";
