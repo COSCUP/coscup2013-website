@@ -577,8 +577,8 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
     'en' => 'We appreciate your support! Because of you, COSCUP is doing better. The following names are ordered by sponsorship amount and number of strokes.'
   );
   $donateAnonymous = array(
-    'zh-tw' => '及不具明的好朋友 %s 名',
-    'zh-cn' => '及不具明的好朋友 %s 名',
+    'zh-tw' => '及不具名的好朋友 %s 名',
+    'zh-cn' => '及不具名的好朋友 %s 名',
     'en' => '... and %s anonymous donors'
   );
 
