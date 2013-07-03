@@ -259,11 +259,11 @@ jQuery(function ($) {
             'media'
           ],
           function (i, level) {
-            if (!data[level]) return;
+            if (!data['sponsors'][level]) return;
             $sponsors.append('<h2>' + titles[level] + '</h2>');
             var $u = $('<ul class="' + level + '" />');
             $.each(
-              data[level],
+              data['sponsors'][level],
               function (i, sponsor) {
                 // Assume that there is no special chars to escape
                 $u.append(
@@ -290,9 +290,9 @@ jQuery(function ($) {
               'media'
             ],
             function (i, level) {
-              if (!data[level]) return;
+              if (!data['sponsors'][level]) return;
               $.each(
-                data[level],
+                data['sponsors'][level],
                 function (i, sponsor) {
                   $allSponsors.push(sponsor);
                 }

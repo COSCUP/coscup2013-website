@@ -787,12 +787,23 @@ else
 		}
 	}
 
+  $donors = array();
+  $anonymous = 0;
+	foreach ($DONATES as $m => &$names) {
+		if ($m === 0)
+			$anonymous = $names;
+		foreach ($names as $name) {
+			$donors[] = $name;
+		}
+	}
+
 	print "Write sponsors into " . $json_output["sponsors"] . " .\n";
 	$fp = fopen ($json_output["sponsors"], "w");
 	fwrite ($fp, json_encode(
 		array(
 			'sponsors' => $SPONS,
-			'donates' => $DONATES
+      'donors' => $donors,
+      'anonymous' => $anonymous
 		)));
 	fclose ($fp);
 }
