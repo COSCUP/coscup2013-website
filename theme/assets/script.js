@@ -323,6 +323,27 @@ jQuery(function ($) {
     );
   }
 
+  function loadNewsWidget() {
+    if ($('.news > .news_list.empty').length ||
+        (window.applicationCache && window.applicationCache.status !== 0)) {
+      $.getJSON(
+        'http://coscup.org/2013/api/news/?callback=?',
+        function (data) {
+          var $news_list = $('.news > .news_list.empty').removeClass('empty');
+          $.each(
+            data['news'].slice(0, 3),
+            function (i, news) {
+              $news_list.append(
+                '<div class="list"><span>' + news.date + '</span>' +
+                  '<a href="' + news.link + '" target="_blank">' +
+                  '<div class="title">' + news.desc + '</div></a></div>'
+              );
+            });
+        });
+    }
+  }
+  $(window).bind('pageload', loadNewsWidget);
+
   // init: Analytics tracking for Sponsors
   $('.sponsors a, #mobileSponsorLogo a').live(
     'click',

@@ -181,16 +181,17 @@
     #left .news {
         width: 95%;
     }
-    #left .news .list {
+    #left .news .news_list .list {
         width: 100%;
+        margin-bottom: 0px;
         background: #efefef;
         border-top: 1px #CCC solid;
-        border-bottom: 1px #CCC solid;
         padding: 8px;
+        border-bottom: none;
         float: left;
     }
-    #left .news .first {
-        border-bottom: none;
+    #left .news .news_list .list:last-child {
+        border-bottom: 1px #CCC solid;
     }
     #left .news span {
         width: 95%;
@@ -954,16 +955,17 @@
     #left .news {
         width: 95%;
     }
-    #left .news .list {
+    #left .news .news_list .list {
         width: 100%;
+        margin-bottom: 0px;
         background: #efefef;
         border-top: 1px #CCC solid;
-        border-bottom: 1px #CCC solid;
+        border-bottom: none;
         padding: 8px;
         float: left;
     }
-    #left .news .first {
-        border-bottom: none;
+    #left .news .news_list .list:last-child {
+        border-bottom: 1px #CCC solid;
     }
     #left .news span {
         width: 95%;

@@ -217,16 +217,12 @@ h2 {
 #left .news {
     width: 430px;
 }
-#left .news .list {
-    width: 95%;
-    background: #efefef;
-    border-top: 1px #CCC solid;
-    border-bottom: 1px #CCC solid;
-    padding: 8px;
-    float: left;
-}
-#left .news .first {
+#left .news .news_list .list {
+    margin-bottom: 0px;
     border-bottom: none;
+}
+#left .news .news_list .list:last-child {
+    border-bottom: 1px solid rgb(204, 204, 204);
 }
 #left .news span {
     width: 95%;

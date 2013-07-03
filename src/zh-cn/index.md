@@ -7,7 +7,10 @@
       <span class="date"><em>6</em>月<em>13</em>日<em>20:00</em></span><span class="call"><a href="http://registrano.com/events/coscup2013-regist">最后报名</a></span>
     </div>
     <!--news-->
-    <div class="news" style="display: none;">
+    <div class="news">
+      <h1>媒体报导</h1>
+      <div class="news_list empty"></div>
+      <div class="more"><a href="./news/">更多News »</a></div>
     </div>
     <!--议程-->
     <div class="info">

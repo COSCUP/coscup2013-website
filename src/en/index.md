@@ -7,7 +7,10 @@
       <span class="date"><em>6</em>/<em>13</em>, 8pm - <a href="http://registrano.com/events/coscup2013-regist">Last Registration</a></span>
     </div>
     <!--news-->
-    <div class="news" style="display: none;">
+    <div class="news">
+      <h1>News Release</h1>
+      <div class="news_list empty"></div>
+      <div class="more"><a href="./news/">more news »</a></div>
     </div>
     <!--session-->
     <div class="info">
