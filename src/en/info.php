@@ -11,4 +11,4 @@ $contents = array(
   "openwall" => "Open"
 );
 
-$menu_hidden = array("news", "openwall");
+$menu_hidden = array("openwall");

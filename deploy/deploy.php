@@ -23,6 +23,7 @@ system("rm -rf ".escapeshellarg(TMP_PATH));
 mkdir(dirname($json_output['menu']), 0777, true);
 mkdir(dirname($json_output['sponsors']), 0777, true);
 mkdir(dirname($json_output['program']), 0777, true);
+mkdir(dirname($json_output['news']), 0777, true);
 
 $cwd = getcwd();
 

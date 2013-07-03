@@ -10,4 +10,7 @@ src/en/sponsors/index.md
 src/en/program/*.html
 src/zh-tw/program/*.html
 src/zh-cn/program/*.html
+src/en/news/*.html
+src/zh-tw/news/*.html
+src/zh-cn/news/*.html
 deploy/files/

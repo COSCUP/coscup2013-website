@@ -692,6 +692,74 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
 	return $html;
 }
 
+function get_news_list_from_gdoc() {
+
+    $handle = @fopen('https://spreadsheets.google.com/pub?key=' . NEWS_LIST_KEY . '&range=A2%3AC999&output=csv', 'r');
+
+    if (!$handle)
+    {
+        return FALSE; // failed
+    }
+
+    $NEWS_LIST = array();
+
+    // date, desc, link
+    while (($NEWS = fgetcsv($handle)) !== FALSE)
+    {
+        $date = trim($NEWS[0]);
+        $desc = trim($NEWS[1]);
+        $link = trim($NEWS[2]);
+
+        if ($date === "" ||
+            $desc === "" ||
+            $link === "") {
+            continue;
+        }
+
+        $NEWS_obj = array(
+            'date' => $date,
+            'desc' => $desc,
+            'link' => $link
+        );
+
+        array_push ($NEWS_LIST, $NEWS_obj);
+    }
+
+    fclose($handle);
+
+    return $NEWS_LIST;
+}
+
+function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
+
+    $l10n = array(
+        'en' => array(
+            'News' => 'News'
+        ),
+        'zh-tw' => array(
+            'News' => '媒體報導'
+        ),
+        'zh-cn' => array(
+            'News' => '媒体报导'
+        )
+    );
+
+    $html = '';
+    $html .= sprintf("<h1 id=\"News\">%s</h1>\n", htmlspecialchars($l10n[$lang]['News']));
+    $html .= "<div class=\"news\">\n";
+    foreach ($NEWS_LIST as $idx => &$news)
+    {
+        $html .= "    <div class=\"list\">\n";
+        $html .= sprintf("        <span>%s</span>\n", htmlspecialchars($news['date']));
+        $html .= sprintf("        <div class=\"title\">%s</div>\n", htmlspecialchars($news['desc']));
+        $html .= sprintf("        <div class=\"link\"><a href=\"%s\">%s</a></div>\n",
+                         htmlspecialchars($news['link']),
+                         htmlspecialchars($news['link']));
+        $html .= "    </div>\n";
+    }
+    $html .= "</div>\n"; // <div class="news">
+    return $html;
+}
 
 function anchor_name($s)
 {
@@ -768,4 +836,27 @@ else
 			'community' => $program_community_list
 		)));
 	fclose ($fp);
+}
+
+$news_list = get_news_list_from_gdoc();
+
+if ($news_list === FALSE)
+{
+    print "ERROR! Unable to download news list from Google Docs.\n";
+}
+else
+{
+    foreach ($news_list_output as $lang => $path)
+    {
+        $news_list_html = get_news_list_html($news_list, $lang);
+        print "Write news into " . $path . " .\n";
+        $fp = fopen($path, "w");
+        fwrite($fp, $news_list_html);
+        fclose($fp);
+    }
+
+    print "Write news into " . $json_output["news"] . " .\n";
+    $fp = fopen ($json_output["news"], "w");
+    fwrite ($fp, json_encode(array('news' => $news_list)));
+    fclose ($fp);
 }
