@@ -3,9 +3,6 @@
     <div class="contributor">
       <span class="date">COSCUP 2013 个人赞助方案</span><span class="call"><a href="http://registrano.com/events/personalsponsor" target="_blank">立即前往</a></span>
     </div>
-    <div class="register">
-      <span class="date"><em>6</em>月<em>13</em>日<em>20:00</em></span><span class="call"><a href="http://registrano.com/events/coscup2013-regist">最后报名</a></span>
-    </div>
     <!--news-->
     <div class="news">
       <h1>媒体报导</h1>
@@ -23,6 +20,17 @@
     <div class="whatiscoscup">
       <h1>COSCUP 2013</h1>
       <div class="text">开放原始码的三大支柱是开发者、使用者与推广者。开发者（大神）是主要的生产者，但同时也是其它程序的使用者。在使用者了解 FLOSS 文化、熟练技能之后，也将成为下一代的开发者或推广者。推广者是扩大使用者数目的的重要媒介，也是 COSCUP 最所想扮演的角色。 COSCUP 希望藉由每一届的年度会议，让世界各地的 FLOSS 爱好者齐聚一堂，并邀请世界各地的专家上台分享经验，想法与新的技术，来共同的激发国内外的爱好者更加踊跃投入 FLOSS 的开发与使用。</div>
+    </div>
+    <!--important data-->
+    <div class="importantdate">
+      <h1>重要日期</h1>
+      <ul class="text">
+        <li>议程征求: 4 月 1 日 ~ 5 月 3 日</li>
+        <li>贡献者报名: 4 月 7 日 ~ 5 月 31 日</li>
+        <li>议程公布: 5 月 31 日</li>
+        <li>大众报名: 6 月 3 日</li>
+        <li>大会时间: 8 月 3 - 4 日</li>
+      </ul>
     </div>
   </div>
   <div id="sidebar2">

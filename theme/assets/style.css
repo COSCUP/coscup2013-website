@@ -160,7 +160,7 @@ h2 {
     margin-bottom: 20px;
     float: left;
 }
-#left .news .text,#left .info,#left .whatiscoscup {
+#left .news .text, #left .info, #left .text {
     font-size: 15px;
     line-height: 28px;
 }

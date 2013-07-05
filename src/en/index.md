@@ -3,9 +3,6 @@
     <div class="contributor">
       <span class="date"><a href="http://registrano.com/events/personalsponsor" target="_blank">Call for Individual Sponsorship</a></span>
     </div>
-    <div class="register">
-      <span class="date"><em>6</em>/<em>13</em>, 8pm - <a href="http://registrano.com/events/coscup2013-regist">Last Registration</a></span>
-    </div>
     <!--news-->
     <div class="news">
       <h1>News Release</h1>
@@ -45,7 +42,18 @@
       create a friendly and informative environment for people from
       different communities to make friends, to learn new
       technologies, and to get inspired by each other.
+      </div>
     </div>
+    <!--important data-->
+    <div class="importantdate">
+      <h1>Important Dates</h1>
+      <ul class="text">
+        <li>Call for proposal: 4 月 1 日 ~ 5 月 3 日</li>
+        <li>Contributor Registration: 4 月 7 日 ~ 5 月 31 日</li>
+        <li>Program announced: 5 月 31 日</li>
+        <li>Registration opens: 6 月 3 日</li>
+        <li>Conference dates: 8 月 3 - 4 日</li>
+      </ul>
     </div>
   </div>
   <div id="sidebar2">
