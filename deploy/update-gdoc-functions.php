@@ -646,6 +646,27 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
       foreach ($levels as &$level)
       {
         if (!$SPONS[$level]) continue;
+        // donor should before media partners
+        if ($level === 'media' && count($DONATES) > 0) {
+          $html .= sprintf('<h1 id="donor">%s</h1>'."\n", htmlspecialchars($levelTitles['personal']));
+          $html .= sprintf('<p>%s</p>'."\n", htmlspecialchars($donateDesc[$lang]));
+
+          $html .= '<div class="splist donor">'."\n";
+          $html .= '<img />'."\n";  // just a placeholder
+          $html .= '  <div class="spinfo"><ul>'."\n";
+          foreach ($DONATES as $m => &$names) {
+            if ($m === 0)
+              continue;
+            foreach ($names as $name) {
+              $html .= sprintf('<li>%s</li>'."\n", htmlspecialchars($name));
+            }
+          }
+          $html .= "</ul>\n";
+          if (isset($DONATES[0])) {
+            $html .= sprintf('<div>'.$donateAnonymous[$lang].'</div>', $DONATES[0]);
+          }
+          $html .= "</div></div>\n";
+        }
 
         $html .= sprintf('<h1 id="%s">%s</h1>'."\n", $level, htmlspecialchars($levelTitles[$level]));
 
@@ -668,24 +689,6 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
         }
       }
 
-      if (count($DONATES) === 0) break;
-
-      $html .= sprintf('<h1>%s</h1>'."\n", htmlspecialchars($levelTitles['personal']));
-      $html .= sprintf('<p>%s</p>'."\n", htmlspecialchars($donateDesc[$lang]));
-      $html .= '<div class="personal"><ul>'."\n";
-      foreach ($DONATES as $m => &$names) {
-        if ($m === 0)
-          continue;
-        foreach ($names as $name) {
-          $html .= sprintf('<li>%s</li>'."\n", htmlspecialchars($name));
-        }
-      }
-      $html .= "</ul></div>\n";
-      if (isset($DONATES[0])) {
-        $html .= '<div class="personal"><div>'."\n";
-        $html .= sprintf($donateAnonymous[$lang], $DONATES[0]);
-        $html .= "</div></div>\n";
-      }
 
       break;
 	}
@@ -790,8 +793,10 @@ else
   $donors = array();
   $anonymous = 0;
 	foreach ($DONATES as $m => &$names) {
-		if ($m === 0)
-			$anonymous = $names;
+		if ($m === 0) {
+      $anonymous = $names;
+      continue;
+    }
 		foreach ($names as $name) {
 			$donors[] = $name;
 		}

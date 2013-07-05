@@ -369,18 +369,20 @@
         font-size: 15px;
         line-height: 28px;
     }
-    .personal {
-      width: 90%;
-      margin-bottom: 15px;
-      border-left: 4px solid rgb(204, 204, 204);
-      padding: 15px;
-      background: rgb(255, 255, 255);
-      float: left;
+    .donor .spinfo li {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: #666666;
     }
-    .personal li {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 10px;
+    .donor .spinfo div {
+        clear: left;
+        font-size: 15px;
+        color: #666666;
+    }
+    .donor img {
+        display: none;
     }
 
     /* news------ */
@@ -1139,18 +1141,20 @@
         font-size: 15px;
         line-height: 28px;
     }
-    .personal {
-      width: 95%;
-      margin-bottom: 15px;
-      border-left: 4px solid rgb(204, 204, 204);
-      padding: 15px;
-      background: rgb(255, 255, 255);
-      float: left;
-    }
-    .personal li {
+    .donor .spinfo li {
       float: left;
       margin-right: 15px;
       margin-bottom: 10px;
+      font-size: 15px;
+      color: #666666;
+    }
+    .donor .spinfo div {
+      clear: left;
+      font-size: 15px;
+      color: #666666;
+    }
+    .donor img {
+      display: none;
     }
     
     /* news------ */

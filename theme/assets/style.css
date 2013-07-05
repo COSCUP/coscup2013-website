@@ -454,18 +454,21 @@ h2 {
     color: #333333
 }
 
-.personal {
-  width: 95%;
-  margin-bottom: 15px;
-  border-left: 4px solid rgb(204, 204, 204);
-  padding: 15px;
-  background: rgb(255, 255, 255);
-  float: left;
+.donor .spinfo li {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333333
 }
-.personal li {
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 10px;
+.donor .spinfo div {
+    clear: left;
+    font-size: 15px;
+    color: #333333
+}
+.donor img {
+    display: inline-block;
+    width: 140px;
 }
 
 /* map------ */
