@@ -334,9 +334,9 @@ jQuery(function ($) {
             data['news'].slice(0, 3),
             function (i, news) {
               $news_list.append(
-                '<div class="list"><span>' + news.date + '</span>' +
+                '<div class="list"><span>' + news.date + '<b>' + news.source + '</b></span>' +
                   '<a href="' + news.link + '" target="_blank">' +
-                  '<div class="title">' + news.desc + '</div></a></div>'
+                  '<div class="title">' + news.title+ '</div></a></div>'
               );
             });
         });

@@ -403,6 +403,11 @@
         margin-bottom: 3px;
         float: left;
     }
+    #content .news b {
+        margin-left: 10px;
+        color: #606060;
+        font-size: 13px;
+    }
     #content .news .title {
         width: 95%;
         font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
@@ -1174,6 +1179,11 @@
         color: #999999;
         margin-bottom: 3px;
         float: left;
+    }
+    #content .news b {
+        margin-left: 10px;
+        color: #606060;
+        font-size: 13px;
     }
     #content .news .title {
         width: 95%;

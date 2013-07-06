@@ -697,7 +697,7 @@ function get_sponsors_html($SPONS, $DONATES, $type = 'sidebar', $lang = 'zh-tw')
 
 function get_news_list_from_gdoc() {
 
-    $handle = @fopen('https://spreadsheets.google.com/pub?key=' . NEWS_LIST_KEY . '&range=A2%3AC999&output=csv', 'r');
+    $handle = @fopen('https://spreadsheets.google.com/pub?key=' . NEWS_LIST_KEY . '&range=A2%3AD999&output=csv', 'r');
 
     if (!$handle)
     {
@@ -706,22 +706,24 @@ function get_news_list_from_gdoc() {
 
     $NEWS_LIST = array();
 
-    // date, desc, link
+    // date, title, source, link
     while (($NEWS = fgetcsv($handle)) !== FALSE)
     {
         $date = trim($NEWS[0]);
-        $desc = trim($NEWS[1]);
-        $link = trim($NEWS[2]);
+        $title = trim($NEWS[1]);
+        $source = trim($NEWS[2]);
+        $link = trim($NEWS[3]);
 
         if ($date === "" ||
-            $desc === "" ||
+            $title === "" ||
             $link === "") {
             continue;
         }
 
         $NEWS_obj = array(
             'date' => $date,
-            'desc' => $desc,
+            'title' => $title,
+            'source' => $source,
             'link' => $link
         );
 
@@ -753,9 +755,10 @@ function get_news_list_html($NEWS_LIST, $lang = 'zh-tw') {
     foreach ($NEWS_LIST as $idx => &$news)
     {
         $html .= "    <div class=\"list\">\n";
-        $html .= sprintf("        <span>%s</span>\n", htmlspecialchars($news['date']));
-        $html .= sprintf("        <div class=\"title\">%s</div>\n", htmlspecialchars($news['desc']));
-        $html .= sprintf("        <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n",
+        $html .= sprintf("  <span>%s<b>%s</b></span>\n", 
+                            htmlspecialchars($news['date']), htmlspecialchars($news['source']));
+        $html .= sprintf("  <div class=\"title\">%s</div>\n", htmlspecialchars($news['title']));
+        $html .= sprintf("  <div class=\"link\"><a href=\"%s\" target=\"_blank\">%s</a></div>\n",
                          htmlspecialchars($news['link']),
                          htmlspecialchars($news['link']));
         $html .= "    </div>\n";
