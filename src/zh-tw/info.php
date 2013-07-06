@@ -8,6 +8,7 @@ $contents = array(
   "news" => "媒體報導",
 	"http://blog.coscup.org/" => "部落格",
 	"contact" => "聯絡資訊",
+  "api" => "API",
   "openwall" => "Open"
 );
 
