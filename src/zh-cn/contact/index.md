@@ -8,3 +8,7 @@
 ## 大会聊天频道
 
 COSCUP 的 IRC 频道位于 Freenode。请使用您的 IRC 软件连上 [chat.freenode.net#coscup](ircs://chat.freenode.net/coscup)。您也可以使用 Freenode 提供的[网页聊天界面](https://webchat.freenode.net/?channels=coscup)。
+
+<div style="text-align:center; vertical-align:middle;">
+	<iframe src="http://webchat.freenode.net?channels=coscup&uio=d4" width="900" height="600" style="border: 0;"></iframe>
+</div>
