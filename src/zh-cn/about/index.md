@@ -11,7 +11,7 @@
 <img src="images/a02.jpg" class="ab02">
 
 Coders、users 和 promoters 是让 open source 软件发光发热的三大支柱，这个研讨会就是专为这三种人举办的：你可以是 A 软件的 coder、B 软件的 promoter、C 软件的 user，不论你是已经踏入 open source 领域，还是一直站在门口不知如何入门，欢迎你来参加 COSCUP — Conference for Open Source Coders, Users and Promoters! COSCUP 研讨会已堂堂迈入第八年，七年来不但由各地社群共同举办，在众多同好的参与之下，逐渐成长茁壮。无论你是写 open source 软件的开发者、热衷
-open source 软件的推广者、熟悉 open source 软件的使用者或是想了解 open source 软件的新手，都欢迎你来参加一年一度全台最大的开源人年会。
+open source 软件的推广者、熟悉 open source 软件的用户或是想了解 open source 软件的新手，都欢迎你来参加一年一度全台最大的开源人年会。
 
 ## 2013 筹备团队
 

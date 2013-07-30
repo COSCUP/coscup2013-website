@@ -20,7 +20,7 @@ class i18n
      'COPYRIGHT' => '&copy; 2013 COSCUP | <a href="http://coscup.org/2013/en/contact/">Contact us</a>'
      ),
   'zh-CN' => array(
-     '首頁' => '首页',
+     '首頁' => '主页',
      '開源人年會' => '开源人年会',
      '台灣台北' => '台湾台北',
      '加到 Google 日曆' => '加到 Google 日历',
