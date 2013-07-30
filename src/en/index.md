@@ -1,8 +1,5 @@
 <div><!--add root div as a workaround of weird makrdown parser-->
   <div id="left">
-    <div class="contributor">
-      <span class="date"><a href="http://registrano.com/events/personalsponsor" target="_blank">Call for Individual Sponsorship</a></span>
-    </div>
     <!--news-->
     <div class="news">
       <h1>News Release</h1>

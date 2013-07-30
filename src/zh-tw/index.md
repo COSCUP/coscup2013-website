@@ -1,8 +1,5 @@
 <div><!--add root div as a workaround of weird makrdown parser-->
   <div id="left">
-    <div class="contributor">
-      <span class="date">COSCUP 2013 個人贊助方案</span><span class="call"><a href="http://registrano.com/events/personalsponsor" target="_blank">立即前往</a></span>
-    </div>
     <!--news-->
     <div class="news">
       <h1>媒體報導</h1>
