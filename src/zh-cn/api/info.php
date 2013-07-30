@@ -1,6 +1,6 @@
 <?php
 $contents = array(
-	"index" => "联络信息"
+	"index" => "API 文档"
 );
 
 $menu_hidden = array("index");
