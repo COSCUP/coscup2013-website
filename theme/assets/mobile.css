@@ -740,14 +740,8 @@
         margin: 3px 0 3px 15px;
     }
     /***Mobile Swipe Sponsor**/
-    #console {
-        font-size: 12px;
-        font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-        color: #999;
-        line-height: 18px;
-        margin-top: 20px;
-        max-height: 150px;
-        overflow: auto;
+    #mySwipe {
+        padding-top: 15px;
     }
     #mySwipe div span {
         display: block;
@@ -757,10 +751,12 @@
         box-shadow: 0 1px #EBEBEB;
         background: #fff;
         border-radius: 3px;
+        line-height: 134px;
     }
     #mySwipe div span img {
         width: 40%;
         vertical-align: middle;
+        margin: 0 10px;
     }
     /* Swipe 2 required styles */
     .swipe {
@@ -1448,27 +1444,6 @@
         /* show dropdown on hover */
     }
     /***Mobile Swipe Sponsor**/
-    #console {
-        font-size: 12px;
-        font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-        color: #999;
-        line-height: 18px;
-        margin-top: 20px;
-        max-height: 150px;
-        overflow: auto;
-    }
-    #mySwipe div b {
-        display: block;
-        font-weight: bold;
-        color: #14ADE5;
-        font-size: 20px;
-        text-align: center;
-        padding: 10px 10px;
-        margin-bottom: 10px;
-        box-shadow: 0 1px #EBEBEB;
-        background: #fff;
-        border-radius: 3px;
-    }
     /* Swipe 2 required styles */
     .swipe {
         overflow: hidden;
@@ -1518,8 +1493,5 @@
     }
     #lan {
         margin-bottom: 0;
-    }
-    #mySwipe {
-        padding-top: 15px;
     }
 }
