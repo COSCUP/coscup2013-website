@@ -54,7 +54,7 @@ if (isset($styles)) {
 
 <!--隱藏網址列-->
 <!--script>
-	window.addEventListener("load",function() {  
+	window.addEventListener("load",function() {
     setTimeout(function(){
     window.scrollTo(0, 1); }, 10);
   });
@@ -184,7 +184,7 @@ switch($this->current[0])
         <li><a href="http://coscup.org/2012/zh-tw/" target="_blank" >2012</a>|</li>
         <div class="design">Design by <a href="http://www.lichenple.com" target="_blank">LICHENple</a></div>
     </ul>
-    
+
 </div>
 </body>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
