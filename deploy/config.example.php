@@ -3,6 +3,7 @@
 define('SPONSOR_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_SPONSORS');
 define('PROGRAM_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_PROGRAM_LIST');
 define('NEWS_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_NEWS_LIST');
+define('LIVE_LIST_KEY', 'YOUR_GOOGLE_SPREADSHEET_API_KEY_WHICH_HAS_LIVE_LIST');
 
 define('MARKSITE_PATH', 'marksite/');
 define('THEME_PATH', '../theme/');
@@ -40,6 +41,12 @@ $news_list_output = array(
     "zh-tw" => "../src/zh-tw/news/index.html",
     "zh-cn" => "../src/zh-cn/news/index.html",
     "en" => "../src/en/news/index.html"
+);
+
+$live_list_output = array(
+  "zh-tw" => "../src/zh-tw/live/index.html",
+  "zh-cn" => "../src/zh-cn/live/index.html",
+  "en" => "../src/en/live/index.html"
 );
 
 $json_output = array(

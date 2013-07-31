@@ -516,6 +516,48 @@ h2 {
     font-size: 15px;
     line-height: 28px;
 }
+/* Live -------- */
+#content .live {
+    width: 100%;
+    font: 15px/20px "Lucida Grande", "Lucida Sans Unicode","微軟正黑體", Arial, Verdana, sans-serif;
+}
+#content .live .list {
+    background: #efefef;
+    border-top: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    margin-bottom: 40px;
+    padding: 15px;
+    width: 95%;
+}
+#content .live div {
+    margin: 10px 0;
+}
+#content .live span {
+    margin-right: 10px;
+    color: #666666;
+    font-weight: bold;
+}
+#content .live span.online {
+    border: 1px solid gray;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    background: red;
+    color: white;
+    margin: 2px;
+    padding: 2px 5px;
+}
+#content .live span.online.end {
+    background: #369;
+}
+#content .live .title {
+    font-weight: bold;
+    color: #000;
+}
+#content .live iframe {
+  width: 720px;
+  height: 540px;
+}
 /* Program------ */
 h2.pro {
     width: 780px;

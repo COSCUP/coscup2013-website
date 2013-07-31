@@ -3,6 +3,7 @@ $contents = array(
 	"index" => "首頁",
 	"about" => "活動簡介",
 	"program" => "議程",
+  "live" => "線上直播",
 	"venue" => "地點",
 	"sponsors" => "贊助單位",
   "news" => "媒體報導",
@@ -12,4 +13,4 @@ $contents = array(
   "openwall" => "Open"
 );
 
-$menu_hidden = array("openwall");
+$menu_hidden = array("live","openwall");

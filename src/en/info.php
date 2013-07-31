@@ -3,6 +3,7 @@ $contents = array(
   "index" => "Home",
   "about" => "About Us",
   "program" => "Program",
+  "live" => "Live",
   "venue" => "Venue",
   "sponsors" => "Sponsors",
   "news" => "News",
@@ -12,4 +13,4 @@ $contents = array(
   "openwall" => "Open"
 );
 
-$menu_hidden = array("openwall");
+$menu_hidden = array("live", "openwall");

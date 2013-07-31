@@ -3,6 +3,7 @@ $contents = array(
   "index" => "主页",
   "about" => "活动简介",
   "program" => "议程",
+  "live" => "在线观看",
   "venue" => "地点",
   "sponsors" => "赞助单位",
   "news" => "媒体报导",
@@ -12,4 +13,4 @@ $contents = array(
   "openwall" => "Open"
 );
 
-$menu_hidden = array("openwall");
+$menu_hidden = array("live", "openwall");
