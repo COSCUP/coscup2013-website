@@ -1,5 +1,7 @@
 <div><!--add root div as a workaround of weird makrdown parser-->
   <div id="left">
+    <h1 class="coscup">COSCUP - Conference for Open Source Coders, Users and Promoters</h1>
+
     <!--news-->
     <div class="news">
       <h1>News Release</h1>

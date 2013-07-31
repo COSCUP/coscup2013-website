@@ -412,6 +412,11 @@ h2 {
     font-size: 22px;
     margin-bottom: 17px;
 }
+#content h1.coscup {
+    font-style: italic;
+    color: #42CFDA;
+    margin-bottom: 45px;
+}
 #content .article {
     font-size: 15px;
     line-height: 28px;

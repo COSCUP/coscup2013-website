@@ -325,6 +325,11 @@
         font-size: 20px;
         margin-bottom: 17px;
     }
+    #content h1.coscup {
+        font-style: italic;
+        color: #42CFDA;
+        margin-bottom: 45px;
+    }
     #content .article {
         font-size: 15px;
         line-height: 32px;
@@ -1101,6 +1106,11 @@
     #content h1 {
         font-size: 20px;
         margin-bottom: 17px;
+    }
+    #content h1.coscup {
+        font-style: italic;
+        color: #42CFDA;
+        margin-bottom: 45px;
     }
     #content .article {
         font-size: 15px;
