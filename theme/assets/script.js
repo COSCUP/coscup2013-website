@@ -22,6 +22,30 @@ jQuery(function ($) {
 
   var lang = ($('html').attr('lang') || 'zh-TW').toLowerCase();
 
+  function mobileInit() {
+    /* prepend menu icon */
+    $('#nav-wrap').prepend('<div id="menu-icon"></div>');
+    var toggleMenu = function() {
+      console.log("toggleMenu!!!");
+      $("#mainNav").slideToggle();
+      $("#menu-icon").toggleClass("active");
+    };
+
+    /* toggle nav */
+    $("#menu-icon").on("click", toggleMenu);
+    $("#mainNav").on("click", toggleMenu);
+
+    var elem = document.getElementById('mySwipe');
+    window.mySwipe = Swipe(elem, {
+      auto: 3000,
+    });
+  }
+
+  var isMobile = ($('#mySwipe').css('display') === "block" )? true : false;
+  if (isMobile) {
+    mobileInit();
+  }
+
   // FIXME: CSS dependent test
   function isMobileLayout() {
     return false;

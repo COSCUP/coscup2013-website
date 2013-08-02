@@ -756,6 +756,9 @@
         float: none;
         margin: 14px 0 5px 10px;
     }
+    #mainNav li.open {
+      display: none;
+    }
     #mainNav a,
     #mainNav ul a {
         font: inherit;
@@ -1574,11 +1577,7 @@
         color: #000;
     }
     #mainNav li.open {
-        margin-right: 0;
-        float: right;
-    }
-    #mainNav li.open a {
-        font-size: 13px;
+      display: none;
     }
     #lan {
         margin-bottom: 0;

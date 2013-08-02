@@ -96,7 +96,7 @@ if (isset($styles)) {
       <nav id="nav-wrap">
         <ul id="mainNav">
           <?php echo $this->menu(1); ?>
-          <li class="open"><a href="#" title="OPEN">We (heart) Open.</a></li>
+          <li class="open">We (heart) Open.</li>
         </ul>
       </nav> 
     </div>
@@ -189,28 +189,9 @@ switch($this->current[0])
 </body>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>respond.min.js"></script>
-<script type="text/javascript">
-  jQuery(document).ready(function($){
-    /* prepend menu icon */
-    $('#nav-wrap').prepend('<div id="menu-icon"></div>');
-
-    /* toggle nav */
-    $("#menu-icon").on("click", function(){
-      $("#mainNav").slideToggle();
-      $(this).toggleClass("active");
-    });
-  });
-</script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>swipe.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>script.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>program.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>program-filter.js"></script>
 <script type="text/javascript" src="<?php echo $theme_assets_uri;?>bootstrap-scrollspy.js"></script>
-<script>
-  // pure JS
-  var elem = document.getElementById('mySwipe');
-  window.mySwipe = Swipe(elem, {
-    auto: 3000,
-  });
-</script>
 </html>

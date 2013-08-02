@@ -123,12 +123,13 @@ h2 {
 }
 #mainNav a {
     color: #fff;
-    font-family: "微軟正黑體", "Arial Unicode MS";
     padding: 9px;
-    font-size: 15px;
-    line-height: 35px;
 }
 #mainNav li {
+    font-family: "微軟正黑體", "Arial Unicode MS";
+    line-height: 35px;
+    font-size: 15px;
+    color: #fff;
     height: 36px;
     margin-right: 8px;
     float: left;
@@ -140,9 +141,7 @@ h2 {
 #mainNav li.open {
     float: right;
 }
-#mainNav li.open a {
-    font-size: 13px;
-}
+
 #main {
     width: 100%;
     background: url(bg_main.jpg) repeat;
