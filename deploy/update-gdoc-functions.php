@@ -186,24 +186,24 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
 	$l10n = array(
 		'en' => array(
 			'time' => 'Time',
-			'am_day_1' => 'Day 1 Morning',
-			'pm_day_1' => 'Day 1 Afternoon',
-			'am_day_2' => 'Day 2 Morning',
-			'pm_day_2' => 'Day 2 Afternoon'
+			'am_day_1' => 'Day 1 AM',
+			'pm_day_1' => 'Day 1 PM',
+			'am_day_2' => 'Day 2 AM',
+			'pm_day_2' => 'Day 2 PM'
 		),
 		'zh-tw' => array(
 			'time' => '時間',
-			'am_day_1' => '第一天上午',
-			'pm_day_1' => '第一天下午',
-			'am_day_2' => '第二天上午',
-			'pm_day_2' => '第二天下午'
+			'am_day_1' => 'Day 1 早',
+			'pm_day_1' => 'Day 1 午',
+			'am_day_2' => 'Day 2 早',
+			'pm_day_2' => 'Day 2 午'
 		),
 		'zh-cn' => array(
 			'time' => '时间',
-			'am_day_1' => '第一天上午',
-			'pm_day_1' => '第一天下午',
-			'am_day_2' => '第二天上午',
-			'pm_day_2' => '第二天下午'
+			'am_day_1' => 'Day 1 早',
+			'pm_day_1' => 'Day 1 午',
+			'am_day_2' => 'Day 2 早',
+			'pm_day_2' => 'Day 2 午'
 		)
 	);
 
