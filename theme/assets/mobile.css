@@ -95,10 +95,11 @@
         background: #95e9ee;
         margin-bottom: 15px;
         float: left;
+        line-height: 0;
     }
     #lan li {
-        padding-left: 20px;
-        float: left;
+        padding-right: 20px;
+        float: right;
     }
     #lan li a {
         text-align: center;
@@ -672,8 +673,6 @@
     /************************************************************************************
     mobile
     *************************************************************************************/
-    #nav-wrap {
-    }
     /* menu icon */
     #menu-icon {
         display: none;
@@ -723,7 +722,7 @@
     /* nav-wrap */
     #nav-wrap {
         position: absolute;
-        top: 8px;
+        top: 5px;
         left: 10px;
         z-index: 99999;
     }
@@ -732,7 +731,7 @@
         color: #000;
         width: 30px;
         height: 30px;
-        background: url(mobile/menu-icon.png) no-repeat 10px center;
+        background: url(mobile/menu-icon.png) no-repeat 10px center #95E9EE;
         padding: 8px 10px 0 42px;
         cursor: pointer;
         display: block;
@@ -921,10 +920,11 @@
         background: #95e9ee;
         margin-bottom: 15px;
         float: left;
+        line-height: 0;
     }
     #lan li {
-        padding-left: 20px;
-        float: left;
+        padding-right: 20px;
+        float: right;
     }
     #lan li a {
         text-align: center;
@@ -1496,8 +1496,6 @@
     *
     mobile
     *************************************************************************************/
-    #nav-wrap {
-    }
     /* menu icon */
     #menu-icon {
         display: none;

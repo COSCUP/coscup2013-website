@@ -24,7 +24,7 @@ jQuery(function ($) {
 
   function mobileInit() {
     /* prepend menu icon */
-    $('#nav-wrap').prepend('<div id="menu-icon"></div>');
+    $('#nav-wrap').prepend('<div id="menu-icon">menu</div>');
     var toggleMenu = function() {
       console.log("toggleMenu!!!");
       $("#mainNav").slideToggle();
