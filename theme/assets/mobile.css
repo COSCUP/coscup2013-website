@@ -462,6 +462,9 @@
         font-weight: bold;
         color: #000;
     }
+    .webchat {
+      display: none;
+    }
 
     /* program------ */
     h2.pro {
@@ -1285,6 +1288,10 @@
       width: 560px;
       height: 420px;
     }
+    .webchat {
+      display: none;
+    }
+
     /* program------ */
     h2.pro {
         width: 100%;
