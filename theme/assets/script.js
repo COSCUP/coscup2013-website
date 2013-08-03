@@ -27,17 +27,17 @@ jQuery(function ($) {
     $('#nav-wrap').prepend('<div id="menu-icon">menu</div>');
     var toggleMenu = function() {
       console.log("toggleMenu!!!");
-      $("#mainNav").slideToggle();
+      $("#mainNav").toggle();
       $("#menu-icon").toggleClass("active");
     };
 
     /* toggle nav */
     $("#menu-icon").on("click", toggleMenu);
-    $("#mainNav").on("click", toggleMenu);
+    $("#mainNav li").on("click", toggleMenu);
 
     var elem = document.getElementById('mySwipe');
     window.mySwipe = Swipe(elem, {
-      auto: 3000,
+      auto: 3000
     });
   }
 
