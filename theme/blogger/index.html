@@ -129,23 +129,26 @@ head.appendChild(script);
           <li><a href='#'>正體</a></li>
         </ul>
       <ul id='social'>
-        <li><a href='https://www.facebook.com/coscup' title='facebook'><img src='http://coscup.org/2013-theme/assets/icon_fb.png'/></a></li>
-        <li><a href='http://www.plurk.com/coscup' title='plurk'><img src='http://coscup.org/2013-theme/assets/icon_plurk.png'/></a></li>
-        <li><a href='https://twitter.com/coscup' title='twitter'><img src='http://coscup.org/2013-theme/assets/icon_twitter.png'/></a></li>
-        <li><a href='http://blog.coscup.org' title='blog'><img src='http://coscup.org/2013-theme/assets/icon_blog.png'/></a></li>
-        <li><a href='http://www.flickr.com/people/coscup/' title='flickr'><img src='http://coscup.org/2013-theme/assets/icon_flickr.png'/></a></li>
-        <li><a href='http://www.youtube.com/user/thecoscup?feature=watch' title='youtube'><img src='http://coscup.org/2013-theme/assets/icon_utube.png'/></a></li>
+        <li><a href='https://www.facebook.com/coscup' target='_blank' title='facebook'><img src='http://coscup.org/2013-theme/assets/icon_fb.png'/></a></li>
+        <li><a href='https://plus.google.com/101434041225212178932' target='_blank' title='Google+'><img src='http://coscup.org/2013-theme/assets/icon_gplus.png'/></a></li>
+        <li><a href='http://www.plurk.com/coscup' target='_blank' title='plurk'><img src='http://coscup.org/2013-theme/assets/icon_plurk.png'/></a></li>
+        <li><a href='https://twitter.com/coscup' target='_blank' title='twitter'><img src='http://coscup.org/2013-theme/assets/icon_twitter.png'/></a></li>
+        <li><a href='http://blog.coscup.org' target='_blank' title='blog'><img src='http://coscup.org/2013-theme/assets/icon_blog.png'/></a></li>
+        <li><a href='http://www.flickr.com/people/coscup/' target='_blank' title='flickr'><img src='http://coscup.org/2013-theme/assets/icon_flickr.png'/></a></li>
+        <li><a href='http://www.youtube.com/user/thecoscup?feature=watch' target='_blank' title='youtube'><img src='http://coscup.org/2013-theme/assets/icon_utube.png'/></a></li>
       </ul>
       <nav id='nav-wrap'>
         <ul id='mainNav'>
+          <li><a href='http://coscup.org/2013/zh-tw/index.html'>首頁</a></li>
           <li><a href='http://coscup.org/2013/zh-tw/about/'>活動簡介</a></li>
           <li><a href='http://coscup.org/2013/zh-tw/program/'>議程</a></li>
           <li><a href='http://coscup.org/2013/zh-tw/venue/'>地點</a></li>
           <li><a href='http://coscup.org/2013/zh-tw/sponsors/'>贊助單位</a></li>
-          <li><a href='http://coscup.org/2013/zh-tw/news/'>News</a></li>
+          <li><a href='http://coscup.org/2013/zh-tw/news/'>媒體報導</a></li>
           <li><a href='http://blog.coscup.org/'>部落格</a></li>
           <li><a href='http://coscup.org/2013/zh-tw/contact/'>聯絡資訊</a></li>
-          <li class='open'><a href='#' title='OPEN'>We (heart) Open.</a></li>
+          <li><a href='http://coscup.org/2013/zh-tw/api/'>API</a></li>
+          <li class='open'>We (heart) Open.</li>
         </ul>
       </nav> 
     </div>
@@ -153,7 +156,7 @@ head.appendChild(script);
 <div id='main'>
 <div class='wrap'>
 <!-- // sponsor -->
-<div id='sponsor' class='empty'>
+<div class='empty' id='sponsor'>
 <!-- 加上 class="empty" 會觸發 script 拉遠端資料顯示 -->
 
 <h2>特別感謝</h2>
@@ -169,7 +172,7 @@ head.appendChild(script);
 <div id='content'>
 <!-- content // -->
   <!-- blogger data -->
-  <b:section id='left' showaddelement='no'>
+  <b:section id='left' class='blog' showaddelement='no'>
     <b:widget id='Blog1' locked='true' title='網誌文章' type='Blog'>
       <b:includable id='main' var='top'>
         <b:if cond='data:top.showDummy'>
@@ -1078,15 +1081,7 @@ head.appendChild(script);
   </b:section>
 <!-- mid -->
   <!--b:if cond='data:blog.url == data:blog.homepageUrl'-->
-    <b:section class='hideInMobile' id='sidebar2' preferred='yes'>
-      <b:widget id='HTML3' locked='false' title='工商服務' type='HTML'>
-        <b:includable id='main'>
-          <div class='widget-content'>
-            <data:content/>
-          </div>
-          <b:include name='quickedit'/>
-        </b:includable>
-      </b:widget>
+    <b:section class='hideInMobile blog' id='sidebar2' preferred='yes'>
       <b:widget id='BlogArchive1' locked='false' title='網誌存檔' type='BlogArchive'>
         <b:includable id='main'>
           <b:if cond='data:title'>
@@ -1181,15 +1176,15 @@ head.appendChild(script);
         <li><a href='http://coscup.org/2006/' target='_blank'>2006</a>|</li>
         <li><a href='http://coscup.org/2007/' target='_blank'>2007</a>|</li>
         <li><a href='http://coscup.org/2008/' target='_blank'>2008</a>|</li>
-        <li><a href='http://coscup.org/2009/zh-tw/' target='_blank'>2009</a>|</li>
+        <li><a href='http://coscup.org/2009/' target='_blank'>2009</a>|</li>
         <li><a href='http://coscup.org/2010/' target='_blank'>2010</a>|</li>
-        <li><a href='http://coscup.org/2011/zh-tw/' target='_blank'>2011</a>|</li>
-        <li><a href='http://coscup.org/2012/zh-tw/' target='_blank'>2012</a>|</li>
+        <li><a href='http://coscup.org/2011/' target='_blank'>2011</a>|</li>
+        <li><a href='http://coscup.org/2012/' target='_blank'>2012</a>|</li>
         <div class='design'>Design by <a href='http://www.lichenple.com' target='_blank'>LICHENple</a></div>
     </ul>
 </div>
 
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js' type='text/javascript'/>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js' type='text/javascript'/>
 <script src='http://coscup.org/2013-theme/assets/swipe.js' type='text/javascript'/>
 <script src='http://coscup.org/2013-theme/assets/script.js' type='text/javascript'/>
 <script src='http://coscup.org/2013-theme/assets/respond.min.js' type='text/javascript'/>

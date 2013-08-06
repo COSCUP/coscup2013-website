@@ -155,6 +155,9 @@ h2 {
     min-height: 300px;
     float:left
 }
+#left.blog {
+    width: 525px;
+}
 #left .register,#left .news,#left .info,#left .whatiscoscup,#left .contributor {
     margin-bottom: 20px;
     float: left;
@@ -256,6 +259,10 @@ h2 {
     width: 330px;
     margin-left: 25px;
     float:left
+}
+#sidebar2.blog {
+    width: 250px;
+    float: right;
 }
 #sidebar2 .fb,#sidebar2 .socialbuzz,#sidebar2 .utube {
     margin-bottom: 20px;
