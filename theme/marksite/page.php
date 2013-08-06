@@ -86,12 +86,13 @@ if (isset($styles)) {
 		  <li><a href="/2013/zh-cn/" title="简体中文" lang="zh-CN">简体</a></li>
         </ul>
 	    <ul id="social">
-        <li><a href="https://www.facebook.com/coscup" title="facebook"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
-        <li><a href="http://www.plurk.com/coscup" title="plurk"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" /></a></li>
-        <li><a href="https://twitter.com/coscup" title="twitter"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" /></a></li>
-        <li><a href="http://blog.coscup.org" title="blog"><img src="<?php echo $theme_assets_uri;?>icon_blog.png" /></a></li>
-        <li><a href="http://www.flickr.com/photos/coscup/sets/" title="flickr"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  /></a></li>
-        <li><a href="http://www.youtube.com/user/thecoscup?feature=watch" title="youtube"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
+        <li><a href="https://www.facebook.com/coscup" title="facebook" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png"/></a></li>
+        <li><a href="https://plus.google.com/101434041225212178932" title="Google+" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_gplus.png"/></a></li>
+        <li><a href="http://www.plurk.com/coscup" title="plurk" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" /></a></li>
+        <li><a href="https://twitter.com/coscup" title="twitter" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" /></a></li>
+        <li><a href="http://blog.coscup.org" title="blog" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_blog.png" /></a></li>
+        <li><a href="http://www.flickr.com/photos/coscup/sets/" title="flickr" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  /></a></li>
+        <li><a href="http://www.youtube.com/user/thecoscup?feature=watch" title="youtube" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_utube.png" /></a></li>
 	    </ul>
       <nav id="nav-wrap">
         <ul id="mainNav">
@@ -164,12 +165,13 @@ switch($this->current[0])
 <!--social Mobile-->
 <ul class="sharing">
   <li class="title">Follow Us!!<hr></li>
-  <li><a href="https://www.facebook.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_fb.png" align="absmiddle" /><span>facebook</span></a></li>
-  <li><a href="http://www.plurk.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" align="absmiddle" /><span>Plurk</span></a></li>
-  <li><a href="https://twitter.com/coscup"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" align="absmiddle" /><span>twitter</span></a></li>
-  <li><a href="http://blog.coscup.org"><img src="<?php echo $theme_assets_uri;?>icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
-  <li><a href="http://www.flickr.com/photos/coscup/sets/"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  align="absmiddle" /><span>flickr</span></a></li>
-  <li><a href="http://www.youtube.com/user/thecoscup?feature=watch"><img src="<?php echo $theme_assets_uri;?>icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li>
+  <li><a href="https://www.facebook.com/coscup" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_fb.png" align="absmiddle" /><span>facebook</span></a></li>
+  <li><a href="https://plus.google.com/101434041225212178932" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_gplus.png" align="absmiddle" /><span>Google+</span></a></li>
+  <li><a href="http://www.plurk.com/coscup" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_plurk.png" align="absmiddle" /><span>Plurk</span></a></li>
+  <li><a href="https://twitter.com/coscup" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_twitter.png" align="absmiddle" /><span>twitter</span></a></li>
+  <li><a href="http://blog.coscup.org" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_blog.png"  align="absmiddle" /><span>Blog</span></a></li>
+  <li><a href="http://www.flickr.com/photos/coscup/sets/" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_flickr.png"  align="absmiddle" /><span>flickr</span></a></li>
+  <li><a href="http://www.youtube.com/user/thecoscup?feature=watch" target="_blank"><img src="<?php echo $theme_assets_uri;?>icon_utube.png"  align="absmiddle" /><span>Youtube</span></a></li>
 </ul><!--social Mobile end-->
 <!--底-->
 <div id="footer">
@@ -178,10 +180,10 @@ switch($this->current[0])
         <li><a href="http://coscup.org/2006/" target="_blank">2006</a>|</li>
         <li><a href="http://coscup.org/2007/" target="_blank">2007</a>|</li>
         <li><a href="http://coscup.org/2008/" target="_blank">2008</a>|</li>
-        <li><a href="http://coscup.org/2009/zh-tw/" target="_blank">2009</a>|</li>
+        <li><a href="http://coscup.org/2009/" target="_blank">2009</a>|</li>
         <li><a href="http://coscup.org/2010/" target="_blank">2010</a>|</li>
-        <li><a href="http://coscup.org/2011/zh-tw/" target="_blank">2011</a>|</li>
-        <li><a href="http://coscup.org/2012/zh-tw/" target="_blank" >2012</a>|</li>
+        <li><a href="http://coscup.org/2011/" target="_blank">2011</a>|</li>
+        <li><a href="http://coscup.org/2012/" target="_blank" >2012</a>|</li>
         <div class="design">Design by <a href="http://www.lichenple.com" target="_blank">LICHENple</a></div>
     </ul>
 
