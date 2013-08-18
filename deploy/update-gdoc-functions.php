@@ -378,10 +378,16 @@ function get_program_list_html(&$program_list, &$type_list, &$room_list, $commun
        //room == 0 is a keynote, room == 9 is a cross rooms session
        $eventClass = ($program['room'] === 0 || $program['room'] === 9)? "program keynote" : "program";
        $html['program'] .= sprintf('<div class="%s" data-id="%d">', $eventClass, $program['id']);
-       $html['program'] .= sprintf(' <div class="metadata track_tag colorTag-%d">', $program['type']);
+       $html['program'] .= sprintf('  <div class="metadata track_tag colorTag-%d">', $program['type']);
        $html['program'] .= sprintf('  <div class="head"><div class="place">%s</div>', 
                           htmlspecialchars($room_list[$program['room']][$lang]));
-       $html['program'] .= sprintf('  <div class="video"><a href="%s"><img src="/2013-theme/assets/icon_camera.png"></a></div>', "#"); 
+       if (isset($program['youtube'])) {
+         $html['program'] .= sprintf('  <div class="video"><a href="http://www.youtube.com/watch?v=%s">', $program['youtube'][0]);
+         $html['program'] .= '<img src="/2013-theme/assets/icon_camera.png" /></a></div>';
+       }
+       if ($program['slide']) {
+         $html['program'] .= sprintf('  <div class="slide"><a href="%s"><img src="/2013-theme/assets/icon_slide.png" /></a></div>', $program['slide']);
+       }
        $html['program'] .= sprintf('  <div class="community">%s</div>',
            htmlspecialchars($community_list[$program['community']]));
        $html['program'] .= '</div><div class="body">';

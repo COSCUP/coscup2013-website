@@ -741,18 +741,22 @@ h2.pro {
     line-height: 25px;
     text-align: center;
     float: left;
-    padding: 0 10px;
+    font-size: 13px;
 }
 .program .community {
     float: right;
     font-size: 13px;
     color: #999;
     margin-right: 5px;
+    line-height: 20px;
+}
+.program .slide {
+    float: right;
+    margin: 0 5px;
 }
 .program .video {
     float: right;
-    margin-right: 5px;
-    display: none;
+    margin: 0 5px;
 }
 .program .topic {
     color: #000;
@@ -790,7 +794,7 @@ h2.pro {
 .program .ps {
     position: absolute;
     color: #900;
-    right: 5px;
+    left: 5px;
     bottom: 5px;
     line-height: 20px;
 }

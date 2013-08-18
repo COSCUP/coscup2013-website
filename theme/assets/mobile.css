@@ -564,18 +564,25 @@ h2.pro {
 .program .place {
     float: left;
     font-weight: bold;
-    color: #999;
+    color: #666;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    background: #EEE;
+}
+.program .slide {
+    float: right;
+    margin: 0 5px;
 }
 .program .video {
     float: right;
-    margin-right: 5px;
-    display: none;
+    margin: 0 5px;
 }
 .program .community {
     float: right;
     font-size: 13px;
     color: #999;
-    margin-right: 5px;
+    margin: 0 5px;
+    line-height: 20px;
 }
 .program .topic {
     margin-bottom: 5px;
@@ -603,7 +610,6 @@ h2.pro {
 }
 .program .ps {
     color: #900;
-    text-align: right; 
 }
 .program .detail {
   padding: 0 5px;
