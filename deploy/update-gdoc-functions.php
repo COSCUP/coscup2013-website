@@ -13,7 +13,7 @@ function linkify($text){
 
 function get_program_list_from_gdoc() {
 
-	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . PROGRAM_LIST_KEY . '&range=A2%3AL999&output=csv', 'r');
+	$handle = @fopen('https://spreadsheets.google.com/pub?key=' . PROGRAM_LIST_KEY . '&range=A2%3AM999&output=csv', 'r');
 
 	if (!$handle)
 	{
